@@ -1,7 +1,7 @@
 import iisignature  # logsig to sig in Lyndon basis
 import torch
 import signatory
-import utils
+from signaturemean.utils import sigscaling
 
 
 def mean(datasig, depth, channels, rescaling=False):
@@ -28,8 +28,8 @@ def mean(datasig, depth, channels, rescaling=False):
                     in datasig.
     """
     if rescaling:  # normalization
-        datasig = utils.sigscaling(datasig, depth, channels)
-    stoLogS = signatory.SignatureToLogSignature(channels, depth, mode='brackets')  
+        datasig = sigscaling(datasig, depth, channels)
+    stoLogS = signatory.SignatureToLogSignature(channels, depth, mode='brackets')
     datalogsig = stoLogS.forward(datasig)
     logbarycenter = torch.mean(datalogsig, dim=0)
     # Logsig to sig is not implemented in SIGNATORY
@@ -68,7 +68,7 @@ def mean_from_paths(data, depth, rescaling=False):
     channels = data.shape[2]
     datasig = signatory.signature(data, depth)
     if rescaling:  # normalization
-        datasig = utils.sigscaling(datasig, depth, channels)
+        datasig = sigscaling(datasig, depth, channels)
     datalogsig = signatory.signature_to_logsignature(
                  datasig, channels, depth, mode="brackets")
     logbarycenter = torch.mean(datalogsig, dim=0)

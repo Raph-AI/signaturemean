@@ -10,7 +10,7 @@ from pymanopt.solvers import SteepestDescent
 # from pymanopt.solvers import TrustRegions
 # from pymanopt.solvers import ParticleSwarm
 import pymanopt
-import utils
+from signaturemean.utils import datashift
 
 """
 
@@ -140,7 +140,7 @@ def mean(data, depth, n_init=1, init_len=10, init_paths=None,
 
     # CHECK IF : DATA STARTS AT ZERO
     if not torch.all(torch.abs(data[0,0,:])<1e-3):
-        data = utils.datashift(data)
+        data = datashift(data)
 
     # INITIALIZATION
     if init_len > stream:

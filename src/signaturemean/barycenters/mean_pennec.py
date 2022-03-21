@@ -2,8 +2,8 @@ import numpy as np
 import iisignature  # logsig to sig
 import torch
 import signatory
-from utils import sigprod
-from utils import siginv
+from signaturemean.utils import sigprod
+from signaturemean.utils import siginv
 
 
 def mean(datasig, depth, channels, max_iter_pe=5):
@@ -41,9 +41,9 @@ def mean(datasig, depth, channels, max_iter_pe=5):
     idx_rd = np.random.randint(batch)
     sigbarycenter = datasig[idx_rd]  # random initialization
     sigbarycenters = sigbarycenter.unsqueeze(0)
-    stoLogS = signatory.SignatureToLogSignature(channels, depth, mode='brackets')  
+    stoLogS = signatory.SignatureToLogSignature(channels, depth, mode='brackets')
     # brackets (= lyndon basis), because we then need LogSigtoSig
-    logStoS = iisignature.prepare(channels, depth, "S2")  
+    logStoS = iisignature.prepare(channels, depth, "S2")
     # S2 (= lyndon basis), corresponds to 'brackets' in Signatory
     n_iter = 0
     while n_iter < max_iter_pe:
