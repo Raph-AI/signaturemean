@@ -1,4 +1,8 @@
-# Signature barycenters
+# signaturemean
+
+A toolbox for signature averaging.
+
+## Signature barycenters
 
 This repository contains three approaches to compute a barycenter of _iterated integrals signatures_ of paths. The three methods are the following:
 
