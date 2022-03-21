@@ -6,7 +6,8 @@ from signaturemean.barycenters import mean_pathopt
 # from signaturemean.utils import dist_on_sigs
 # from scipy.spatial.distance import cdist
 from sklearn.utils import check_random_state
-from tsclusteringutils import (EmptyClusterError, _check_no_empty_cluster)
+from signaturemean.clustering.utils import EmptyClusterError
+from signaturemean.clustering.utils import _check_no_empty_cluster
 
 
 """
