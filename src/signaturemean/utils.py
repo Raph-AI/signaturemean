@@ -1,9 +1,6 @@
 import numpy as np
-# import iisignature  # logsig to sig
 import torch
-# import signatory
 import math
-# import time
 
 # def to_tens_alg(sig, sig_depth, channels):
 #     """
@@ -30,9 +27,14 @@ def to_tens_alg(sig, sig_depth, channels):
     Transform a signature output of signatory to an element of the truncated
     tensor algebra T^N((E)) i.e. subdivide the output tensor into a list of
     tensors, each one corresponding to a different signature order.
+
+    Parameters
+    ----------
+    sig : torch.tensor
+        A signature as obtained with `signatory.signature` module.
     """
     inds = np.cumsum([channels**k for k in range(1, sig_depth+1)])
-    free_tensor = [1.]  # list because each item has different size
+    free_tensor = [1.]
     ind_prev = 0
     for it, ind in enumerate(inds):
         shape = tuple([channels]*(it+1))
@@ -85,7 +87,7 @@ def sigprod(sig1, sig2, sig_depth, channels):
             f"Signatures should be of same truncated order (i.e. have the "
             f"same number of signature coefficients. Got {len(sig1)} "
             f"and {len(sig2)} signature coefficients"
-        )    
+        )
     tens1 = to_tens_alg(sig1, sig_depth, channels)
     tens2 = to_tens_alg(sig2, sig_depth, channels)
     prod = []
@@ -110,26 +112,29 @@ def sigprod(sig1, sig2, sig_depth, channels):
     return(prod)
 
 
-def sigprod_old(sig1, sig2, sig_depth, channels):
-    r"""
-    Product between two signatures (in other words: two elements of the tensor
-    algebra).
-    $a \otimes b = (c_0, ..., c_N)$
-    """
-    if len(sig1) != len(sig2):
-        raise("signatures must be of same truncated order")
-    tens1 = to_tens_alg(sig1, sig_depth, channels)
-    tens2 = to_tens_alg(sig2, sig_depth, channels)
-    prod = []
-    for idx_coord in range(sig_depth+1):
-        coord = 0.
-        for k in range(idx_coord+1):
-            A = tens1[k]
-            B = tens2[idx_coord-k]
-            coord += np.multiply.outer(A, B)
-        prod.append(coord)
-    prod = from_tens_alg(prod)
-    return(prod)
+# def sigprod_old(sig1, sig2, sig_depth, channels):
+#     r"""
+#     Product between two signatures (in other words: two elements of the tensor
+#     algebra).
+#     $a \otimes b = (c_0, ..., c_N)$
+#     """
+#     if len(sig1) != len(sig2):
+#         raise ValueError(
+#             f"Signatures must be of same truncated order : got {len(sig1)} "
+#             f"and {len(sig2)} signature coordinates"
+#             )
+#     tens1 = to_tens_alg(sig1, sig_depth, channels)
+#     tens2 = to_tens_alg(sig2, sig_depth, channels)
+#     prod = []
+#     for idx_coord in range(sig_depth+1):
+#         coord = 0.
+#         for k in range(idx_coord+1):
+#             A = tens1[k]
+#             B = tens2[idx_coord-k]
+#             coord += np.multiply.outer(A, B)
+#         prod.append(coord)
+#     prod = from_tens_alg(prod)
+#     return(prod)
 
 
 def to_tens_alg_inv(sig, sig_depth, channels):
@@ -170,11 +175,14 @@ def from_tens_alg_inv(free_tensor):
 def sigprod_inv(sig1, sig2, sig_depth, channels):
     """
     Variant of sigprod, ONLY FOR siginv FUNCTION.
-    Here sig1 and sig2 first value are scalar and not vector (vector is second
-    value).
+    Here sig1 and sig2 first item is a scalar and not a vector (vector is the
+    second item).
     """
     if len(sig1) != len(sig2):
-        raise("signatures must be of same truncated order")
+        raise ValueError(
+            f"Signatures must be of same truncated order : got {len(sig1)} "
+            f"and {len(sig2)} signature coordinates"
+            )
     tens1 = to_tens_alg_inv(sig1, sig_depth, channels)
     tens2 = to_tens_alg_inv(sig2, sig_depth, channels)
     prod = []
@@ -192,12 +200,18 @@ def sigprod_inv(sig1, sig2, sig_depth, channels):
 def siginv(sig, sig_depth, channels):
     r"""
     Compute the inverse of an element a of the signature Lie group with formula
-    $a^{-1} = \sum_{k \geq 0} (1-a)^{\otimes k}$
+    $a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}$ with m signature depth.
 
-    :input: torch tensor of shape [len(sig)]
+    Parameters
+    ----------
+    sig : torch.tensor
+        Signature to inverse.
     """
     if len(sig.shape) > 1:
-        raise("only one obs at a time")
+        raise ValueError(
+            f"Signature input must be one dimensional : got shape = "
+            f"{sig.shape}"
+            )
     idty = torch.zeros(len(sig))
     idty = torch.cat((torch.tensor([1.]), idty))
     inv = idty
@@ -502,8 +516,8 @@ def nsigterms(depth, channels):
 
 def depth_inds(depth, channels):
     """
-    Most libraries output the signature as a vector. This function outputs the
-    indices corresponding to first value of each signature depth in this
-    vector.
+    Most libraries computing the signature transform output the signature as a
+    vector. This function outputs the indices corresponding to first value of
+    each signature depth in this vector.
     """
     return np.cumsum([channels**k for k in range(1, depth+1)])

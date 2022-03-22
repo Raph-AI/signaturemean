@@ -21,15 +21,15 @@ def _check_no_empty_cluster(labels, n_clusters):
         # print(f"_check_no_empty_cluster : labels = {labels}")
         if torch.sum(labels == k) == 0:
             raise EmptyClusterError
-            
-def _check_full_length(centroids):
-    """Check that provided centroids are full-length (ie. not padded with
-    nans).
-    If some centroids are found to be padded with nans, TimeSeriesResampler is
-    used to resample the centroids.
-    """
-    resampler = TimeSeriesResampler(sz=centroids.shape[1])
-    return resampler.fit_transform(centroids)            
+
+# def _check_full_length(centroids):
+#     """Check that provided centroids are full-length (ie. not padded with
+#     nans).
+#     If some centroids are found to be padded with nans, TimeSeriesResampler is
+#     used to resample the centroids.
+#     """
+#     resampler = TimeSeriesResampler(sz=centroids.shape[1])
+#     return resampler.fit_transform(centroids)
 
 def _check_initial_guess(init, n_clusters):
     if hasattr(init, '__array__'):
