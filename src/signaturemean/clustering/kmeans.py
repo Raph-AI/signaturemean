@@ -64,7 +64,7 @@ class KMeansSignature():
     fit : check_array , _check_initial_guess
     """
 
-    def __init__(self, depth, channels, random_state,metric, n_clusters=3, max_iter=10, n_init=1,
+    def __init__(self, depth, channels, random_state, metric, n_clusters=3, max_iter=10, n_init=1,
                  init='random', averaging='LE',
                  minibatch=False, verbose=False, pathlen_pe=10):
         self.depth = depth
@@ -79,7 +79,6 @@ class KMeansSignature():
         self.minibatch = minibatch
         self.verbose = verbose
         self.pathlen_pe = pathlen_pe
-
 
     def _check_params(self, SX):
         # n_init
@@ -110,7 +109,6 @@ class KMeansSignature():
                     "stream and channels"
                 )
 
-
     def _fit_one_init(self, SX, rs):
         if self.init == "random":
             indices = rs.choice(SX.shape[0], self.n_clusters, replace=False)
@@ -136,7 +134,6 @@ class KMeansSignature():
                 print(f"iteration #{it} completed")
         return self
 
-
     def _transform(self, SX):
         if self.metric == "euclidean":
             if self.averaging == 'PO':
@@ -148,8 +145,7 @@ class KMeansSignature():
         else:
             raise ValueError(
                 f"Incorrect metric : {self.metric} (should be one of 'euclidean')"
-            )
-
+            ) # (TO DO) add signature metric
 
     def _assign(self, SX):
         dists = self._transform(SX)
@@ -159,7 +155,6 @@ class KMeansSignature():
         _check_no_empty_cluster(self.labels_, self.n_clusters)
         return matched_labels
 
-
     def _update_centroids(self, SX):
         for k in range(self.n_clusters):
             if self.averaging == 'LE':
@@ -168,10 +163,11 @@ class KMeansSignature():
                     depth=self.depth,
                     channels=self.channels)
             elif self.averaging == 'PE':
-                self.cluster_centers_[k] = mean_pennec.mean(
+                self.cluster_centers_[k], times = mean_pennec.mean(
                     SX[self.labels_ == k],
                     depth=self.depth,
                     channels=self.channels)
+                self.times_pe += times
             elif self.averaging == 'PO':
                 self.cluster_centers_[k] = mean_pathopt.mean(
                     SX[self.labels_ == k],
@@ -183,7 +179,6 @@ class KMeansSignature():
                     f"Incorrect averaging method : {self.averaging} (should be one of 'LE', 'PE')."
                 )
 
-
     def fit(self, SX):
         """
         Compute K-means algorithm.
@@ -193,114 +188,119 @@ class KMeansSignature():
         SX : (batch, channels**1 + ... + channels**depth) torch.tensor
             Array of signatures.
         """
+        self.times_pe = np.array([0., 0., 0., 0., 0.])
         self._check_params(SX)
         self.labels_ = None
         self.cluster_centers_ = None
         self.n_iter_ = 0
-        max_attempts = 1  # to change later
         rs = check_random_state(self.random_state)
         # _check_initial_guess(self.init, self.n_clusters)
-        n_attempts = 0
-        while n_attempts < max_attempts:
+        init_idx = 0
+        while init_idx < self.n_init:
             try:
                 self._fit_one_init(SX, rs)
-                n_attempts += 1
+                init_idx += 1
             except EmptyClusterError:
                 if self.verbose:
                     print("Interrupted because of empty cluster")
+        print(f"time sig inv: {self.times_pe[0]:.2f} sec")
+        print(f"time sig prods: {self.times_pe[1]:.2f} sec")
+        print(f"time stologs: {self.times_pe[2]:.2f} sec")
+        print(f"time logstos: {self.times_pe[3]:.2f} sec")
+        print(f"total time : {self.times_pe[4]:.2f} sec")
         return self
 
 
-def datascaling(data):
-    "Each observation is set to have total variation norm equals to 1."
-    batch, stream, channels = data.shape
-    print(f"stream = {stream}")
-    for i in range(batch):
-        tvnorm = np.array([(data[i, k, :] - data[i, k-1, :]).numpy() for k in range(1, stream)])
-        tvnorm = np.sum(tvnorm, axis=0)
-        tvnorm = np.linalg.norm(tvnorm)
-        print(f"tvnorm obs #{i} = {tvnorm}")
-        data[i] = data[i]/tvnorm
-        print(data[i])
-    return(data)
+# def datascaling(data):
+#     "Each observation is set to have total variation norm equals to 1."
+#     batch, stream, channels = data.shape
+#     print(f"stream = {stream}")
+#     for i in range(batch):
+#         tvnorm = np.array([(data[i, k, :] - data[i, k-1, :]).numpy() for k in range(1, stream)])
+#         tvnorm = np.sum(tvnorm, axis=0)
+#         tvnorm = np.linalg.norm(tvnorm)
+#         print(f"tvnorm obs #{i} = {tvnorm}")
+#         data[i] = data[i]/tvnorm
+#         print(data[i])
+#     return(data)
 
 
-def kmeans(n_clusters, signatures, depth, channels, max_iterations, seed,
-           mean_strat, dist, verbose=False, minibatch=False):
-    """
-    Perform k-means on a dataset of signatures.
-
-    Parameters
-    ----------
-    max_iterations : int
-        number of iterations before k-means stops
-    dist : string
-        Distance to use. One of 'euclidean', 'sigdist'.
-    mean_strat : string
-        Strategy to use for averaging. One of 'PE', 'LE'.
-
-    Notes
-    -----
-    Cluster associated to each observation for every k-means iteration is
-    written in the logs folder.
-    """
-    batch, siglen = signatures.shape
-    y_pred = -1*np.ones(batch, dtype='int')  # corresponding cluster index for each obs
-
-    # INITIALIZATION
-    # choose k obs randomly to start from
-    rng = np.random.default_rng(seed)
-    idx_init_centroid = rng.integers(batch, size=n_clusters)  # TO DO : replace with rng.choice
-    # # not random initialization
-    # idx_init_centroid = [7, 2, 1, 15, 3, 8, 5, 14, 0, 10]
-    centroids = signatures[idx_init_centroid]
-
-    n_iter = 0
-    while n_iter < max_iterations:
-        # if n_iter%2==0:
-        print(f"iteration #{n_iter}")
-
-        # 1. ASSIGN EACH OBS TO CLUSTER W/ NEAREST CENTROID
-        idx_obs = 0
-        while idx_obs < batch:
-            # print(f'{idx_obs} / {batch}')
-            sig = signatures[idx_obs]
-            id_cluster = 0
-            if dist=='euclidean':
-                dist_sigc = torch.linalg.norm(sig-centroids[0])
-                i = 0
-                while i<n_clusters:
-                    dist_sigc_i = torch.linalg.norm(sig-centroids[i])
-                    if dist_sigc_i < dist_sigc:
-                        id_cluster = i
-                        dist_sigc = dist_sigc_i
-                    i += 1
-            # elif dist=='sigdist':
-            #     distlist = [utils.dist_on_sigs(sig, centroids[i], depth, channels) for i in range(k)]  # SIG DISTANCE
-            y_pred[idx_obs] = id_cluster
-            idx_obs += 1
-
-        # 2. UPDATE MEAN VALUES TO MEAN OF CLUSTER
-        i = 0
-        while i < n_clusters:
-            to_average = signatures[y_pred==i, :]  # select obs of cluster i
-            if not len(to_average)==0:
-                if mean_strat=='PE':
-                    centroids[i] = mean_pennec.mean(to_average, depth, channels)
-                elif mean_strat=='LE':
-                    centroids[i] = mean_le.mean(to_average, depth, channels)
-                else:
-                    raise ValueError(f"Chosen mean strategy '{mean_strat}' do NOT exist.")
-            i += 1
-        if verbose:
-            # print(f"SUM  = {sum1}")
-            print(f"first cluster indices : {y_pred[:15]}")
-            print(f"mean values")
-            print((centroids[0])[14:24])
-            print((centroids[3])[14:24])
-            print((centroids[6])[14:24])
-        n_iter += 1
-    return(y_pred, centroids)
+# def kmeans(n_clusters, signatures, depth, channels, max_iterations, seed,
+#            mean_strat, dist, verbose=False, minibatch=False):
+#     """
+#     Perform k-means on a dataset of signatures.
+#
+#     Parameters
+#     ----------
+#     max_iterations : int
+#         number of iterations before k-means stops
+#     dist : string
+#         Distance to use. One of 'euclidean', 'sigdist'.
+#     mean_strat : string
+#         Strategy to use for averaging. One of 'PE', 'LE'.
+#
+#     Notes
+#     -----
+#     Cluster associated to each observation for every k-means iteration is
+#     written in the logs folder.
+#     """
+#     batch, siglen = signatures.shape
+#     y_pred = -1*np.ones(batch, dtype='int')  # corresponding cluster index for each obs
+#
+#     # INITIALIZATION
+#     # choose k obs randomly to start from
+#     rng = np.random.default_rng(seed)
+#     idx_init_centroid = rng.integers(batch, size=n_clusters)  # TO DO : replace with rng.choice
+#     # # not random initialization
+#     # idx_init_centroid = [7, 2, 1, 15, 3, 8, 5, 14, 0, 10]
+#     centroids = signatures[idx_init_centroid]
+#
+#     n_iter = 0
+#     while n_iter < max_iterations:
+#         # if n_iter%2==0:
+#         print(f"iteration #{n_iter}")
+#
+#         # 1. ASSIGN EACH OBS TO CLUSTER W/ NEAREST CENTROID
+#         idx_obs = 0
+#         while idx_obs < batch:
+#             # print(f'{idx_obs} / {batch}')
+#             sig = signatures[idx_obs]
+#             id_cluster = 0
+#             if dist=='euclidean':
+#                 dist_sigc = torch.linalg.norm(sig-centroids[0])
+#                 i = 0
+#                 while i<n_clusters:
+#                     dist_sigc_i = torch.linalg.norm(sig-centroids[i])
+#                     if dist_sigc_i < dist_sigc:
+#                         id_cluster = i
+#                         dist_sigc = dist_sigc_i
+#                     i += 1
+#             # elif dist=='sigdist':
+#             #     distlist = [utils.dist_on_sigs(sig, centroids[i], depth, channels) for i in range(k)]  # SIG DISTANCE
+#             y_pred[idx_obs] = id_cluster
+#             idx_obs += 1
+#
+#         # 2. UPDATE MEAN VALUES TO MEAN OF CLUSTER
+#         i = 0
+#         while i < n_clusters:
+#             to_average = signatures[y_pred==i, :]  # select obs of cluster i
+#             if not len(to_average)==0:
+#                 if mean_strat=='PE':
+#                     centroids[i] = mean_pennec.mean(to_average, depth, channels)
+#                 elif mean_strat=='LE':
+#                     centroids[i] = mean_le.mean(to_average, depth, channels)
+#                 else:
+#                     raise ValueError(f"Chosen mean strategy '{mean_strat}' do NOT exist.")
+#             i += 1
+#         if verbose:
+#             # print(f"SUM  = {sum1}")
+#             print(f"first cluster indices : {y_pred[:15]}")
+#             print(f"mean values")
+#             print((centroids[0])[14:24])
+#             print((centroids[3])[14:24])
+#             print((centroids[6])[14:24])
+#         n_iter += 1
+#     return(y_pred, centroids)
 
 
 # def kmeansInertia(SX, y, centroids, dist, channels=None, sigdepth=None):

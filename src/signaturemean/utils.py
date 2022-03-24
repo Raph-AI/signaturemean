@@ -514,10 +514,18 @@ def nsigterms(depth, channels):
     return channels*(channels**depth-1)//(channels-1)
 
 
-def depth_inds(depth, channels):
+def depth_inds(depth, channels, scalar=False):
     """
     Most libraries computing the signature transform output the signature as a
     vector. This function outputs the indices corresponding to first value of
     each signature depth in this vector.
+    Parameters
+    ----------
+    scalar : boolean
+        Presence of scalar as first value of the signature coordinates. By
+        default, `signatory` returns signature vectors without the scalar
+        value.
     """
+    if scalar:
+        return np.cumsum([channels**k for k in range(0, depth+1)])
     return np.cumsum([channels**k for k in range(1, depth+1)])

@@ -1,7 +1,7 @@
 import numpy as np
 import signatory
 import torch
-# Requires PyManOpt from Git (main branch) :
+# Caution ! Requires PyManOpt from Git (main branch) :
 # python3 -m pip install git+https://github.com/pymanopt/pymanopt.git@master
 from pymanopt.manifolds import Euclidean
 from pymanopt import Problem
@@ -14,7 +14,7 @@ from signaturemean.utils import datashift
 
 """
 
-The main function of this script is `mean`.
+The main function of this code is `mean`.
 
 """
 
