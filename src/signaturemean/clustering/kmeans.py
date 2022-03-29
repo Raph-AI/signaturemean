@@ -1,32 +1,25 @@
 import numpy as np
 import torch
-from signaturemean.barycenters import mean_pennec
-from signaturemean.barycenters import mean_le
-from signaturemean.barycenters import mean_pathopt
 # from signaturemean.utils import dist_on_sigs
 # from scipy.spatial.distance import cdist
 from sklearn.utils import check_random_state
+
+# Personal libraries
 from signaturemean.clustering.utils import EmptyClusterError
 from signaturemean.clustering.utils import _check_no_empty_cluster
-
+from signaturemean.barycenters import mean_pennec
+from signaturemean.barycenters import mean_le
+from signaturemean.barycenters import mean_tsoptim
 
 """
-# (TO DO)
-
-# S'inspirer de la classe `tslearn.clustering.TimeSeriesKMeans`
-
-class KMeansSig():
-    # definir KMeans pour stratégies signature :
-    #   * LE (log euclidean)
-    #   * PE (pennec)
-    #   * PO (path optimization)
+(TO DO)
 
     # 1. support CPU parallelization
 
     # 2. definir stratégie MiniBatchKMeans
 
     # 3. definir stratégie KMeans++
-# (END TO DO)
+
 """
 
 
@@ -48,8 +41,8 @@ class KMeansSignature():
     minibatch : boolean
         Apply MiniBatch strategy.
 
-    pathlen_pe : int
-        Only when using averaging='PE'. Path length (stream) to use for the
+    po_mean_stream : int
+        Only when using averaging='PO'. Path length (stream) to use for the
         optimization space.
 
     Attributes
@@ -66,7 +59,7 @@ class KMeansSignature():
 
     def __init__(self, depth, channels, random_state, metric, n_clusters=3, max_iter=10, n_init=1,
                  init='random', averaging='LE',
-                 minibatch=False, verbose=False, pathlen_pe=10):
+                 minibatch=False, verbose=False, po_mean_stream=10):
         self.depth = depth
         self.channels = channels
         self.n_clusters = n_clusters
@@ -78,7 +71,7 @@ class KMeansSignature():
         self.random_state = random_state
         self.minibatch = minibatch
         self.verbose = verbose
-        self.pathlen_pe = pathlen_pe
+        self.po_mean_stream = po_mean_stream
 
     def _check_params(self, SX):
         # n_init
@@ -115,21 +108,19 @@ class KMeansSignature():
             if self.averaging == 'LE' or self.averaging == 'PE':
                 self.cluster_centers_ = SX[indices].clone()
             elif self.averaging == 'PO':
-                stream_inds = np.sort(rs.choice(SX.shape[1]-2, self.pathlen_pe-2, replace=False))+1
+                stream_inds = np.sort(rs.choice(SX.shape[1]-2, self.po_mean_stream-2, replace=False))+1
                 # keep first and last value
                 stream_inds = np.concatenate((np.array([0]), stream_inds, np.array([SX.shape[1]-1])), 0)
                 self.cluster_centers_ = SX[indices].clone()
                 self.cluster_centers_ = self.cluster_centers_[:, stream_inds, :]
-
         else:
             raise ValueError(
                 f"Value for parameter 'init' is invalid : got {self.init}"
             )
         # self.cluster_centers_ = _check_full_length(self.cluster_centers_)  # should do this (check if NaNs)
-
         for it in range(self.max_iter):
             self._assign(SX)
-            self._update_centroids(SX)
+            self._update_centroids(SX, rs)
             if self.verbose:
                 print(f"iteration #{it} completed")
         return self
@@ -137,9 +128,11 @@ class KMeansSignature():
     def _transform(self, SX):
         if self.metric == "euclidean":
             if self.averaging == 'PO':
-                return torch.cdist(SX.reshape((SX.shape[0], -1)),
-                                   self.cluster_centers_.reshape((self.n_clusters, -1)),
-                                   p=2.0)
+                return torch.cdist(
+                    SX.reshape((SX.shape[0], -1)),
+                    self.cluster_centers_.reshape((self.n_clusters, -1)),
+                    p=2.0
+                )
             else:
                 return torch.cdist(SX, self.cluster_centers_, p=2.0)
         else:
@@ -155,28 +148,33 @@ class KMeansSignature():
         _check_no_empty_cluster(self.labels_, self.n_clusters)
         return matched_labels
 
-    def _update_centroids(self, SX):
+    def _update_centroids(self, SX, rs):
         for k in range(self.n_clusters):
             if self.averaging == 'LE':
                 self.cluster_centers_[k] = mean_le.mean(
                     SX[self.labels_ == k],
                     depth=self.depth,
-                    channels=self.channels)
+                    channels=self.channels
+                )
             elif self.averaging == 'PE':
                 self.cluster_centers_[k], times = mean_pennec.mean(
                     SX[self.labels_ == k],
                     depth=self.depth,
-                    channels=self.channels)
+                    channels=self.channels
+                )
                 self.times_pe += times
             elif self.averaging == 'PO':
-                self.cluster_centers_[k] = mean_pathopt.mean(
-                    SX[self.labels_ == k],
-                    depth=self.depth,
+                tsoptim = mean_tsoptim.TSoptim(
+                    self.depth, self.channels, random_state=self.random_state,
                     n_init=1,
-                    init_len=self.pathlen_pe)[0]  # (TO DO) output mean_pathopt.mean to change (list)
+                    mean_stream=self.po_mean_stream
+                )
+                tsoptim.fit(SX[self.labels_ == k])
+                self.cluster_centers_[k] = tsoptim.barycenter_ts
             else:
                 raise ValueError(
-                    f"Incorrect averaging method : {self.averaging} (should be one of 'LE', 'PE')."
+                    f"Incorrect averaging method : got {self.averaging}. "
+                    "Should be one of 'LE', 'PE', 'PO'"
                 )
 
     def fit(self, SX):
