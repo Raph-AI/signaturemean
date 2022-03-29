@@ -1,4 +1,5 @@
 numpy
 signatory
 iisignature
-torch
+torch==1.7.1+cu101
+pymanopt==0.2.5
