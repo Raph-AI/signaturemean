@@ -7,7 +7,6 @@ from pymanopt.manifolds import Euclidean
 from pymanopt import Problem
 from pymanopt.solvers import SteepestDescent  # ConjugateGradient, TrustRegions, ParticleSwarm
 import pymanopt
-from signaturemean.utils import datashift
 
 
 class TSoptim():
@@ -31,9 +30,10 @@ class TSoptim():
         but a time series.
     """
 
-    def __init__(self, depth, random_state, n_init=1, mean_stream=10,
+    def __init__(self, depth, channels, random_state, n_init=1, mean_stream=10,
                  metric='euclidean', penalty=None, max_iter=200, verbosity=False):
         self.depth = depth
+        self.channels = channels
         self.random_state = random_state
         self.n_init = n_init
         self.mean_stream = mean_stream
@@ -58,29 +58,43 @@ class TSoptim():
                 f"Input data should have three dimensions (batch, stream, "
                 f"channels), got {self.X.shape}"
             )
-        if not torch.equal(X[:, 0, :], torch.zeros(X.shape[0], X.shape[2])):
-            raise ValueError(
-                f"Input data must be shifted and scaled beforehand"
-                )
 
-    def _cost_all_args(self, ts):
-        return
+    def _create_cost(self):
+        @pymanopt.function.PyTorch
+        def cost(ts):
+            ts = ts.reshape((1, ts.shape[0], ts.shape[1]))
+            Sts = signatory.signature(ts, self.depth)
+            # if self.penalty == "lasso":
+            #    # (TO DO) do something
+            return torch.sum(torch.linalg.norm(self.SX-Sts, dim=1))
+        return cost
 
-    @pymanopt.function.PyTorch
-    def _cost(self, path):
-        return self._cost_all_args()
+    def _fit_one_init(self, X, rs):
+        idx_obs = rs.integers(X.shape[0], size=1)
+        idx_stream = np.sort(
+            rs.choice(
+                range(1, X.shape[1]-1),
+                size=self.mean_stream-2,
+                replace=False
+            )
+        )
 
-    def _fit_one_init(self, X, SX, rs):
-        idx = rs.integers(X.shape[0], size=1)
-        self.init_ts_ = X[idx].clone()
+        idx_stream = np.concatenate(([0], idx_stream, [X.shape[1]-1]))
+        self.init_ts_ = X[idx_obs][:, idx_stream, :].clone()
+        self.init_ts_ = self.init_ts_[0]
 
         manifold = Euclidean(X.shape[2], X.shape[1])
-        problem = Problem(manifold=manifold, cost=self._cost, verbosity=1)
-        solver = SteepestDescent(maxiter=self.max_iter, logverbosity=0)
+        cost = self._create_cost()
+        problem = Problem(manifold=manifold, cost=cost, verbosity=self.verbosity)
+        solver = SteepestDescent(maxiter=self.max_iter, logverbosity=self.verbosity)
 
-        self.init_ts_ = self.init_ts_.numpy()  # (TO DO) needed ?
-        self.barycenter_ts = solver.solve(problem, x=self.init_ts_)
-        self.barycenter_ts = torch.from_numpy(self.barycenter_ts)
+        self.init_ts_ = self.init_ts_.numpy()
+        bary = solver.solve(problem, x=self.init_ts_)
+        costbary = cost(bary)
+        if costbary < self.cost_value_:
+            bary = torch.from_numpy(bary)
+            self.cost_value_ = costbary
+            self.barycenter_ts = bary
         return self
 
     def fit(self, X):
@@ -94,10 +108,11 @@ class TSoptim():
         self._check_params(X)
         self.init_ts_ = None
         self.barycenter_ts = None
-        # batch, stream, channels = self.X.shape
-        SX = signatory.signature(X, self.depth)
+        self.cost_value_ = np.inf
+        rs = np.random.default_rng(self.random_state)
+        self.SX = signatory.signature(X, self.depth)
         init_idx = 0
         while init_idx < self.n_init:
-            self._fit_one_init(X, SX, self.random_state)
+            bary = self._fit_one_init(X, rs)
             init_idx += 1
         return self
