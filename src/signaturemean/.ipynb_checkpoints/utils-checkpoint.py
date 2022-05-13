@@ -232,8 +232,8 @@ def dist_on_sigs(g, h, depth, channels):
     It is defined as :
     $$d(g,h) := \max_{i=1, \dots, N} ||\pi_i(g^{-1} \otimes h)||^{1/i}$$
     with
-      * $\pi_i$ is the projection on the tensor space of dimension i
-      * ||.|| is the Frobenius norm on tensors i.e. sqrt(sum of squared values)
+        * $\pi_i$ is the projection on the tensor space of dimension i
+        * ||.|| is the Frobenius norm on tensors sqrt(sum of squared values)
 
     Parameters
     ----------
@@ -277,7 +277,7 @@ def dist_on_sigsL2(g, h, depth, channels):
     g_inv = siginv(g, depth, channels)
     prod = sigprod(g_inv, h, depth, channels)
     prod = prod[1:]  # skip scalar value (since i start at 1 in the formula)
-    norm = torch.sum(torch.pow(prod, 2))
+    norm = torch.sum(torch.pow(prod,2))
     return(norm)
 
 
@@ -385,8 +385,7 @@ def datashift(data):
         for idx_stream in range(stream):
             # print(data[idx_obs, idx_stream, :])
             # print(data0)
-            datashifted[idx_obs, idx_stream,
-                        :] = data[idx_obs, idx_stream, :] - data0
+            datashifted[idx_obs, idx_stream, :] = data[idx_obs, idx_stream, :] - data0
     return(datashifted)
 
 
@@ -397,8 +396,7 @@ def datascaling(data):
     batch, stream, channels = data.shape
     datascaled = data.clone()
     for i in range(batch):
-        variations = [np.linalg.norm(data[i, k, :]-data[i, k-1, :])
-                      for k in range(1, stream)]
+        variations = [np.linalg.norm(data[i, k, :]-data[i, k-1, :]) for k in range(1, stream)]
         tvnorm = np.sum(np.array(variations), axis=0)
         datascaled[i] = data[i]/tvnorm
     return(datascaled)
@@ -441,7 +439,6 @@ def sigscaling_reverse(sig, depth, channels):
         idx1, idx2 = inds[d-1], inds[d]
         sig[idx1:idx2] /= math.factorial(d)
     return(sig)
-
 
 def sigscalingv1(sig, depth, channels):
     """

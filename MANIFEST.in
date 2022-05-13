@@ -1,0 +1,4 @@
+recursive-include src/signaturemean *.c 
+recursive-include src/signaturemean *.pyx
+include src/signaturemean/*.c
+include src/signaturemean/*.pyx

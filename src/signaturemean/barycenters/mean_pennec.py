@@ -2,9 +2,61 @@ import numpy as np
 import iisignature  # logsig to sig
 import torch
 import signatory
-from signaturemean.utils import sigprod
-from signaturemean.utils import siginv
 import time
+from ..utils import sigprod
+from ..utils import siginv
+from ..cutils import sigprod as csigprod
+from ..cutils import siginv as csiginv
+from ..cutils import depth_inds as cdepth_inds
+
+# from signaturemean.utils import siginv
+# from signaturemean.utils import depth_inds
+# from cutils import siginv as csiginv
+# from cutils import sigprod as csigprod
+# from cutils import depth_inds as cdepth_inds
+
+
+def meancython(datasig, depth, channels, max_iter_pe=5):
+    batch = datasig.shape[0]
+    lensig1 = datasig.shape[1]+1
+    idx_rd = np.random.randint(batch)
+    sigbarycenter = datasig[idx_rd]  # random initialization
+    stoLogS = signatory.SignatureToLogSignature(
+        channels, depth, mode='brackets'
+        )
+    # brackets (= lyndon basis), because we then need LogSigtoSig
+    logStoS = iisignature.prepare(channels, depth, "S2")
+    # S2 (= lyndon basis), corresponds to 'brackets' in Signatory
+    datasig = datasig.numpy()
+    sigbarycenter = sigbarycenter.numpy()
+    inds0 = cdepth_inds(depth, channels)
+
+    n_iter = 0
+    while n_iter < max_iter_pe:
+        sigbarycenter1 = np.concatenate(([1.], sigbarycenter))
+        inv_sigbarycenter = csiginv(
+            sigbarycenter1, depth, channels, inds0, lensig1
+        )
+        inv_sigbarycenter1 = np.concatenate(([1.], inv_sigbarycenter))
+        mean_logsSX = 0.
+        for idx in range(batch):
+            obs = datasig[idx]
+            obs1 = np.concatenate(([1.], obs))
+            prod = csigprod(inv_sigbarycenter1, obs1, depth, channels, inds0)
+            prod = torch.from_numpy(prod)
+            prod = prod.unsqueeze(0)
+            logSX = stoLogS.forward(prod)
+            mean_logsSX += logSX
+        mean_logsSX = mean_logsSX*1./batch
+        exp_sigbarycenter = iisignature.logsigtosig(mean_logsSX[0], logStoS)
+        exp_sigbarycenter1 = np.concatenate(([1.], exp_sigbarycenter))
+        sigbarycenter_new = csigprod(
+            sigbarycenter1, exp_sigbarycenter1, depth, channels, inds0
+        )
+        sigbarycenter = sigbarycenter_new
+        n_iter += 1
+    return sigbarycenter
+
 
 def mean(datasig, depth, channels, max_iter_pe=5):
     """
@@ -46,8 +98,9 @@ def mean(datasig, depth, channels, max_iter_pe=5):
     batch = datasig.shape[0]
     idx_rd = np.random.randint(batch)
     sigbarycenter = datasig[idx_rd]  # random initialization
-    sigbarycenters = sigbarycenter.unsqueeze(0)
-    stoLogS = signatory.SignatureToLogSignature(channels, depth, mode='brackets')
+    # sigbarycenters = sigbarycenter.unsqueeze(0)
+    stoLogS = signatory.SignatureToLogSignature(
+        channels, depth, mode='brackets')
     # brackets (= lyndon basis), because we then need LogSigtoSig
     logStoS = iisignature.prepare(channels, depth, "S2")
     # S2 (= lyndon basis), corresponds to 'brackets' in Signatory

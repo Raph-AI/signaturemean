@@ -49,11 +49,13 @@ pathbarycenter = mean_pathopt.mean(paths, depth, n_init=3)  # a list of 3 paths
 
 ## Requirements
 
-See `requirements.txt`.
-
-**If using `mean_pathopt.py`:**
-
-- PyManOpt from git main branch : `python3 -m pip install git+https://github.com/pymanopt/pymanopt.git@master` (does not work with `pip install pymanopt`).
+1. See `requirements.txt`.
+2. Requires pip >= 10
+3. Signatory must be compatible with your `torch` package version. E.g.
+    - torch 1.7.1+cu101 (CUDA 10.1) `pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html`
+    - signatory 1.2.6.1.7.1 `pip install signatory==1.2.6.1.7.1 --no-cache-dir --force-reinstall`
+4. If using `mean_pathopt.py`:
+    - Requires PyManOpt from git: `python3 -m pip install git+https://github.com/pymanopt/pymanopt.git@master` (does not work with `pip install pymanopt`).
 
 
 <!-- ## Example -->
