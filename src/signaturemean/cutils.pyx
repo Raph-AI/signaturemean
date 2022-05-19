@@ -11,6 +11,8 @@ from libc.math cimport sqrt
 # from libcpp cimport bool
 
 
+# cpdef cnp.ndarray[double, ndim=1] sigprod():
+
 def sigprod(cnp.ndarray[double, ndim=1] sigA,
             cnp.ndarray[double, ndim=1] sigB,
             unsigned int depth,
@@ -35,25 +37,54 @@ def sigprod(cnp.ndarray[double, ndim=1] sigA,
     # cdef int[:] cinds = inds
     cdef double one = 1.0
     for idx_depth in range(2, depth+2):
-        sh2 += channels**(idx_depth-1)  # sh2 += (int)(pow(channels, idx_depth-1))
+        sh2 += channels**(idx_depth-1) # sh2 += (int)(pow(channels, idx_depth-1))
         for i in range(0, idx_depth):
-            # left = sigA[inds[i]:inds[i+1]]
-            # right = sigB[inds[idx_depth-i-1]:inds[idx_depth-i]]
-            # lenleft = len(left)
-            # lenright = len(right)
-
-            lenleft = inds[i+1]
-            lenleft -= inds[i]
+            lenleft = inds[i+1]-inds[i]
             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
-            dger(&lenright, &lenleft, &one, &sigB[inds[idx_depth-i-1]], &inc,
-                 &sigA[inds[i]], &inc, &prod[sh1], &lenright)
-            # Careful: fortran order ! (column major)
-
-            # outerprod = np.outer(left, right).ravel()
-            # # prod.base[sh1:sh2] += outerprod
-            # prod[sh1:sh2] += outerprod
+            dger(&lenright, &lenleft, &one,
+                 &sigB[inds[idx_depth-i-1]], &inc,
+                 &sigA[inds[i]], &inc,
+                 &prod[sh1], &lenright)
+            # Careful! fortran order (column major): sigA and sigB switched !
         sh1 = sh2
     return prod
+
+
+cpdef cnp.ndarray[double, ndim=1] sigprod_inplace(
+    cnp.ndarray[double, ndim=1] sigA,
+    cnp.ndarray[double, ndim=1] sigB,
+    unsigned int depth,
+    unsigned int channels,
+    cnp.ndarray[int, ndim=1] inds,
+    bint check_params = True
+    ):
+    if check_params:  # to be removed
+        if len(sigA) != inds[-1]:
+            raise ValueError(
+                f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+            )
+        if len(sigA) != len(sigB):
+            raise ValueError(
+                f"Signatures should be of same truncated order (i.e. have the "
+                f"same number of signature coefficients. Got {len(sigA)} "
+                f"and {len(sigB)} signature coefficients"
+            )
+    cdef double one = 1.0
+    cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+    for idx_depth in range(depth+1, 0, -1):
+        start = inds[idx_depth-1]
+        # for i in range(0, idx_depth):
+        for i in range(idx_depth-1, -1, -1):  # Careful! Must use sig[start:] in first iteration
+            lenleft = inds[i+1]-inds[i]
+            lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+            print(f"idx_d {idx_depth}, i {i}, lenl {lenleft}, lenr {lenright}")
+            print(f"sigA bef {sigA}")
+            dger(&lenright, &lenleft, &one,
+                 &sigB[inds[idx_depth-i-1]], &inc,
+                 &sigA[inds[i]], &inc,
+                 &sigA[start], &lenright)  # Careful! In place modif of `sigA`
+            print(f"sigA aft {sigA}") 
+    return sigA
 
 
 def siginv(cnp.ndarray[double, ndim=1] sig,
@@ -61,7 +92,7 @@ def siginv(cnp.ndarray[double, ndim=1] sig,
            unsigned int channels,
            cnp.ndarray[int, ndim=1] inds,
            unsigned int lensig
-          ):
+          ):  # don't need lensig: lensig = inds[-1] ??
     r"""
     Compute the inverse of an element a of the signature Lie group with formula
     $a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}$ with m signature depth.
@@ -88,6 +119,30 @@ def siginv(cnp.ndarray[double, ndim=1] sig,
         inv += summand[1:]
     # return inv[1:]
     return inv
+
+
+cpdef cnp.ndarray[double, ndim=1] siginv_inplace(
+    cnp.ndarray[double, ndim=1] sig,
+    unsigned int depth,
+    unsigned int channels,
+    cnp.ndarray[int, ndim=1] inds
+    ):
+    """
+    Inverse computation using this trick: 1+x+x^2+x^3 = 1+x(1+x(1+x))
+    where we replace x with (1-a).
+    I need supplementary memory for (2-a) only.
+    """
+    cdef cnp.ndarray[double, ndim=1] right = np.empty(inds[-1], dtype=cnp.dtype("d"))
+    sigbis = sig.copy()
+    sigbis = -sigbis
+    sigbis[0] += 1.  # sigbis is (1-a)
+    sig = -sig
+    sig[0] += 2.  # sig is (2-a)
+    cdef unsigned int i = 0
+    for i in range(depth):
+        sig = sigprod_inplace(sigbis, sig, depth, channels, inds, True)
+        sig[0] += 1.
+    return sig
 
 
 def sigdist(cnp.ndarray[double, ndim=1] sigA,
@@ -139,7 +194,7 @@ def sigdist(cnp.ndarray[double, ndim=1] sigA,
 # }
 
 
-def depth_inds(int depth, int channels):
+cpdef cnp.ndarray[int, ndim=1] depth_inds(int depth, int channels):
     """
     Most libraries computing the signature transform output the signature as a
     vector. This function outputs the indices corresponding to first value of
@@ -154,20 +209,3 @@ def depth_inds(int depth, int channels):
         sum +=  channels**i
         inds[i+1] = sum
     return(inds)
-
-
-# def depth_inds(depth, channels, scalar=False):
-#     """
-#     Most libraries computing the signature transform output the signature as a
-#     vector. This function outputs the indices corresponding to first value of
-#     each signature depth in this vector.
-#     Parameters
-#     ----------
-#     scalar : boolean
-#         Presence of scalar as first value of the signature coordinates. By
-#         default, `signatory` returns signature vectors without the scalar
-#         value.
-#     """
-#     if scalar:
-#         return np.cumsum([channels**k for k in range(0, depth+1)])
-#     return np.cumsum([channels**k for k in range(1, depth+1)])
