@@ -2,21 +2,44 @@ import numpy as np
 import iisignature  # logsig to sig
 import torch
 import signatory
-import time
-from ..utils import sigprod
-from ..utils import siginv
+# from ..utils import sigprod
+# from ..utils import siginv
 from ..cutils import sigprod as csigprod
 from ..cutils import siginv as csiginv
 from ..cutils import depth_inds as cdepth_inds
 
-# from signaturemean.utils import siginv
-# from signaturemean.utils import depth_inds
-# from cutils import siginv as csiginv
-# from cutils import sigprod as csigprod
-# from cutils import depth_inds as cdepth_inds
 
+def mean(datasig, depth, channels, max_iter_pe=5):
+    """
+    Compute the Group Exponential Mean from a dataset of signatures.
 
-def meancython(datasig, depth, channels, max_iter_pe=5):
+    Parameters
+    ----------
+    datasig : (batch, stream, channels) torch.Tensor
+        Dataset containing signatures over which the mean is computed,
+        along the batch axis.
+
+    depth : int
+        Maximum depth of the signature which is used to compute the mean.
+
+    max_iter_pe : int (default=5)
+        Number of iterations until the algorithm stops. Usually, requires
+        less than 10 iterations to converge to a solution.
+
+    Returns
+    -------
+    sigbarycenter : (channels**1 + ... + channels**depth) torch.Tensor
+        A signature which is the barycenter of the signatures in
+        datasig.
+
+    References
+    ----------
+    Pennec, Xavier, and Vincent Arsigny. 2013. “Exponential Barycenters of the
+    Canonical Cartan Connection and Invariant Means on Lie Groups.” In Matrix
+    Information Geometry, edited by Frank Nielsen and Rajendra Bhatia, 123–66.
+    Berlin, Heidelberg: Springer Berlin Heidelberg.
+    https://doi.org/10.1007/978-3-642-30232-9_7
+    """
     batch = datasig.shape[0]
     lensig1 = datasig.shape[1]+1
     idx_rd = np.random.randint(batch)
@@ -58,86 +81,86 @@ def meancython(datasig, depth, channels, max_iter_pe=5):
     return sigbarycenter
 
 
-def mean(datasig, depth, channels, max_iter_pe=5):
-    """
-    Compute the Group Exponential Mean from a dataset of signatures.
-
-    Parameters
-    ----------
-    datasig : (batch, stream, channels) torch.Tensor
-        Dataset containing signatures over which the mean is computed,
-        along the batch axis.
-
-    depth : int
-        Maximum depth of the signature which is used to compute the mean.
-
-    max_iter_pe : int (default=5)
-        Number of iterations until the algorithm stops. Usually, requires
-        less than 10 iterations to converge to a solution.
-
-    Returns
-    -------
-    sigbarycenter : (channels**1 + ... + channels**depth) torch.Tensor
-        A signature which is the barycenter of the signatures in
-        datasig.
-
-    References
-    ----------
-    Pennec, Xavier, and Vincent Arsigny. 2013. “Exponential Barycenters of the
-    Canonical Cartan Connection and Invariant Means on Lie Groups.” In Matrix
-    Information Geometry, edited by Frank Nielsen and Rajendra Bhatia, 123–66.
-    Berlin, Heidelberg: Springer Berlin Heidelberg.
-    https://doi.org/10.1007/978-3-642-30232-9_7.
-    """
-    timesiginv = 0.
-    timesigprods = 0.
-    timestologs = 0.
-    timelogstos = 0.
-    totaltime = 0.
-    ts1 = time.time()
-    batch = datasig.shape[0]
-    idx_rd = np.random.randint(batch)
-    sigbarycenter = datasig[idx_rd]  # random initialization
-    # sigbarycenters = sigbarycenter.unsqueeze(0)
-    stoLogS = signatory.SignatureToLogSignature(
-        channels, depth, mode='brackets')
-    # brackets (= lyndon basis), because we then need LogSigtoSig
-    logStoS = iisignature.prepare(channels, depth, "S2")
-    # S2 (= lyndon basis), corresponds to 'brackets' in Signatory
-    n_iter = 0
-    while n_iter < max_iter_pe:
-        ts = time.time()
-        inv_sigbarycenter = siginv(sigbarycenter, depth, channels)
-        timesiginv += time.time() - ts
-        mean_logsSX = 0.
-        for idx in range(batch):
-            ts = time.time()
-            prod = sigprod(inv_sigbarycenter, datasig[idx], depth, channels)
-            timesigprods += time.time() - ts
-            prod = prod.unsqueeze(0)
-            ts = time.time()
-            logSX = stoLogS.forward(prod)
-            timestologs += time.time() - ts
-            mean_logsSX += logSX
-        mean_logsSX = mean_logsSX*1./batch
-        ts = time.time()
-        exp_sigbarycenter = torch.tensor(iisignature.logsigtosig(
-                                         mean_logsSX[0], logStoS))
-        timelogstos += time.time()-ts
-        ts = time.time()
-        sigbarycenter_new = sigprod(sigbarycenter, exp_sigbarycenter, depth,
-                                    channels)
-        timesigprods += time.time() - ts
-        sigbarycenter = sigbarycenter_new
-        n_iter += 1
-    totaltime = time.time()-ts1
-    # print(f"time sig inv: {timesiginv:.2f} sec")
-    # print(f"time sig prods: {timesigprods:.2f} sec")
-    # print(f"time stologs: {timestologs:.2f} sec")
-    # print(f"time logstos: {timelogstos:.2f} sec")
-    # print(f"total time : {totaltime:.2f} sec")
-    times = [timesiginv, timesigprods, timestologs, timelogstos, totaltime]
-    return sigbarycenter, times
+# def mean(datasig, depth, channels, max_iter_pe=5):
+#     """
+#     Compute the Group Exponential Mean from a dataset of signatures.
+#
+#     Parameters
+#     ----------
+#     datasig : (batch, stream, channels) torch.Tensor
+#         Dataset containing signatures over which the mean is computed,
+#         along the batch axis.
+#
+#     depth : int
+#         Maximum depth of the signature which is used to compute the mean.
+#
+#     max_iter_pe : int (default=5)
+#         Number of iterations until the algorithm stops. Usually, requires
+#         less than 10 iterations to converge to a solution.
+#
+#     Returns
+#     -------
+#     sigbarycenter : (channels**1 + ... + channels**depth) torch.Tensor
+#         A signature which is the barycenter of the signatures in
+#         datasig.
+#
+#     References
+#     ----------
+#     Pennec, Xavier, and Vincent Arsigny. 2013. “Exponential Barycenters of the
+#     Canonical Cartan Connection and Invariant Means on Lie Groups.” In Matrix
+#     Information Geometry, edited by Frank Nielsen and Rajendra Bhatia, 123–66.
+#     Berlin, Heidelberg: Springer Berlin Heidelberg.
+#     https://doi.org/10.1007/978-3-642-30232-9_7.
+#     """
+#     timesiginv = 0.
+#     timesigprods = 0.
+#     timestologs = 0.
+#     timelogstos = 0.
+#     totaltime = 0.
+#     ts1 = time.time()
+#     batch = datasig.shape[0]
+#     idx_rd = np.random.randint(batch)
+#     sigbarycenter = datasig[idx_rd]  # random initialization
+#     # sigbarycenters = sigbarycenter.unsqueeze(0)
+#     stoLogS = signatory.SignatureToLogSignature(
+#         channels, depth, mode='brackets')
+#     # brackets (= lyndon basis), because we then need LogSigtoSig
+#     logStoS = iisignature.prepare(channels, depth, "S2")
+#     # S2 (= lyndon basis), corresponds to 'brackets' in Signatory
+#     n_iter = 0
+#     while n_iter < max_iter_pe:
+#         ts = time.time()
+#         inv_sigbarycenter = siginv(sigbarycenter, depth, channels)
+#         timesiginv += time.time() - ts
+#         mean_logsSX = 0.
+#         for idx in range(batch):
+#             ts = time.time()
+#             prod = sigprod(inv_sigbarycenter, datasig[idx], depth, channels)
+#             timesigprods += time.time() - ts
+#             prod = prod.unsqueeze(0)
+#             ts = time.time()
+#             logSX = stoLogS.forward(prod)
+#             timestologs += time.time() - ts
+#             mean_logsSX += logSX
+#         mean_logsSX = mean_logsSX*1./batch
+#         ts = time.time()
+#         exp_sigbarycenter = torch.tensor(iisignature.logsigtosig(
+#                                          mean_logsSX[0], logStoS))
+#         timelogstos += time.time()-ts
+#         ts = time.time()
+#         sigbarycenter_new = sigprod(sigbarycenter, exp_sigbarycenter, depth,
+#                                     channels)
+#         timesigprods += time.time() - ts
+#         sigbarycenter = sigbarycenter_new
+#         n_iter += 1
+#     totaltime = time.time()-ts1
+#     # print(f"time sig inv: {timesiginv:.2f} sec")
+#     # print(f"time sig prods: {timesigprods:.2f} sec")
+#     # print(f"time stologs: {timestologs:.2f} sec")
+#     # print(f"time logstos: {timelogstos:.2f} sec")
+#     # print(f"total time : {totaltime:.2f} sec")
+#     times = [timesiginv, timesigprods, timestologs, timelogstos, totaltime]
+#     return sigbarycenter, times
 
 
 # def mean_from_paths(data, depth, max_iter_pe=5):

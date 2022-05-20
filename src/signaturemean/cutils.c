@@ -924,7 +924,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "src/signaturemean/cutils.pyx",
+  "cutils.pyx",
   "__init__.pxd",
   "type.pxd",
 };
@@ -965,7 +965,7 @@ typedef struct {
 } __Pyx_BufFmt_Context;
 
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":690
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":690
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -974,7 +974,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":691
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":691
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -983,7 +983,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":692
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":692
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -992,7 +992,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":693
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":693
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1001,7 +1001,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":697
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":697
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1010,7 +1010,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":698
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":698
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1019,7 +1019,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":699
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":699
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1028,7 +1028,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":700
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":700
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1037,7 +1037,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":704
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":704
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1046,7 +1046,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":705
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":705
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1055,7 +1055,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":714
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":714
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1064,7 +1064,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":715
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":715
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -1073,7 +1073,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":716
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":716
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1082,7 +1082,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":718
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":718
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1091,7 +1091,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":719
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":719
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -1100,7 +1100,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":720
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":720
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1109,7 +1109,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":722
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":722
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1118,7 +1118,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":723
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":723
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1127,7 +1127,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":725
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":725
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1136,7 +1136,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":726
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":726
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1145,7 +1145,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":727
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":727
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1198,7 +1198,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 
 /*--- Type declarations ---*/
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":729
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":729
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1207,7 +1207,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":730
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":730
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1216,7 +1216,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":731
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":731
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1225,7 +1225,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":733
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":733
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -1233,6 +1233,32 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  * cdef inline object PyArray_MultiIterNew1(a):
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
+struct __pyx_opt_args_13signaturemean_6cutils_sigrprod_inplace;
+struct __pyx_opt_args_13signaturemean_6cutils_siglprod_inplace;
+
+/* "signaturemean/cutils.pyx":53
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] sigrprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+struct __pyx_opt_args_13signaturemean_6cutils_sigrprod_inplace {
+  int __pyx_n;
+  int check_params;
+};
+
+/* "signaturemean/cutils.pyx":92
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] siglprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+struct __pyx_opt_args_13signaturemean_6cutils_siglprod_inplace {
+  int __pyx_n;
+  int check_params;
+};
 
 /* --- Runtime support code (head) --- */
 /* Refnanny.proto */
@@ -1506,6 +1532,9 @@ static CYTHON_INLINE PyObject *__Pyx__GetModuleGlobalName(PyObject *name);
 /* ExtTypeTest.proto */
 static CYTHON_INLINE int __Pyx_TypeTest(PyObject *obj, PyTypeObject *type);
 
+/* CIntToPyUnicode.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyUnicode_From_int(int value, Py_ssize_t width, char padding_char, char format_char);
+
 /* PyObjectCallNoArg.proto */
 #if CYTHON_COMPILING_IN_CPYTHON
 static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func);
@@ -1543,6 +1572,24 @@ static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Fast(PyObject *o, Py_ssize_t i,
 static CYTHON_INLINE PyObject *__Pyx_PyObject_GetItem(PyObject *obj, PyObject* key);
 #else
 #define __Pyx_PyObject_GetItem(obj, key)  PyObject_GetItem(obj, key)
+#endif
+
+/* SetItemInt.proto */
+#define __Pyx_SetItemInt(o, i, v, type, is_signed, to_py_func, is_list, wraparound, boundscheck)\
+    (__Pyx_fits_Py_ssize_t(i, type, is_signed) ?\
+    __Pyx_SetItemInt_Fast(o, (Py_ssize_t)i, v, is_list, wraparound, boundscheck) :\
+    (is_list ? (PyErr_SetString(PyExc_IndexError, "list assignment index out of range"), -1) :\
+               __Pyx_SetItemInt_Generic(o, to_py_func(i), v)))
+static int __Pyx_SetItemInt_Generic(PyObject *o, PyObject *j, PyObject *v);
+static CYTHON_INLINE int __Pyx_SetItemInt_Fast(PyObject *o, Py_ssize_t i, PyObject *v,
+                                               int is_list, int wraparound, int boundscheck);
+
+/* PyFloatBinop.proto */
+#if !CYTHON_COMPILING_IN_PYPY
+static PyObject* __Pyx_PyFloat_AddObjC(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check);
+#else
+#define __Pyx_PyFloat_AddObjC(op1, op2, floatval, inplace, zerodivision_check)\
+    (inplace ? PyNumber_InPlaceAdd(op1, op2) : PyNumber_Add(op1, op2))
 #endif
 
 /* GetTopmostException.proto */
@@ -1832,6 +1879,10 @@ static void (*__pyx_f_5scipy_6linalg_11cython_blas_dger)(int *, int *, __pyx_t_5
 /* Module declarations from 'libc.math' */
 
 /* Module declarations from 'signaturemean.cutils' */
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_sigrprod_inplace(PyArrayObject *, PyArrayObject *, unsigned int, unsigned int, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_13signaturemean_6cutils_sigrprod_inplace *__pyx_optional_args); /*proto*/
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_siglprod_inplace(PyArrayObject *, PyArrayObject *, unsigned int, unsigned int, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_13signaturemean_6cutils_siglprod_inplace *__pyx_optional_args); /*proto*/
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_siginv_inplace(PyArrayObject *, unsigned int, unsigned int, PyArrayObject *, int __pyx_skip_dispatch); /*proto*/
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_depth_inds(int, int, int __pyx_skip_dispatch); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_int = { "int", NULL, sizeof(int), { 0 }, 0, IS_UNSIGNED(int) ? 'U' : 'I', IS_UNSIGNED(int), 0 };
 #define __Pyx_MODULE_NAME "signaturemean.cutils"
@@ -1846,7 +1897,9 @@ static const char __pyx_k_d[] = "d";
 static const char __pyx_k_i[] = "i";
 static const char __pyx_k_k[] = "k";
 static const char __pyx_k_n[] = "n";
+static const char __pyx_k__3[] = " ";
 static const char __pyx_k_np[] = "np";
+static const char __pyx_k_Got[] = ". Got ";
 static const char __pyx_k_and[] = " and ";
 static const char __pyx_k_inc[] = "inc";
 static const char __pyx_k_inv[] = "inv";
@@ -1854,7 +1907,6 @@ static const char __pyx_k_one[] = "one";
 static const char __pyx_k_sh1[] = "sh1";
 static const char __pyx_k_sh2[] = "sh2";
 static const char __pyx_k_sig[] = "sig";
-static const char __pyx_k_sum[] = "sum";
 static const char __pyx_k_copy[] = "copy";
 static const char __pyx_k_dist[] = "dist";
 static const char __pyx_k_ind1[] = "ind1";
@@ -1886,31 +1938,34 @@ static const char __pyx_k_indsdiff[] = "indsdiff";
 static const char __pyx_k_lenright[] = "lenright";
 static const char __pyx_k_idx_depth[] = "idx_depth";
 static const char __pyx_k_ValueError[] = "ValueError";
-static const char __pyx_k_depth_inds[] = "depth_inds";
+static const char __pyx_k_cutils_pyx[] = "cutils.pyx";
 static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_check_params[] = "check_params";
 static const char __pyx_k_current_dist[] = "current_dist";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_signaturemean_cutils[] = "signaturemean.cutils";
 static const char __pyx_k_signature_coefficients[] = " signature coefficients";
-static const char __pyx_k_src_signaturemean_cutils_pyx[] = "src/signaturemean/cutils.pyx";
+static const char __pyx_k_Signatures_should_be_of_length[] = "Signatures should be of length ";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_First_value_of_sigA_and_sigB_sho[] = "First value of sigA and sigB should be 1.";
 static const char __pyx_k_Signatures_should_be_of_same_tru[] = "Signatures should be of same truncated order (i.e. have the same number of signature coefficients. Got ";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 static PyObject *__pyx_kp_u_First_value_of_sigA_and_sigB_sho;
+static PyObject *__pyx_kp_u_Got;
 static PyObject *__pyx_n_s_ImportError;
+static PyObject *__pyx_kp_u_Signatures_should_be_of_length;
 static PyObject *__pyx_kp_u_Signatures_should_be_of_same_tru;
 static PyObject *__pyx_n_s_ValueError;
+static PyObject *__pyx_kp_u__3;
 static PyObject *__pyx_kp_u_and;
 static PyObject *__pyx_n_s_channels;
 static PyObject *__pyx_n_s_check_params;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_copy;
 static PyObject *__pyx_n_s_current_dist;
+static PyObject *__pyx_kp_s_cutils_pyx;
 static PyObject *__pyx_n_u_d;
 static PyObject *__pyx_n_s_depth;
-static PyObject *__pyx_n_s_depth_inds;
 static PyObject *__pyx_n_s_dist;
 static PyObject *__pyx_n_s_dtype;
 static PyObject *__pyx_n_s_empty;
@@ -1950,36 +2005,36 @@ static PyObject *__pyx_n_s_siginv;
 static PyObject *__pyx_kp_u_signature_coefficients;
 static PyObject *__pyx_n_s_signaturemean_cutils;
 static PyObject *__pyx_n_s_sigprod;
-static PyObject *__pyx_kp_s_src_signaturemean_cutils_pyx;
-static PyObject *__pyx_n_s_sum;
 static PyObject *__pyx_n_s_summand;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_zeros;
 static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, int __pyx_v_check_params); /* proto */
-static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sig, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig); /* proto */
-static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig); /* proto */
-static PyObject *__pyx_pf_13signaturemean_6cutils_6depth_inds(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_depth, int __pyx_v_channels); /* proto */
+static PyObject *__pyx_pf_13signaturemean_6cutils_2sigrprod_inplace(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, int __pyx_v_check_params); /* proto */
+static PyObject *__pyx_pf_13signaturemean_6cutils_4siglprod_inplace(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, int __pyx_v_check_params); /* proto */
+static PyObject *__pyx_pf_13signaturemean_6cutils_6siginv(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sig, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig); /* proto */
+static PyObject *__pyx_pf_13signaturemean_6cutils_8siginv_inplace(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sig, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds); /* proto */
+static PyObject *__pyx_pf_13signaturemean_6cutils_10sigdist(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig); /* proto */
+static PyObject *__pyx_pf_13signaturemean_6cutils_12depth_inds(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_depth, int __pyx_v_channels); /* proto */
+static PyObject *__pyx_float_1_;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_neg_1;
 static PyObject *__pyx_tuple_;
-static PyObject *__pyx_slice__3;
 static PyObject *__pyx_slice__4;
+static PyObject *__pyx_slice__5;
 static PyObject *__pyx_tuple__2;
-static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
 static PyObject *__pyx_tuple__7;
 static PyObject *__pyx_tuple__8;
-static PyObject *__pyx_tuple__10;
-static PyObject *__pyx_tuple__12;
-static PyObject *__pyx_tuple__14;
-static PyObject *__pyx_codeobj__9;
-static PyObject *__pyx_codeobj__11;
-static PyObject *__pyx_codeobj__13;
-static PyObject *__pyx_codeobj__15;
+static PyObject *__pyx_tuple__9;
+static PyObject *__pyx_tuple__11;
+static PyObject *__pyx_tuple__13;
+static PyObject *__pyx_codeobj__10;
+static PyObject *__pyx_codeobj__12;
+static PyObject *__pyx_codeobj__14;
 /* Late includes */
 
-/* "signaturemean/cutils.pyx":14
- * 
+/* "signaturemean/cutils.pyx":16
+ * # cpdef cnp.ndarray[double, ndim=1] sigprod():
  * 
  * def sigprod(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
  *             cnp.ndarray[double, ndim=1] sigB,
@@ -2033,25 +2088,25 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_1sigprod(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sigB)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 1); __PYX_ERR(0, 14, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 1); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_depth)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 2); __PYX_ERR(0, 14, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 2); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channels)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 3); __PYX_ERR(0, 14, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 3); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_inds)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 4); __PYX_ERR(0, 14, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, 4); __PYX_ERR(0, 16, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -2061,7 +2116,7 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_1sigprod(PyObject *__pyx_self,
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "sigprod") < 0)) __PYX_ERR(0, 14, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "sigprod") < 0)) __PYX_ERR(0, 16, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2078,14 +2133,14 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_1sigprod(PyObject *__pyx_self,
     }
     __pyx_v_sigA = ((PyArrayObject *)values[0]);
     __pyx_v_sigB = ((PyArrayObject *)values[1]);
-    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
-    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[3]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 18, __pyx_L3_error)
+    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[3]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 19, __pyx_L3_error)
     __pyx_v_inds = ((PyArrayObject *)values[4]);
     if (values[5]) {
-      __pyx_v_check_params = __Pyx_PyObject_IsTrue(values[5]); if (unlikely((__pyx_v_check_params == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 19, __pyx_L3_error)
+      __pyx_v_check_params = __Pyx_PyObject_IsTrue(values[5]); if (unlikely((__pyx_v_check_params == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L3_error)
     } else {
 
-      /* "signaturemean/cutils.pyx":19
+      /* "signaturemean/cutils.pyx":21
  *             unsigned int channels,
  *             cnp.ndarray[int, ndim=1] inds,
  *             bint check_params = True             # <<<<<<<<<<<<<<
@@ -2097,19 +2152,19 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_1sigprod(PyObject *__pyx_self,
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 14, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("sigprod", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 16, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("signaturemean.cutils.sigprod", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigA), __pyx_ptype_5numpy_ndarray, 1, "sigA", 0))) __PYX_ERR(0, 14, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigB), __pyx_ptype_5numpy_ndarray, 1, "sigB", 0))) __PYX_ERR(0, 15, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 18, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigA), __pyx_ptype_5numpy_ndarray, 1, "sigA", 0))) __PYX_ERR(0, 16, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigB), __pyx_ptype_5numpy_ndarray, 1, "sigB", 0))) __PYX_ERR(0, 17, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 20, __pyx_L1_error)
   __pyx_r = __pyx_pf_13signaturemean_6cutils_sigprod(__pyx_self, __pyx_v_sigA, __pyx_v_sigB, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, __pyx_v_check_params);
 
-  /* "signaturemean/cutils.pyx":14
- * 
+  /* "signaturemean/cutils.pyx":16
+ * # cpdef cnp.ndarray[double, ndim=1] sigprod():
  * 
  * def sigprod(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
  *             cnp.ndarray[double, ndim=1] sigB,
@@ -2189,21 +2244,21 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
   __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 14, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 16, __pyx_L1_error)
   }
   __pyx_pybuffernd_sigA.diminfo[0].strides = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigA.diminfo[0].shape = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 14, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 16, __pyx_L1_error)
   }
   __pyx_pybuffernd_sigB.diminfo[0].strides = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigB.diminfo[0].shape = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 14, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 16, __pyx_L1_error)
   }
   __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
 
-  /* "signaturemean/cutils.pyx":21
+  /* "signaturemean/cutils.pyx":23
  *             bint check_params = True
  *            ):
  *     if check_params:             # <<<<<<<<<<<<<<
@@ -2213,7 +2268,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
   __pyx_t_1 = (__pyx_v_check_params != 0);
   if (__pyx_t_1) {
 
-    /* "signaturemean/cutils.pyx":22
+    /* "signaturemean/cutils.pyx":24
  *            ):
  *     if check_params:
  *         if sigA[0] != 1. or sigB[0] != 1.:             # <<<<<<<<<<<<<<
@@ -2228,7 +2283,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_sigA.diminfo[0].shape)) __pyx_t_3 = 0;
     if (unlikely(__pyx_t_3 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_3);
-      __PYX_ERR(0, 22, __pyx_L1_error)
+      __PYX_ERR(0, 24, __pyx_L1_error)
     }
     __pyx_t_4 = (((*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigA.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_sigA.diminfo[0].strides)) != 1.) != 0);
     if (!__pyx_t_4) {
@@ -2244,27 +2299,27 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
     } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_sigB.diminfo[0].shape)) __pyx_t_3 = 0;
     if (unlikely(__pyx_t_3 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_3);
-      __PYX_ERR(0, 22, __pyx_L1_error)
+      __PYX_ERR(0, 24, __pyx_L1_error)
     }
     __pyx_t_4 = (((*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigB.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_sigB.diminfo[0].strides)) != 1.) != 0);
     __pyx_t_1 = __pyx_t_4;
     __pyx_L5_bool_binop_done:;
     if (unlikely(__pyx_t_1)) {
 
-      /* "signaturemean/cutils.pyx":23
+      /* "signaturemean/cutils.pyx":25
  *     if check_params:
  *         if sigA[0] != 1. or sigB[0] != 1.:
  *             raise ValueError(             # <<<<<<<<<<<<<<
  *                 "First value of sigA and sigB should be 1."
  *             )
  */
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 23, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 25, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_Raise(__pyx_t_5, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __PYX_ERR(0, 23, __pyx_L1_error)
+      __PYX_ERR(0, 25, __pyx_L1_error)
 
-      /* "signaturemean/cutils.pyx":22
+      /* "signaturemean/cutils.pyx":24
  *            ):
  *     if check_params:
  *         if sigA[0] != 1. or sigB[0] != 1.:             # <<<<<<<<<<<<<<
@@ -2273,7 +2328,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
  */
     }
 
-    /* "signaturemean/cutils.pyx":21
+    /* "signaturemean/cutils.pyx":23
  *             bint check_params = True
  *            ):
  *     if check_params:             # <<<<<<<<<<<<<<
@@ -2282,26 +2337,26 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
  */
   }
 
-  /* "signaturemean/cutils.pyx":26
+  /* "signaturemean/cutils.pyx":28
  *                 "First value of sigA and sigB should be 1."
  *             )
  *     if len(sigA) != len(sigB):             # <<<<<<<<<<<<<<
  *         raise ValueError(
  *             f"Signatures should be of same truncated order (i.e. have the "
  */
-  __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 26, __pyx_L1_error)
-  __pyx_t_7 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 26, __pyx_L1_error)
+  __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_7 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 28, __pyx_L1_error)
   __pyx_t_1 = ((__pyx_t_6 != __pyx_t_7) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "signaturemean/cutils.pyx":28
+    /* "signaturemean/cutils.pyx":30
  *     if len(sigA) != len(sigB):
  *         raise ValueError(
  *             f"Signatures should be of same truncated order (i.e. have the "             # <<<<<<<<<<<<<<
  *             f"same number of signature coefficients. Got {len(sigA)} "
  *             f"and {len(sigB)} signature coefficients"
  */
-    __pyx_t_5 = PyTuple_New(5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 28, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 30, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_7 = 0;
     __pyx_t_8 = 127;
@@ -2310,15 +2365,15 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
     __Pyx_GIVEREF(__pyx_kp_u_Signatures_should_be_of_same_tru);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_Signatures_should_be_of_same_tru);
 
-    /* "signaturemean/cutils.pyx":29
+    /* "signaturemean/cutils.pyx":31
  *         raise ValueError(
  *             f"Signatures should be of same truncated order (i.e. have the "
  *             f"same number of signature coefficients. Got {len(sigA)} "             # <<<<<<<<<<<<<<
  *             f"and {len(sigB)} signature coefficients"
  *         )
  */
-    __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 29, __pyx_L1_error)
-    __pyx_t_9 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_6, 0, ' ', 'd'); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_6, 0, ' ', 'd'); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 31, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_9);
     __Pyx_GIVEREF(__pyx_t_9);
@@ -2329,15 +2384,15 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
     __Pyx_GIVEREF(__pyx_kp_u_and);
     PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_and);
 
-    /* "signaturemean/cutils.pyx":30
+    /* "signaturemean/cutils.pyx":32
  *             f"Signatures should be of same truncated order (i.e. have the "
  *             f"same number of signature coefficients. Got {len(sigA)} "
  *             f"and {len(sigB)} signature coefficients"             # <<<<<<<<<<<<<<
  *         )
  *     # cdef double[:] prod = np.zeros(len(sigA)-1, dtype=np.dtype("d"))
  */
-    __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 30, __pyx_L1_error)
-    __pyx_t_9 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_6, 0, ' ', 'd'); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 30, __pyx_L1_error)
+    __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 32, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_6, 0, ' ', 'd'); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 32, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_7 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_9);
     __Pyx_GIVEREF(__pyx_t_9);
@@ -2348,32 +2403,32 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
     __Pyx_GIVEREF(__pyx_kp_u_signature_coefficients);
     PyTuple_SET_ITEM(__pyx_t_5, 4, __pyx_kp_u_signature_coefficients);
 
-    /* "signaturemean/cutils.pyx":28
+    /* "signaturemean/cutils.pyx":30
  *     if len(sigA) != len(sigB):
  *         raise ValueError(
  *             f"Signatures should be of same truncated order (i.e. have the "             # <<<<<<<<<<<<<<
  *             f"same number of signature coefficients. Got {len(sigA)} "
  *             f"and {len(sigB)} signature coefficients"
  */
-    __pyx_t_9 = __Pyx_PyUnicode_Join(__pyx_t_5, 5, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 28, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyUnicode_Join(__pyx_t_5, 5, __pyx_t_7, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 30, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "signaturemean/cutils.pyx":27
+    /* "signaturemean/cutils.pyx":29
  *             )
  *     if len(sigA) != len(sigB):
  *         raise ValueError(             # <<<<<<<<<<<<<<
  *             f"Signatures should be of same truncated order (i.e. have the "
  *             f"same number of signature coefficients. Got {len(sigA)} "
  */
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 27, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 29, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_Raise(__pyx_t_5, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __PYX_ERR(0, 27, __pyx_L1_error)
+    __PYX_ERR(0, 29, __pyx_L1_error)
 
-    /* "signaturemean/cutils.pyx":26
+    /* "signaturemean/cutils.pyx":28
  *                 "First value of sigA and sigB should be 1."
  *             )
  *     if len(sigA) != len(sigB):             # <<<<<<<<<<<<<<
@@ -2382,44 +2437,44 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
  */
   }
 
-  /* "signaturemean/cutils.pyx":33
+  /* "signaturemean/cutils.pyx":35
  *         )
  *     # cdef double[:] prod = np.zeros(len(sigA)-1, dtype=np.dtype("d"))
  *     cdef cnp.ndarray[double, ndim=1] prod = np.zeros(len(sigA)-1, dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
  *     cdef int sh1 = 0, sh2 = 0, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
  *     # cdef int[:] cinds = inds
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_zeros); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_7 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 33, __pyx_L1_error)
-  __pyx_t_5 = PyInt_FromSsize_t((__pyx_t_7 - 1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_7 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_5 = PyInt_FromSsize_t((__pyx_t_7 - 1)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_11 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_11) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_11) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_10, __pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_10, __pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!(likely(((__pyx_t_11) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_11, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (!(likely(((__pyx_t_11) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_11, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 35, __pyx_L1_error)
   __pyx_t_12 = ((PyArrayObject *)__pyx_t_11);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_prod.rcbuffer->pybuffer, (PyObject*)__pyx_t_12, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_prod = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_prod.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 33, __pyx_L1_error)
+      __PYX_ERR(0, 35, __pyx_L1_error)
     } else {__pyx_pybuffernd_prod.diminfo[0].strides = __pyx_pybuffernd_prod.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_prod.diminfo[0].shape = __pyx_pybuffernd_prod.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -2427,7 +2482,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
   __pyx_v_prod = ((PyArrayObject *)__pyx_t_11);
   __pyx_t_11 = 0;
 
-  /* "signaturemean/cutils.pyx":34
+  /* "signaturemean/cutils.pyx":36
  *     # cdef double[:] prod = np.zeros(len(sigA)-1, dtype=np.dtype("d"))
  *     cdef cnp.ndarray[double, ndim=1] prod = np.zeros(len(sigA)-1, dtype=cnp.dtype("d"))
  *     cdef int sh1 = 0, sh2 = 0, idx_depth, i, inc = 1, lenleft = 0, lenright = 0             # <<<<<<<<<<<<<<
@@ -2440,20 +2495,20 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
   __pyx_v_lenleft = 0;
   __pyx_v_lenright = 0;
 
-  /* "signaturemean/cutils.pyx":36
+  /* "signaturemean/cutils.pyx":38
  *     cdef int sh1 = 0, sh2 = 0, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
  *     # cdef int[:] cinds = inds
  *     cdef double one = 1.0             # <<<<<<<<<<<<<<
  *     for idx_depth in range(2, depth+2):
- *         sh2 += channels**(idx_depth-1)  # sh2 += (int)(pow(channels, idx_depth-1))
+ *         sh2 += channels**(idx_depth-1) # sh2 += (int)(pow(channels, idx_depth-1))
  */
   __pyx_v_one = 1.0;
 
-  /* "signaturemean/cutils.pyx":37
+  /* "signaturemean/cutils.pyx":39
  *     # cdef int[:] cinds = inds
  *     cdef double one = 1.0
  *     for idx_depth in range(2, depth+2):             # <<<<<<<<<<<<<<
- *         sh2 += channels**(idx_depth-1)  # sh2 += (int)(pow(channels, idx_depth-1))
+ *         sh2 += channels**(idx_depth-1) # sh2 += (int)(pow(channels, idx_depth-1))
  *         for i in range(0, idx_depth):
  */
   __pyx_t_13 = (__pyx_v_depth + 2);
@@ -2461,33 +2516,33 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
   for (__pyx_t_3 = 2; __pyx_t_3 < __pyx_t_14; __pyx_t_3+=1) {
     __pyx_v_idx_depth = __pyx_t_3;
 
-    /* "signaturemean/cutils.pyx":38
+    /* "signaturemean/cutils.pyx":40
  *     cdef double one = 1.0
  *     for idx_depth in range(2, depth+2):
- *         sh2 += channels**(idx_depth-1)  # sh2 += (int)(pow(channels, idx_depth-1))             # <<<<<<<<<<<<<<
+ *         sh2 += channels**(idx_depth-1) # sh2 += (int)(pow(channels, idx_depth-1))             # <<<<<<<<<<<<<<
  *         for i in range(0, idx_depth):
- *             # left = sigA[inds[i]:inds[i+1]]
+ *             lenleft = inds[i+1]-inds[i]
  */
     __pyx_v_sh2 = (__pyx_v_sh2 + __Pyx_pow_long(((long)__pyx_v_channels), (__pyx_v_idx_depth - 1)));
 
-    /* "signaturemean/cutils.pyx":39
+    /* "signaturemean/cutils.pyx":41
  *     for idx_depth in range(2, depth+2):
- *         sh2 += channels**(idx_depth-1)  # sh2 += (int)(pow(channels, idx_depth-1))
+ *         sh2 += channels**(idx_depth-1) # sh2 += (int)(pow(channels, idx_depth-1))
  *         for i in range(0, idx_depth):             # <<<<<<<<<<<<<<
- *             # left = sigA[inds[i]:inds[i+1]]
- *             # right = sigB[inds[idx_depth-i-1]:inds[idx_depth-i]]
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
  */
     __pyx_t_15 = __pyx_v_idx_depth;
     __pyx_t_16 = __pyx_t_15;
     for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
       __pyx_v_i = __pyx_t_17;
 
-      /* "signaturemean/cutils.pyx":45
- *             # lenright = len(right)
- * 
- *             lenleft = inds[i+1]             # <<<<<<<<<<<<<<
- *             lenleft -= inds[i]
+      /* "signaturemean/cutils.pyx":42
+ *         sh2 += channels**(idx_depth-1) # sh2 += (int)(pow(channels, idx_depth-1))
+ *         for i in range(0, idx_depth):
+ *             lenleft = inds[i+1]-inds[i]             # <<<<<<<<<<<<<<
  *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,
  */
       __pyx_t_2 = (__pyx_v_i + 1);
       __pyx_t_18 = -1;
@@ -2497,92 +2552,83 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
       } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
       if (unlikely(__pyx_t_18 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 42, __pyx_L1_error)
+      }
+      __pyx_t_19 = __pyx_v_i;
+      __pyx_t_18 = -1;
+      if (__pyx_t_19 < 0) {
+        __pyx_t_19 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 42, __pyx_L1_error)
+      }
+      __pyx_v_lenleft = ((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_inds.diminfo[0].strides)) - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_inds.diminfo[0].strides)));
+
+      /* "signaturemean/cutils.pyx":43
+ *         for i in range(0, idx_depth):
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]             # <<<<<<<<<<<<<<
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ */
+      __pyx_t_19 = (__pyx_v_idx_depth - __pyx_v_i);
+      __pyx_t_18 = -1;
+      if (__pyx_t_19 < 0) {
+        __pyx_t_19 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 43, __pyx_L1_error)
+      }
+      __pyx_t_2 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
+      __pyx_t_18 = -1;
+      if (__pyx_t_2 < 0) {
+        __pyx_t_2 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_2 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 43, __pyx_L1_error)
+      }
+      __pyx_v_lenright = ((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_inds.diminfo[0].strides)) - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_inds.diminfo[0].strides)));
+
+      /* "signaturemean/cutils.pyx":45
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,             # <<<<<<<<<<<<<<
+ *                  &sigA[inds[i]], &inc,
+ *                  &prod[sh1], &lenright)
+ */
+      __pyx_t_2 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
+      __pyx_t_18 = -1;
+      if (__pyx_t_2 < 0) {
+        __pyx_t_2 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_2 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
         __PYX_ERR(0, 45, __pyx_L1_error)
       }
-      __pyx_v_lenleft = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_inds.diminfo[0].strides));
+      __pyx_t_19 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_inds.diminfo[0].strides));
+      __pyx_t_18 = -1;
+      if (__pyx_t_19 < 0) {
+        __pyx_t_19 += __pyx_pybuffernd_sigB.diminfo[0].shape;
+        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_sigB.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 45, __pyx_L1_error)
+      }
 
       /* "signaturemean/cutils.pyx":46
- * 
- *             lenleft = inds[i+1]
- *             lenleft -= inds[i]             # <<<<<<<<<<<<<<
- *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
- *             dger(&lenright, &lenleft, &one, &sigB[inds[idx_depth-i-1]], &inc,
- */
-      __pyx_t_2 = __pyx_v_i;
-      __pyx_t_18 = -1;
-      if (__pyx_t_2 < 0) {
-        __pyx_t_2 += __pyx_pybuffernd_inds.diminfo[0].shape;
-        if (unlikely(__pyx_t_2 < 0)) __pyx_t_18 = 0;
-      } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
-      if (unlikely(__pyx_t_18 != -1)) {
-        __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 46, __pyx_L1_error)
-      }
-      __pyx_v_lenleft = (__pyx_v_lenleft - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_inds.diminfo[0].strides)));
-
-      /* "signaturemean/cutils.pyx":47
- *             lenleft = inds[i+1]
- *             lenleft -= inds[i]
- *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]             # <<<<<<<<<<<<<<
- *             dger(&lenright, &lenleft, &one, &sigB[inds[idx_depth-i-1]], &inc,
- *                  &sigA[inds[i]], &inc, &prod[sh1], &lenright)
- */
-      __pyx_t_2 = (__pyx_v_idx_depth - __pyx_v_i);
-      __pyx_t_18 = -1;
-      if (__pyx_t_2 < 0) {
-        __pyx_t_2 += __pyx_pybuffernd_inds.diminfo[0].shape;
-        if (unlikely(__pyx_t_2 < 0)) __pyx_t_18 = 0;
-      } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
-      if (unlikely(__pyx_t_18 != -1)) {
-        __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 47, __pyx_L1_error)
-      }
-      __pyx_t_19 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
-      __pyx_t_18 = -1;
-      if (__pyx_t_19 < 0) {
-        __pyx_t_19 += __pyx_pybuffernd_inds.diminfo[0].shape;
-        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
-      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
-      if (unlikely(__pyx_t_18 != -1)) {
-        __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 47, __pyx_L1_error)
-      }
-      __pyx_v_lenright = ((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_inds.diminfo[0].strides)) - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_inds.diminfo[0].strides)));
-
-      /* "signaturemean/cutils.pyx":48
- *             lenleft -= inds[i]
- *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
- *             dger(&lenright, &lenleft, &one, &sigB[inds[idx_depth-i-1]], &inc,             # <<<<<<<<<<<<<<
- *                  &sigA[inds[i]], &inc, &prod[sh1], &lenright)
- *             # Careful: fortran order ! (column major)
- */
-      __pyx_t_19 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
-      __pyx_t_18 = -1;
-      if (__pyx_t_19 < 0) {
-        __pyx_t_19 += __pyx_pybuffernd_inds.diminfo[0].shape;
-        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
-      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
-      if (unlikely(__pyx_t_18 != -1)) {
-        __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 48, __pyx_L1_error)
-      }
-      __pyx_t_2 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_inds.diminfo[0].strides));
-      __pyx_t_18 = -1;
-      if (__pyx_t_2 < 0) {
-        __pyx_t_2 += __pyx_pybuffernd_sigB.diminfo[0].shape;
-        if (unlikely(__pyx_t_2 < 0)) __pyx_t_18 = 0;
-      } else if (unlikely(__pyx_t_2 >= __pyx_pybuffernd_sigB.diminfo[0].shape)) __pyx_t_18 = 0;
-      if (unlikely(__pyx_t_18 != -1)) {
-        __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 48, __pyx_L1_error)
-      }
-
-      /* "signaturemean/cutils.pyx":49
- *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
- *             dger(&lenright, &lenleft, &one, &sigB[inds[idx_depth-i-1]], &inc,
- *                  &sigA[inds[i]], &inc, &prod[sh1], &lenright)             # <<<<<<<<<<<<<<
- *             # Careful: fortran order ! (column major)
- * 
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,             # <<<<<<<<<<<<<<
+ *                  &prod[sh1], &lenright)
+ *             # Careful! fortran order (column major): sigA and sigB switched !
  */
       __pyx_t_20 = __pyx_v_i;
       __pyx_t_18 = -1;
@@ -2592,7 +2638,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
       } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
       if (unlikely(__pyx_t_18 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 49, __pyx_L1_error)
+        __PYX_ERR(0, 46, __pyx_L1_error)
       }
       __pyx_t_21 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_inds.diminfo[0].strides));
       __pyx_t_18 = -1;
@@ -2602,8 +2648,16 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
       } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_sigA.diminfo[0].shape)) __pyx_t_18 = 0;
       if (unlikely(__pyx_t_18 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 49, __pyx_L1_error)
+        __PYX_ERR(0, 46, __pyx_L1_error)
       }
+
+      /* "signaturemean/cutils.pyx":47
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,
+ *                  &prod[sh1], &lenright)             # <<<<<<<<<<<<<<
+ *             # Careful! fortran order (column major): sigA and sigB switched !
+ *         sh1 = sh2
+ */
       __pyx_t_22 = __pyx_v_sh1;
       __pyx_t_18 = -1;
       if (__pyx_t_22 < 0) {
@@ -2612,22 +2666,22 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
       } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_prod.diminfo[0].shape)) __pyx_t_18 = 0;
       if (unlikely(__pyx_t_18 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_18);
-        __PYX_ERR(0, 49, __pyx_L1_error)
+        __PYX_ERR(0, 47, __pyx_L1_error)
       }
 
-      /* "signaturemean/cutils.pyx":48
- *             lenleft -= inds[i]
+      /* "signaturemean/cutils.pyx":44
+ *             lenleft = inds[i+1]-inds[i]
  *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
- *             dger(&lenright, &lenleft, &one, &sigB[inds[idx_depth-i-1]], &inc,             # <<<<<<<<<<<<<<
- *                  &sigA[inds[i]], &inc, &prod[sh1], &lenright)
- *             # Careful: fortran order ! (column major)
+ *             dger(&lenright, &lenleft, &one,             # <<<<<<<<<<<<<<
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,
  */
-      __pyx_f_5scipy_6linalg_11cython_blas_dger((&__pyx_v_lenright), (&__pyx_v_lenleft), (&__pyx_v_one), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigB.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_sigB.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigA.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_sigA.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_prod.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_prod.diminfo[0].strides))), (&__pyx_v_lenright));
+      __pyx_f_5scipy_6linalg_11cython_blas_dger((&__pyx_v_lenright), (&__pyx_v_lenleft), (&__pyx_v_one), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigB.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_sigB.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigA.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_sigA.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_prod.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_prod.diminfo[0].strides))), (&__pyx_v_lenright));
     }
 
-    /* "signaturemean/cutils.pyx":55
- *             # # prod.base[sh1:sh2] += outerprod
- *             # prod[sh1:sh2] += outerprod
+    /* "signaturemean/cutils.pyx":49
+ *                  &prod[sh1], &lenright)
+ *             # Careful! fortran order (column major): sigA and sigB switched !
  *         sh1 = sh2             # <<<<<<<<<<<<<<
  *     return prod
  * 
@@ -2635,8 +2689,8 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
     __pyx_v_sh1 = __pyx_v_sh2;
   }
 
-  /* "signaturemean/cutils.pyx":56
- *             # prod[sh1:sh2] += outerprod
+  /* "signaturemean/cutils.pyx":50
+ *             # Careful! fortran order (column major): sigA and sigB switched !
  *         sh1 = sh2
  *     return prod             # <<<<<<<<<<<<<<
  * 
@@ -2647,8 +2701,8 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
   __pyx_r = ((PyObject *)__pyx_v_prod);
   goto __pyx_L0;
 
-  /* "signaturemean/cutils.pyx":14
- * 
+  /* "signaturemean/cutils.pyx":16
+ * # cpdef cnp.ndarray[double, ndim=1] sigprod():
  * 
  * def sigprod(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
  *             cnp.ndarray[double, ndim=1] sigB,
@@ -2685,7 +2739,1837 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "signaturemean/cutils.pyx":59
+/* "signaturemean/cutils.pyx":53
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] sigrprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+
+static PyObject *__pyx_pw_13signaturemean_6cutils_3sigrprod_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_sigrprod_inplace(PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, CYTHON_UNUSED unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_13signaturemean_6cutils_sigrprod_inplace *__pyx_optional_args) {
+
+  /* "signaturemean/cutils.pyx":59
+ *     unsigned int channels,
+ *     cnp.ndarray[int, ndim=1] inds,
+ *     bint check_params = True             # <<<<<<<<<<<<<<
+ *     ):
+ *     """
+ */
+  int __pyx_v_check_params = ((int)1);
+  PyArrayObject *__pyx_v_sigAcopy = 0;
+  double __pyx_v_one;
+  int __pyx_v_start;
+  int __pyx_v_idx_depth;
+  int __pyx_v_i;
+  int __pyx_v_inc;
+  int __pyx_v_lenleft;
+  int __pyx_v_lenright;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
+  __Pyx_Buffer __pyx_pybuffer_inds;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigA;
+  __Pyx_Buffer __pyx_pybuffer_sigA;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigAcopy;
+  __Pyx_Buffer __pyx_pybuffer_sigAcopy;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigB;
+  __Pyx_Buffer __pyx_pybuffer_sigB;
+  PyArrayObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  Py_ssize_t __pyx_t_2;
+  Py_ssize_t __pyx_t_3;
+  int __pyx_t_4;
+  PyObject *__pyx_t_5 = NULL;
+  Py_UCS4 __pyx_t_6;
+  PyObject *__pyx_t_7 = NULL;
+  Py_ssize_t __pyx_t_8;
+  PyObject *__pyx_t_9 = NULL;
+  PyObject *__pyx_t_10 = NULL;
+  PyArrayObject *__pyx_t_11 = NULL;
+  PyObject *__pyx_t_12 = NULL;
+  PyObject *__pyx_t_13 = NULL;
+  PyObject *__pyx_t_14 = NULL;
+  int __pyx_t_15;
+  int __pyx_t_16;
+  Py_ssize_t __pyx_t_17;
+  Py_ssize_t __pyx_t_18;
+  Py_ssize_t __pyx_t_19;
+  Py_ssize_t __pyx_t_20;
+  PyArrayObject *__pyx_t_21 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("sigrprod_inplace", 0);
+  if (__pyx_optional_args) {
+    if (__pyx_optional_args->__pyx_n > 0) {
+      __pyx_v_check_params = __pyx_optional_args->check_params;
+    }
+  }
+  __Pyx_INCREF((PyObject *)__pyx_v_sigA);
+  __pyx_pybuffer_sigAcopy.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigAcopy.refcount = 0;
+  __pyx_pybuffernd_sigAcopy.data = NULL;
+  __pyx_pybuffernd_sigAcopy.rcbuffer = &__pyx_pybuffer_sigAcopy;
+  __pyx_pybuffer_sigA.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigA.refcount = 0;
+  __pyx_pybuffernd_sigA.data = NULL;
+  __pyx_pybuffernd_sigA.rcbuffer = &__pyx_pybuffer_sigA;
+  __pyx_pybuffer_sigB.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigB.refcount = 0;
+  __pyx_pybuffernd_sigB.data = NULL;
+  __pyx_pybuffernd_sigB.rcbuffer = &__pyx_pybuffer_sigB;
+  __pyx_pybuffer_inds.pybuffer.buf = NULL;
+  __pyx_pybuffer_inds.refcount = 0;
+  __pyx_pybuffernd_inds.data = NULL;
+  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigA.diminfo[0].strides = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigA.diminfo[0].shape = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigB.diminfo[0].strides = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigB.diminfo[0].shape = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
+
+  /* "signaturemean/cutils.pyx":64
+ *     Right inplace product in signature space: a <- a*b
+ *     """
+ *     if check_params:  # checks are to be removed             # <<<<<<<<<<<<<<
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(
+ */
+  __pyx_t_1 = (__pyx_v_check_params != 0);
+  if (__pyx_t_1) {
+
+    /* "signaturemean/cutils.pyx":65
+ *     """
+ *     if check_params:  # checks are to be removed
+ *         if len(sigA) != inds[-1]:             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ */
+    __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 65, __pyx_L1_error)
+    __pyx_t_3 = -1L;
+    __pyx_t_4 = -1;
+    if (__pyx_t_3 < 0) {
+      __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+      if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+    } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+    if (unlikely(__pyx_t_4 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_4);
+      __PYX_ERR(0, 65, __pyx_L1_error)
+    }
+    __pyx_t_1 = ((__pyx_t_2 != (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides))) != 0);
+    if (unlikely(__pyx_t_1)) {
+
+      /* "signaturemean/cutils.pyx":67
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "             # <<<<<<<<<<<<<<
+ *             )
+ *         if len(sigA) != len(sigB):
+ */
+      __pyx_t_5 = PyTuple_New(5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 67, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __pyx_t_2 = 0;
+      __pyx_t_6 = 127;
+      __Pyx_INCREF(__pyx_kp_u_Signatures_should_be_of_length);
+      __pyx_t_2 += 31;
+      __Pyx_GIVEREF(__pyx_kp_u_Signatures_should_be_of_length);
+      PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_Signatures_should_be_of_length);
+      __pyx_t_3 = -1L;
+      __pyx_t_4 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+      if (unlikely(__pyx_t_4 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_4);
+        __PYX_ERR(0, 67, __pyx_L1_error)
+      }
+      __pyx_t_7 = __Pyx_PyUnicode_From_int((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides)), 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u_Got);
+      __pyx_t_2 += 6;
+      __Pyx_GIVEREF(__pyx_kp_u_Got);
+      PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_Got);
+      __pyx_t_8 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 67, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_8, 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 3, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u__3);
+      __pyx_t_2 += 1;
+      __Pyx_GIVEREF(__pyx_kp_u__3);
+      PyTuple_SET_ITEM(__pyx_t_5, 4, __pyx_kp_u__3);
+      __pyx_t_7 = __Pyx_PyUnicode_Join(__pyx_t_5, 5, __pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+      /* "signaturemean/cutils.pyx":66
+ *     if check_params:  # checks are to be removed
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(             # <<<<<<<<<<<<<<
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ *             )
+ */
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_Raise(__pyx_t_5, 0, 0, 0);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __PYX_ERR(0, 66, __pyx_L1_error)
+
+      /* "signaturemean/cutils.pyx":65
+ *     """
+ *     if check_params:  # checks are to be removed
+ *         if len(sigA) != inds[-1]:             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ */
+    }
+
+    /* "signaturemean/cutils.pyx":69
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ *             )
+ *         if len(sigA) != len(sigB):             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ */
+    __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_8 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_1 = ((__pyx_t_2 != __pyx_t_8) != 0);
+    if (unlikely(__pyx_t_1)) {
+
+      /* "signaturemean/cutils.pyx":71
+ *         if len(sigA) != len(sigB):
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "             # <<<<<<<<<<<<<<
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ *                 f"and {len(sigB)} signature coefficients"
+ */
+      __pyx_t_5 = PyTuple_New(5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __pyx_t_8 = 0;
+      __pyx_t_6 = 127;
+      __Pyx_INCREF(__pyx_kp_u_Signatures_should_be_of_same_tru);
+      __pyx_t_8 += 103;
+      __Pyx_GIVEREF(__pyx_kp_u_Signatures_should_be_of_same_tru);
+      PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_Signatures_should_be_of_same_tru);
+
+      /* "signaturemean/cutils.pyx":72
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ *                 f"same number of signature coefficients. Got {len(sigA)} "             # <<<<<<<<<<<<<<
+ *                 f"and {len(sigB)} signature coefficients"
+ *             )
+ */
+      __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 72, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_2, 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 72, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_8 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u_and);
+      __pyx_t_8 += 5;
+      __Pyx_GIVEREF(__pyx_kp_u_and);
+      PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_and);
+
+      /* "signaturemean/cutils.pyx":73
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ *                 f"and {len(sigB)} signature coefficients"             # <<<<<<<<<<<<<<
+ *             )
+ *     cdef cnp.ndarray[double, ndim=1] sigAcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ */
+      __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 73, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_2, 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 73, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_8 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 3, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u_signature_coefficients);
+      __pyx_t_8 += 23;
+      __Pyx_GIVEREF(__pyx_kp_u_signature_coefficients);
+      PyTuple_SET_ITEM(__pyx_t_5, 4, __pyx_kp_u_signature_coefficients);
+
+      /* "signaturemean/cutils.pyx":71
+ *         if len(sigA) != len(sigB):
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "             # <<<<<<<<<<<<<<
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ *                 f"and {len(sigB)} signature coefficients"
+ */
+      __pyx_t_7 = __Pyx_PyUnicode_Join(__pyx_t_5, 5, __pyx_t_8, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 71, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+      /* "signaturemean/cutils.pyx":70
+ *             )
+ *         if len(sigA) != len(sigB):
+ *             raise ValueError(             # <<<<<<<<<<<<<<
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ */
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_Raise(__pyx_t_5, 0, 0, 0);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __PYX_ERR(0, 70, __pyx_L1_error)
+
+      /* "signaturemean/cutils.pyx":69
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ *             )
+ *         if len(sigA) != len(sigB):             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ */
+    }
+
+    /* "signaturemean/cutils.pyx":64
+ *     Right inplace product in signature space: a <- a*b
+ *     """
+ *     if check_params:  # checks are to be removed             # <<<<<<<<<<<<<<
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(
+ */
+  }
+
+  /* "signaturemean/cutils.pyx":75
+ *                 f"and {len(sigB)} signature coefficients"
+ *             )
+ *     cdef cnp.ndarray[double, ndim=1] sigAcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
+ *     sigAcopy = sigA.copy()
+ *     cdef double one = 1.0
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_empty); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_3 = -1L;
+  __pyx_t_4 = -1;
+  if (__pyx_t_3 < 0) {
+    __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+    if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+  } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+  if (unlikely(__pyx_t_4 != -1)) {
+    __Pyx_RaiseBufferIndexError(__pyx_t_4);
+    __PYX_ERR(0, 75, __pyx_L1_error)
+  }
+  __pyx_t_5 = __Pyx_PyInt_From_int((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_9);
+  __Pyx_GIVEREF(__pyx_t_5);
+  PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_5);
+  __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_10 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_10) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_9, __pyx_t_5); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (!(likely(((__pyx_t_10) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_10, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_11 = ((PyArrayObject *)__pyx_t_10);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      __pyx_v_sigAcopy = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer.buf = NULL;
+      __PYX_ERR(0, 75, __pyx_L1_error)
+    } else {__pyx_pybuffernd_sigAcopy.diminfo[0].strides = __pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigAcopy.diminfo[0].shape = __pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer.shape[0];
+    }
+  }
+  __pyx_t_11 = 0;
+  __pyx_v_sigAcopy = ((PyArrayObject *)__pyx_t_10);
+  __pyx_t_10 = 0;
+
+  /* "signaturemean/cutils.pyx":76
+ *             )
+ *     cdef cnp.ndarray[double, ndim=1] sigAcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ *     sigAcopy = sigA.copy()             # <<<<<<<<<<<<<<
+ *     cdef double one = 1.0
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_sigA), __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_9 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
+    __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_5);
+    if (likely(__pyx_t_9)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_9);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_5, function);
+    }
+  }
+  __pyx_t_10 = (__pyx_t_9) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_9) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+  if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (!(likely(((__pyx_t_10) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_10, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_11 = ((PyArrayObject *)__pyx_t_10);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer);
+    __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    if (unlikely(__pyx_t_4 < 0)) {
+      PyErr_Fetch(&__pyx_t_12, &__pyx_t_13, &__pyx_t_14);
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigAcopy, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_13); Py_XDECREF(__pyx_t_14);
+        __Pyx_RaiseBufferFallbackError();
+      } else {
+        PyErr_Restore(__pyx_t_12, __pyx_t_13, __pyx_t_14);
+      }
+      __pyx_t_12 = __pyx_t_13 = __pyx_t_14 = 0;
+    }
+    __pyx_pybuffernd_sigAcopy.diminfo[0].strides = __pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigAcopy.diminfo[0].shape = __pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer.shape[0];
+    if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 76, __pyx_L1_error)
+  }
+  __pyx_t_11 = 0;
+  __Pyx_DECREF_SET(__pyx_v_sigAcopy, ((PyArrayObject *)__pyx_t_10));
+  __pyx_t_10 = 0;
+
+  /* "signaturemean/cutils.pyx":77
+ *     cdef cnp.ndarray[double, ndim=1] sigAcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ *     sigAcopy = sigA.copy()
+ *     cdef double one = 1.0             # <<<<<<<<<<<<<<
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ *     for idx_depth in range(depth+1, 0, -1):
+ */
+  __pyx_v_one = 1.0;
+
+  /* "signaturemean/cutils.pyx":78
+ *     sigAcopy = sigA.copy()
+ *     cdef double one = 1.0
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0             # <<<<<<<<<<<<<<
+ *     for idx_depth in range(depth+1, 0, -1):
+ *         start = inds[idx_depth-1]
+ */
+  __pyx_v_inc = 1;
+  __pyx_v_lenleft = 0;
+  __pyx_v_lenright = 0;
+
+  /* "signaturemean/cutils.pyx":79
+ *     cdef double one = 1.0
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ *     for idx_depth in range(depth+1, 0, -1):             # <<<<<<<<<<<<<<
+ *         start = inds[idx_depth-1]
+ *         for i in range(idx_depth-1, -1, -1):  # Careful! Must make use of sigA[start:] in first iteration
+ */
+  for (__pyx_t_4 = (__pyx_v_depth + 1); __pyx_t_4 > 0; __pyx_t_4-=1) {
+    __pyx_v_idx_depth = __pyx_t_4;
+
+    /* "signaturemean/cutils.pyx":80
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ *     for idx_depth in range(depth+1, 0, -1):
+ *         start = inds[idx_depth-1]             # <<<<<<<<<<<<<<
+ *         for i in range(idx_depth-1, -1, -1):  # Careful! Must make use of sigA[start:] in first iteration
+ *             lenleft = inds[i+1]-inds[i]
+ */
+    __pyx_t_3 = (__pyx_v_idx_depth - 1);
+    __pyx_t_15 = -1;
+    if (__pyx_t_3 < 0) {
+      __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+      if (unlikely(__pyx_t_3 < 0)) __pyx_t_15 = 0;
+    } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_15 = 0;
+    if (unlikely(__pyx_t_15 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_15);
+      __PYX_ERR(0, 80, __pyx_L1_error)
+    }
+    __pyx_v_start = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides));
+
+    /* "signaturemean/cutils.pyx":81
+ *     for idx_depth in range(depth+1, 0, -1):
+ *         start = inds[idx_depth-1]
+ *         for i in range(idx_depth-1, -1, -1):  # Careful! Must make use of sigA[start:] in first iteration             # <<<<<<<<<<<<<<
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ */
+    for (__pyx_t_15 = (__pyx_v_idx_depth - 1); __pyx_t_15 > -1; __pyx_t_15-=1) {
+      __pyx_v_i = __pyx_t_15;
+
+      /* "signaturemean/cutils.pyx":82
+ *         start = inds[idx_depth-1]
+ *         for i in range(idx_depth-1, -1, -1):  # Careful! Must make use of sigA[start:] in first iteration
+ *             lenleft = inds[i+1]-inds[i]             # <<<<<<<<<<<<<<
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,
+ */
+      __pyx_t_3 = (__pyx_v_i + 1);
+      __pyx_t_16 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 82, __pyx_L1_error)
+      }
+      __pyx_t_17 = __pyx_v_i;
+      __pyx_t_16 = -1;
+      if (__pyx_t_17 < 0) {
+        __pyx_t_17 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_17 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 82, __pyx_L1_error)
+      }
+      __pyx_v_lenleft = ((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides)) - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_inds.diminfo[0].strides)));
+
+      /* "signaturemean/cutils.pyx":83
+ *         for i in range(idx_depth-1, -1, -1):  # Careful! Must make use of sigA[start:] in first iteration
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]             # <<<<<<<<<<<<<<
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ */
+      __pyx_t_17 = (__pyx_v_idx_depth - __pyx_v_i);
+      __pyx_t_16 = -1;
+      if (__pyx_t_17 < 0) {
+        __pyx_t_17 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_17 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 83, __pyx_L1_error)
+      }
+      __pyx_t_3 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
+      __pyx_t_16 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 83, __pyx_L1_error)
+      }
+      __pyx_v_lenright = ((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_inds.diminfo[0].strides)) - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides)));
+
+      /* "signaturemean/cutils.pyx":85
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,             # <<<<<<<<<<<<<<
+ *                  &sigA[inds[i]], &inc,
+ *                  &sigA[start], &lenright)  # Careful! In place modif of `sigA`
+ */
+      __pyx_t_3 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
+      __pyx_t_16 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 85, __pyx_L1_error)
+      }
+      __pyx_t_17 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides));
+      __pyx_t_16 = -1;
+      if (__pyx_t_17 < 0) {
+        __pyx_t_17 += __pyx_pybuffernd_sigB.diminfo[0].shape;
+        if (unlikely(__pyx_t_17 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_sigB.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 85, __pyx_L1_error)
+      }
+
+      /* "signaturemean/cutils.pyx":86
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,             # <<<<<<<<<<<<<<
+ *                  &sigA[start], &lenright)  # Careful! In place modif of `sigA`
+ *     sigA -= sigAcopy
+ */
+      __pyx_t_18 = __pyx_v_i;
+      __pyx_t_16 = -1;
+      if (__pyx_t_18 < 0) {
+        __pyx_t_18 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_18 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 86, __pyx_L1_error)
+      }
+      __pyx_t_19 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_inds.diminfo[0].strides));
+      __pyx_t_16 = -1;
+      if (__pyx_t_19 < 0) {
+        __pyx_t_19 += __pyx_pybuffernd_sigA.diminfo[0].shape;
+        if (unlikely(__pyx_t_19 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_sigA.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 86, __pyx_L1_error)
+      }
+
+      /* "signaturemean/cutils.pyx":87
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,
+ *                  &sigA[start], &lenright)  # Careful! In place modif of `sigA`             # <<<<<<<<<<<<<<
+ *     sigA -= sigAcopy
+ *     return sigA
+ */
+      __pyx_t_20 = __pyx_v_start;
+      __pyx_t_16 = -1;
+      if (__pyx_t_20 < 0) {
+        __pyx_t_20 += __pyx_pybuffernd_sigA.diminfo[0].shape;
+        if (unlikely(__pyx_t_20 < 0)) __pyx_t_16 = 0;
+      } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_sigA.diminfo[0].shape)) __pyx_t_16 = 0;
+      if (unlikely(__pyx_t_16 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_16);
+        __PYX_ERR(0, 87, __pyx_L1_error)
+      }
+
+      /* "signaturemean/cutils.pyx":84
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,             # <<<<<<<<<<<<<<
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,
+ */
+      __pyx_f_5scipy_6linalg_11cython_blas_dger((&__pyx_v_lenright), (&__pyx_v_lenleft), (&__pyx_v_one), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigB.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_sigB.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigA.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_sigA.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigA.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_sigA.diminfo[0].strides))), (&__pyx_v_lenright));
+    }
+  }
+
+  /* "signaturemean/cutils.pyx":88
+ *                  &sigA[inds[i]], &inc,
+ *                  &sigA[start], &lenright)  # Careful! In place modif of `sigA`
+ *     sigA -= sigAcopy             # <<<<<<<<<<<<<<
+ *     return sigA
+ * 
+ */
+  __pyx_t_10 = PyNumber_InPlaceSubtract(((PyObject *)__pyx_v_sigA), ((PyObject *)__pyx_v_sigAcopy)); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  if (!(likely(((__pyx_t_10) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_10, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_21 = ((PyArrayObject *)__pyx_t_10);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+    __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_t_21, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    if (unlikely(__pyx_t_4 < 0)) {
+      PyErr_Fetch(&__pyx_t_14, &__pyx_t_13, &__pyx_t_12);
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        Py_XDECREF(__pyx_t_14); Py_XDECREF(__pyx_t_13); Py_XDECREF(__pyx_t_12);
+        __Pyx_RaiseBufferFallbackError();
+      } else {
+        PyErr_Restore(__pyx_t_14, __pyx_t_13, __pyx_t_12);
+      }
+      __pyx_t_14 = __pyx_t_13 = __pyx_t_12 = 0;
+    }
+    __pyx_pybuffernd_sigA.diminfo[0].strides = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigA.diminfo[0].shape = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.shape[0];
+    if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 88, __pyx_L1_error)
+  }
+  __pyx_t_21 = 0;
+  __Pyx_DECREF_SET(__pyx_v_sigA, ((PyArrayObject *)__pyx_t_10));
+  __pyx_t_10 = 0;
+
+  /* "signaturemean/cutils.pyx":89
+ *                  &sigA[start], &lenright)  # Careful! In place modif of `sigA`
+ *     sigA -= sigAcopy
+ *     return sigA             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __Pyx_XDECREF(((PyObject *)__pyx_r));
+  __Pyx_INCREF(((PyObject *)__pyx_v_sigA));
+  __pyx_r = ((PyArrayObject *)__pyx_v_sigA);
+  goto __pyx_L0;
+
+  /* "signaturemean/cutils.pyx":53
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] sigrprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_10);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("signaturemean.cutils.sigrprod_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigAcopy.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XDECREF((PyObject *)__pyx_v_sigAcopy);
+  __Pyx_XDECREF((PyObject *)__pyx_v_sigA);
+  __Pyx_XGIVEREF((PyObject *)__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_13signaturemean_6cutils_3sigrprod_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_13signaturemean_6cutils_2sigrprod_inplace[] = "\n    Right inplace product in signature space: a <- a*b\n    ";
+static PyObject *__pyx_pw_13signaturemean_6cutils_3sigrprod_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyArrayObject *__pyx_v_sigA = 0;
+  PyArrayObject *__pyx_v_sigB = 0;
+  unsigned int __pyx_v_depth;
+  unsigned int __pyx_v_channels;
+  PyArrayObject *__pyx_v_inds = 0;
+  int __pyx_v_check_params;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("sigrprod_inplace (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_sigA,&__pyx_n_s_sigB,&__pyx_n_s_depth,&__pyx_n_s_channels,&__pyx_n_s_inds,&__pyx_n_s_check_params,0};
+    PyObject* values[6] = {0,0,0,0,0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
+        CYTHON_FALLTHROUGH;
+        case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
+        CYTHON_FALLTHROUGH;
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sigA)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sigB)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("sigrprod_inplace", 0, 5, 6, 1); __PYX_ERR(0, 53, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_depth)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("sigrprod_inplace", 0, 5, 6, 2); __PYX_ERR(0, 53, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channels)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("sigrprod_inplace", 0, 5, 6, 3); __PYX_ERR(0, 53, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  4:
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_inds)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("sigrprod_inplace", 0, 5, 6, 4); __PYX_ERR(0, 53, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  5:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_check_params);
+          if (value) { values[5] = value; kw_args--; }
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "sigrprod_inplace") < 0)) __PYX_ERR(0, 53, __pyx_L3_error)
+      }
+    } else {
+      switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
+        CYTHON_FALLTHROUGH;
+        case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
+        values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+    }
+    __pyx_v_sigA = ((PyArrayObject *)values[0]);
+    __pyx_v_sigB = ((PyArrayObject *)values[1]);
+    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L3_error)
+    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[3]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 57, __pyx_L3_error)
+    __pyx_v_inds = ((PyArrayObject *)values[4]);
+    if (values[5]) {
+      __pyx_v_check_params = __Pyx_PyObject_IsTrue(values[5]); if (unlikely((__pyx_v_check_params == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 59, __pyx_L3_error)
+    } else {
+
+      /* "signaturemean/cutils.pyx":59
+ *     unsigned int channels,
+ *     cnp.ndarray[int, ndim=1] inds,
+ *     bint check_params = True             # <<<<<<<<<<<<<<
+ *     ):
+ *     """
+ */
+      __pyx_v_check_params = ((int)1);
+    }
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("sigrprod_inplace", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 53, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("signaturemean.cutils.sigrprod_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigA), __pyx_ptype_5numpy_ndarray, 1, "sigA", 0))) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigB), __pyx_ptype_5numpy_ndarray, 1, "sigB", 0))) __PYX_ERR(0, 55, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_r = __pyx_pf_13signaturemean_6cutils_2sigrprod_inplace(__pyx_self, __pyx_v_sigA, __pyx_v_sigB, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, __pyx_v_check_params);
+
+  /* "signaturemean/cutils.pyx":53
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] sigrprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_13signaturemean_6cutils_2sigrprod_inplace(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, int __pyx_v_check_params) {
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
+  __Pyx_Buffer __pyx_pybuffer_inds;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigA;
+  __Pyx_Buffer __pyx_pybuffer_sigA;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigB;
+  __Pyx_Buffer __pyx_pybuffer_sigB;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  struct __pyx_opt_args_13signaturemean_6cutils_sigrprod_inplace __pyx_t_2;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("sigrprod_inplace", 0);
+  __pyx_pybuffer_sigA.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigA.refcount = 0;
+  __pyx_pybuffernd_sigA.data = NULL;
+  __pyx_pybuffernd_sigA.rcbuffer = &__pyx_pybuffer_sigA;
+  __pyx_pybuffer_sigB.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigB.refcount = 0;
+  __pyx_pybuffernd_sigB.data = NULL;
+  __pyx_pybuffernd_sigB.rcbuffer = &__pyx_pybuffer_sigB;
+  __pyx_pybuffer_inds.pybuffer.buf = NULL;
+  __pyx_pybuffer_inds.refcount = 0;
+  __pyx_pybuffernd_inds.data = NULL;
+  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigA.diminfo[0].strides = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigA.diminfo[0].shape = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigB.diminfo[0].strides = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigB.diminfo[0].shape = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_2.__pyx_n = 1;
+  __pyx_t_2.check_params = __pyx_v_check_params;
+  __pyx_t_1 = ((PyObject *)__pyx_f_13signaturemean_6cutils_sigrprod_inplace(__pyx_v_sigA, __pyx_v_sigB, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("signaturemean.cutils.sigrprod_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "signaturemean/cutils.pyx":92
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] siglprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+
+static PyObject *__pyx_pw_13signaturemean_6cutils_5siglprod_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_siglprod_inplace(PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, CYTHON_UNUSED unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_13signaturemean_6cutils_siglprod_inplace *__pyx_optional_args) {
+
+  /* "signaturemean/cutils.pyx":98
+ *     unsigned int channels,
+ *     cnp.ndarray[int, ndim=1] inds,
+ *     bint check_params = True             # <<<<<<<<<<<<<<
+ *     ):
+ *     """
+ */
+  int __pyx_v_check_params = ((int)1);
+  PyArrayObject *__pyx_v_sigBcopy = 0;
+  double __pyx_v_one;
+  int __pyx_v_start;
+  int __pyx_v_idx_depth;
+  int __pyx_v_i;
+  int __pyx_v_inc;
+  int __pyx_v_lenleft;
+  int __pyx_v_lenright;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
+  __Pyx_Buffer __pyx_pybuffer_inds;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigA;
+  __Pyx_Buffer __pyx_pybuffer_sigA;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigB;
+  __Pyx_Buffer __pyx_pybuffer_sigB;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigBcopy;
+  __Pyx_Buffer __pyx_pybuffer_sigBcopy;
+  PyArrayObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  Py_ssize_t __pyx_t_2;
+  Py_ssize_t __pyx_t_3;
+  int __pyx_t_4;
+  PyObject *__pyx_t_5 = NULL;
+  Py_UCS4 __pyx_t_6;
+  PyObject *__pyx_t_7 = NULL;
+  Py_ssize_t __pyx_t_8;
+  PyObject *__pyx_t_9 = NULL;
+  PyObject *__pyx_t_10 = NULL;
+  PyArrayObject *__pyx_t_11 = NULL;
+  PyObject *__pyx_t_12 = NULL;
+  PyObject *__pyx_t_13 = NULL;
+  PyObject *__pyx_t_14 = NULL;
+  int __pyx_t_15;
+  int __pyx_t_16;
+  int __pyx_t_17;
+  int __pyx_t_18;
+  Py_ssize_t __pyx_t_19;
+  Py_ssize_t __pyx_t_20;
+  Py_ssize_t __pyx_t_21;
+  Py_ssize_t __pyx_t_22;
+  PyArrayObject *__pyx_t_23 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("siglprod_inplace", 0);
+  if (__pyx_optional_args) {
+    if (__pyx_optional_args->__pyx_n > 0) {
+      __pyx_v_check_params = __pyx_optional_args->check_params;
+    }
+  }
+  __Pyx_INCREF((PyObject *)__pyx_v_sigB);
+  __pyx_pybuffer_sigBcopy.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigBcopy.refcount = 0;
+  __pyx_pybuffernd_sigBcopy.data = NULL;
+  __pyx_pybuffernd_sigBcopy.rcbuffer = &__pyx_pybuffer_sigBcopy;
+  __pyx_pybuffer_sigA.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigA.refcount = 0;
+  __pyx_pybuffernd_sigA.data = NULL;
+  __pyx_pybuffernd_sigA.rcbuffer = &__pyx_pybuffer_sigA;
+  __pyx_pybuffer_sigB.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigB.refcount = 0;
+  __pyx_pybuffernd_sigB.data = NULL;
+  __pyx_pybuffernd_sigB.rcbuffer = &__pyx_pybuffer_sigB;
+  __pyx_pybuffer_inds.pybuffer.buf = NULL;
+  __pyx_pybuffer_inds.refcount = 0;
+  __pyx_pybuffernd_inds.data = NULL;
+  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigA.diminfo[0].strides = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigA.diminfo[0].shape = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigB.diminfo[0].strides = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigB.diminfo[0].shape = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
+
+  /* "signaturemean/cutils.pyx":104
+ *     instead of `sigA`.
+ *     """
+ *     if check_params:  # checks are to be removed             # <<<<<<<<<<<<<<
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(
+ */
+  __pyx_t_1 = (__pyx_v_check_params != 0);
+  if (__pyx_t_1) {
+
+    /* "signaturemean/cutils.pyx":105
+ *     """
+ *     if check_params:  # checks are to be removed
+ *         if len(sigA) != inds[-1]:             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ */
+    __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 105, __pyx_L1_error)
+    __pyx_t_3 = -1L;
+    __pyx_t_4 = -1;
+    if (__pyx_t_3 < 0) {
+      __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+      if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+    } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+    if (unlikely(__pyx_t_4 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_4);
+      __PYX_ERR(0, 105, __pyx_L1_error)
+    }
+    __pyx_t_1 = ((__pyx_t_2 != (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides))) != 0);
+    if (unlikely(__pyx_t_1)) {
+
+      /* "signaturemean/cutils.pyx":107
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "             # <<<<<<<<<<<<<<
+ *             )
+ *         if len(sigA) != len(sigB):
+ */
+      __pyx_t_5 = PyTuple_New(5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 107, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __pyx_t_2 = 0;
+      __pyx_t_6 = 127;
+      __Pyx_INCREF(__pyx_kp_u_Signatures_should_be_of_length);
+      __pyx_t_2 += 31;
+      __Pyx_GIVEREF(__pyx_kp_u_Signatures_should_be_of_length);
+      PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_Signatures_should_be_of_length);
+      __pyx_t_3 = -1L;
+      __pyx_t_4 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+      if (unlikely(__pyx_t_4 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_4);
+        __PYX_ERR(0, 107, __pyx_L1_error)
+      }
+      __pyx_t_7 = __Pyx_PyUnicode_From_int((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides)), 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 107, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u_Got);
+      __pyx_t_2 += 6;
+      __Pyx_GIVEREF(__pyx_kp_u_Got);
+      PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_Got);
+      __pyx_t_8 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 107, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_8, 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 107, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 3, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u__3);
+      __pyx_t_2 += 1;
+      __Pyx_GIVEREF(__pyx_kp_u__3);
+      PyTuple_SET_ITEM(__pyx_t_5, 4, __pyx_kp_u__3);
+      __pyx_t_7 = __Pyx_PyUnicode_Join(__pyx_t_5, 5, __pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 107, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+      /* "signaturemean/cutils.pyx":106
+ *     if check_params:  # checks are to be removed
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(             # <<<<<<<<<<<<<<
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ *             )
+ */
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_Raise(__pyx_t_5, 0, 0, 0);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __PYX_ERR(0, 106, __pyx_L1_error)
+
+      /* "signaturemean/cutils.pyx":105
+ *     """
+ *     if check_params:  # checks are to be removed
+ *         if len(sigA) != inds[-1]:             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ */
+    }
+
+    /* "signaturemean/cutils.pyx":109
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ *             )
+ *         if len(sigA) != len(sigB):             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ */
+    __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 109, __pyx_L1_error)
+    __pyx_t_8 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 109, __pyx_L1_error)
+    __pyx_t_1 = ((__pyx_t_2 != __pyx_t_8) != 0);
+    if (unlikely(__pyx_t_1)) {
+
+      /* "signaturemean/cutils.pyx":111
+ *         if len(sigA) != len(sigB):
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "             # <<<<<<<<<<<<<<
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ *                 f"and {len(sigB)} signature coefficients"
+ */
+      __pyx_t_5 = PyTuple_New(5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __pyx_t_8 = 0;
+      __pyx_t_6 = 127;
+      __Pyx_INCREF(__pyx_kp_u_Signatures_should_be_of_same_tru);
+      __pyx_t_8 += 103;
+      __Pyx_GIVEREF(__pyx_kp_u_Signatures_should_be_of_same_tru);
+      PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_kp_u_Signatures_should_be_of_same_tru);
+
+      /* "signaturemean/cutils.pyx":112
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ *                 f"same number of signature coefficients. Got {len(sigA)} "             # <<<<<<<<<<<<<<
+ *                 f"and {len(sigB)} signature coefficients"
+ *             )
+ */
+      __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigA)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 112, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_2, 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 112, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_8 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u_and);
+      __pyx_t_8 += 5;
+      __Pyx_GIVEREF(__pyx_kp_u_and);
+      PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_kp_u_and);
+
+      /* "signaturemean/cutils.pyx":113
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ *                 f"and {len(sigB)} signature coefficients"             # <<<<<<<<<<<<<<
+ *             )
+ *     cdef cnp.ndarray[double, ndim=1] sigBcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ */
+      __pyx_t_2 = PyObject_Length(((PyObject *)__pyx_v_sigB)); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 113, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_2, 0, ' ', 'd'); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 113, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_8 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_5, 3, __pyx_t_7);
+      __pyx_t_7 = 0;
+      __Pyx_INCREF(__pyx_kp_u_signature_coefficients);
+      __pyx_t_8 += 23;
+      __Pyx_GIVEREF(__pyx_kp_u_signature_coefficients);
+      PyTuple_SET_ITEM(__pyx_t_5, 4, __pyx_kp_u_signature_coefficients);
+
+      /* "signaturemean/cutils.pyx":111
+ *         if len(sigA) != len(sigB):
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "             # <<<<<<<<<<<<<<
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ *                 f"and {len(sigB)} signature coefficients"
+ */
+      __pyx_t_7 = __Pyx_PyUnicode_Join(__pyx_t_5, 5, __pyx_t_8, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+      /* "signaturemean/cutils.pyx":110
+ *             )
+ *         if len(sigA) != len(sigB):
+ *             raise ValueError(             # <<<<<<<<<<<<<<
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ *                 f"same number of signature coefficients. Got {len(sigA)} "
+ */
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_builtin_ValueError, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 110, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_Raise(__pyx_t_5, 0, 0, 0);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __PYX_ERR(0, 110, __pyx_L1_error)
+
+      /* "signaturemean/cutils.pyx":109
+ *                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+ *             )
+ *         if len(sigA) != len(sigB):             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 f"Signatures should be of same truncated order (i.e. have the "
+ */
+    }
+
+    /* "signaturemean/cutils.pyx":104
+ *     instead of `sigA`.
+ *     """
+ *     if check_params:  # checks are to be removed             # <<<<<<<<<<<<<<
+ *         if len(sigA) != inds[-1]:
+ *             raise ValueError(
+ */
+  }
+
+  /* "signaturemean/cutils.pyx":115
+ *                 f"and {len(sigB)} signature coefficients"
+ *             )
+ *     cdef cnp.ndarray[double, ndim=1] sigBcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
+ *     sigBcopy = sigB.copy()
+ *     cdef double one = 1.0
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_empty); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_3 = -1L;
+  __pyx_t_4 = -1;
+  if (__pyx_t_3 < 0) {
+    __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+    if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+  } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+  if (unlikely(__pyx_t_4 != -1)) {
+    __Pyx_RaiseBufferIndexError(__pyx_t_4);
+    __PYX_ERR(0, 115, __pyx_L1_error)
+  }
+  __pyx_t_5 = __Pyx_PyInt_From_int((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_9);
+  __Pyx_GIVEREF(__pyx_t_5);
+  PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_5);
+  __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_10 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_10) < 0) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_9, __pyx_t_5); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 115, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (!(likely(((__pyx_t_10) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_10, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 115, __pyx_L1_error)
+  __pyx_t_11 = ((PyArrayObject *)__pyx_t_10);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      __pyx_v_sigBcopy = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer.buf = NULL;
+      __PYX_ERR(0, 115, __pyx_L1_error)
+    } else {__pyx_pybuffernd_sigBcopy.diminfo[0].strides = __pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigBcopy.diminfo[0].shape = __pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer.shape[0];
+    }
+  }
+  __pyx_t_11 = 0;
+  __pyx_v_sigBcopy = ((PyArrayObject *)__pyx_t_10);
+  __pyx_t_10 = 0;
+
+  /* "signaturemean/cutils.pyx":116
+ *             )
+ *     cdef cnp.ndarray[double, ndim=1] sigBcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ *     sigBcopy = sigB.copy()             # <<<<<<<<<<<<<<
+ *     cdef double one = 1.0
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_sigB), __pyx_n_s_copy); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_9 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
+    __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_5);
+    if (likely(__pyx_t_9)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_9);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_5, function);
+    }
+  }
+  __pyx_t_10 = (__pyx_t_9) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_9) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+  if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (!(likely(((__pyx_t_10) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_10, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_11 = ((PyArrayObject *)__pyx_t_10);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer);
+    __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    if (unlikely(__pyx_t_4 < 0)) {
+      PyErr_Fetch(&__pyx_t_12, &__pyx_t_13, &__pyx_t_14);
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigBcopy, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_13); Py_XDECREF(__pyx_t_14);
+        __Pyx_RaiseBufferFallbackError();
+      } else {
+        PyErr_Restore(__pyx_t_12, __pyx_t_13, __pyx_t_14);
+      }
+      __pyx_t_12 = __pyx_t_13 = __pyx_t_14 = 0;
+    }
+    __pyx_pybuffernd_sigBcopy.diminfo[0].strides = __pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigBcopy.diminfo[0].shape = __pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer.shape[0];
+    if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 116, __pyx_L1_error)
+  }
+  __pyx_t_11 = 0;
+  __Pyx_DECREF_SET(__pyx_v_sigBcopy, ((PyArrayObject *)__pyx_t_10));
+  __pyx_t_10 = 0;
+
+  /* "signaturemean/cutils.pyx":117
+ *     cdef cnp.ndarray[double, ndim=1] sigBcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ *     sigBcopy = sigB.copy()
+ *     cdef double one = 1.0             # <<<<<<<<<<<<<<
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ *     for idx_depth in range(depth+1, 0, -1):
+ */
+  __pyx_v_one = 1.0;
+
+  /* "signaturemean/cutils.pyx":118
+ *     sigBcopy = sigB.copy()
+ *     cdef double one = 1.0
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0             # <<<<<<<<<<<<<<
+ *     for idx_depth in range(depth+1, 0, -1):
+ *         start = inds[idx_depth-1]
+ */
+  __pyx_v_inc = 1;
+  __pyx_v_lenleft = 0;
+  __pyx_v_lenright = 0;
+
+  /* "signaturemean/cutils.pyx":119
+ *     cdef double one = 1.0
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ *     for idx_depth in range(depth+1, 0, -1):             # <<<<<<<<<<<<<<
+ *         start = inds[idx_depth-1]
+ *         for i in range(idx_depth):  # Careful! Must make use of sigB[start:] in first iteration
+ */
+  for (__pyx_t_4 = (__pyx_v_depth + 1); __pyx_t_4 > 0; __pyx_t_4-=1) {
+    __pyx_v_idx_depth = __pyx_t_4;
+
+    /* "signaturemean/cutils.pyx":120
+ *     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+ *     for idx_depth in range(depth+1, 0, -1):
+ *         start = inds[idx_depth-1]             # <<<<<<<<<<<<<<
+ *         for i in range(idx_depth):  # Careful! Must make use of sigB[start:] in first iteration
+ *             lenleft = inds[i+1]-inds[i]
+ */
+    __pyx_t_3 = (__pyx_v_idx_depth - 1);
+    __pyx_t_15 = -1;
+    if (__pyx_t_3 < 0) {
+      __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+      if (unlikely(__pyx_t_3 < 0)) __pyx_t_15 = 0;
+    } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_15 = 0;
+    if (unlikely(__pyx_t_15 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_15);
+      __PYX_ERR(0, 120, __pyx_L1_error)
+    }
+    __pyx_v_start = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides));
+
+    /* "signaturemean/cutils.pyx":121
+ *     for idx_depth in range(depth+1, 0, -1):
+ *         start = inds[idx_depth-1]
+ *         for i in range(idx_depth):  # Careful! Must make use of sigB[start:] in first iteration             # <<<<<<<<<<<<<<
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ */
+    __pyx_t_15 = __pyx_v_idx_depth;
+    __pyx_t_16 = __pyx_t_15;
+    for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
+      __pyx_v_i = __pyx_t_17;
+
+      /* "signaturemean/cutils.pyx":122
+ *         start = inds[idx_depth-1]
+ *         for i in range(idx_depth):  # Careful! Must make use of sigB[start:] in first iteration
+ *             lenleft = inds[i+1]-inds[i]             # <<<<<<<<<<<<<<
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,
+ */
+      __pyx_t_3 = (__pyx_v_i + 1);
+      __pyx_t_18 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 122, __pyx_L1_error)
+      }
+      __pyx_t_19 = __pyx_v_i;
+      __pyx_t_18 = -1;
+      if (__pyx_t_19 < 0) {
+        __pyx_t_19 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 122, __pyx_L1_error)
+      }
+      __pyx_v_lenleft = ((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides)) - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_inds.diminfo[0].strides)));
+
+      /* "signaturemean/cutils.pyx":123
+ *         for i in range(idx_depth):  # Careful! Must make use of sigB[start:] in first iteration
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]             # <<<<<<<<<<<<<<
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ */
+      __pyx_t_19 = (__pyx_v_idx_depth - __pyx_v_i);
+      __pyx_t_18 = -1;
+      if (__pyx_t_19 < 0) {
+        __pyx_t_19 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 123, __pyx_L1_error)
+      }
+      __pyx_t_3 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
+      __pyx_t_18 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 123, __pyx_L1_error)
+      }
+      __pyx_v_lenright = ((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_inds.diminfo[0].strides)) - (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides)));
+
+      /* "signaturemean/cutils.pyx":125
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,             # <<<<<<<<<<<<<<
+ *                  &sigA[inds[i]], &inc,
+ *                  &sigB[start], &lenright)  # Careful! In place modif of `sigB`
+ */
+      __pyx_t_3 = ((__pyx_v_idx_depth - __pyx_v_i) - 1);
+      __pyx_t_18 = -1;
+      if (__pyx_t_3 < 0) {
+        __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_3 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 125, __pyx_L1_error)
+      }
+      __pyx_t_19 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides));
+      __pyx_t_18 = -1;
+      if (__pyx_t_19 < 0) {
+        __pyx_t_19 += __pyx_pybuffernd_sigB.diminfo[0].shape;
+        if (unlikely(__pyx_t_19 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_sigB.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 125, __pyx_L1_error)
+      }
+
+      /* "signaturemean/cutils.pyx":126
+ *             dger(&lenright, &lenleft, &one,
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,             # <<<<<<<<<<<<<<
+ *                  &sigB[start], &lenright)  # Careful! In place modif of `sigB`
+ *     sigB -= sigBcopy
+ */
+      __pyx_t_20 = __pyx_v_i;
+      __pyx_t_18 = -1;
+      if (__pyx_t_20 < 0) {
+        __pyx_t_20 += __pyx_pybuffernd_inds.diminfo[0].shape;
+        if (unlikely(__pyx_t_20 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 126, __pyx_L1_error)
+      }
+      __pyx_t_21 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_inds.diminfo[0].strides));
+      __pyx_t_18 = -1;
+      if (__pyx_t_21 < 0) {
+        __pyx_t_21 += __pyx_pybuffernd_sigA.diminfo[0].shape;
+        if (unlikely(__pyx_t_21 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_sigA.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 126, __pyx_L1_error)
+      }
+
+      /* "signaturemean/cutils.pyx":127
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,
+ *                  &sigB[start], &lenright)  # Careful! In place modif of `sigB`             # <<<<<<<<<<<<<<
+ *     sigB -= sigBcopy
+ *     return sigB
+ */
+      __pyx_t_22 = __pyx_v_start;
+      __pyx_t_18 = -1;
+      if (__pyx_t_22 < 0) {
+        __pyx_t_22 += __pyx_pybuffernd_sigB.diminfo[0].shape;
+        if (unlikely(__pyx_t_22 < 0)) __pyx_t_18 = 0;
+      } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_sigB.diminfo[0].shape)) __pyx_t_18 = 0;
+      if (unlikely(__pyx_t_18 != -1)) {
+        __Pyx_RaiseBufferIndexError(__pyx_t_18);
+        __PYX_ERR(0, 127, __pyx_L1_error)
+      }
+
+      /* "signaturemean/cutils.pyx":124
+ *             lenleft = inds[i+1]-inds[i]
+ *             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+ *             dger(&lenright, &lenleft, &one,             # <<<<<<<<<<<<<<
+ *                  &sigB[inds[idx_depth-i-1]], &inc,
+ *                  &sigA[inds[i]], &inc,
+ */
+      __pyx_f_5scipy_6linalg_11cython_blas_dger((&__pyx_v_lenright), (&__pyx_v_lenleft), (&__pyx_v_one), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigB.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_sigB.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigA.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_sigA.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sigB.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_sigB.diminfo[0].strides))), (&__pyx_v_lenright));
+    }
+  }
+
+  /* "signaturemean/cutils.pyx":128
+ *                  &sigA[inds[i]], &inc,
+ *                  &sigB[start], &lenright)  # Careful! In place modif of `sigB`
+ *     sigB -= sigBcopy             # <<<<<<<<<<<<<<
+ *     return sigB
+ * 
+ */
+  __pyx_t_10 = PyNumber_InPlaceSubtract(((PyObject *)__pyx_v_sigB), ((PyObject *)__pyx_v_sigBcopy)); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  if (!(likely(((__pyx_t_10) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_10, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_23 = ((PyArrayObject *)__pyx_t_10);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+    __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_t_23, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    if (unlikely(__pyx_t_4 < 0)) {
+      PyErr_Fetch(&__pyx_t_14, &__pyx_t_13, &__pyx_t_12);
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+        Py_XDECREF(__pyx_t_14); Py_XDECREF(__pyx_t_13); Py_XDECREF(__pyx_t_12);
+        __Pyx_RaiseBufferFallbackError();
+      } else {
+        PyErr_Restore(__pyx_t_14, __pyx_t_13, __pyx_t_12);
+      }
+      __pyx_t_14 = __pyx_t_13 = __pyx_t_12 = 0;
+    }
+    __pyx_pybuffernd_sigB.diminfo[0].strides = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigB.diminfo[0].shape = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.shape[0];
+    if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
+  }
+  __pyx_t_23 = 0;
+  __Pyx_DECREF_SET(__pyx_v_sigB, ((PyArrayObject *)__pyx_t_10));
+  __pyx_t_10 = 0;
+
+  /* "signaturemean/cutils.pyx":129
+ *                  &sigB[start], &lenright)  # Careful! In place modif of `sigB`
+ *     sigB -= sigBcopy
+ *     return sigB             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __Pyx_XDECREF(((PyObject *)__pyx_r));
+  __Pyx_INCREF(((PyObject *)__pyx_v_sigB));
+  __pyx_r = ((PyArrayObject *)__pyx_v_sigB);
+  goto __pyx_L0;
+
+  /* "signaturemean/cutils.pyx":92
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] siglprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_10);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("signaturemean.cutils.siglprod_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigBcopy.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XDECREF((PyObject *)__pyx_v_sigBcopy);
+  __Pyx_XDECREF((PyObject *)__pyx_v_sigB);
+  __Pyx_XGIVEREF((PyObject *)__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_13signaturemean_6cutils_5siglprod_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_13signaturemean_6cutils_4siglprod_inplace[] = "\n    Same as previous function, but the result product is stored in `sigB`\n    instead of `sigA`.\n    ";
+static PyObject *__pyx_pw_13signaturemean_6cutils_5siglprod_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyArrayObject *__pyx_v_sigA = 0;
+  PyArrayObject *__pyx_v_sigB = 0;
+  unsigned int __pyx_v_depth;
+  unsigned int __pyx_v_channels;
+  PyArrayObject *__pyx_v_inds = 0;
+  int __pyx_v_check_params;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("siglprod_inplace (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_sigA,&__pyx_n_s_sigB,&__pyx_n_s_depth,&__pyx_n_s_channels,&__pyx_n_s_inds,&__pyx_n_s_check_params,0};
+    PyObject* values[6] = {0,0,0,0,0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
+        CYTHON_FALLTHROUGH;
+        case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
+        CYTHON_FALLTHROUGH;
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sigA)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sigB)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("siglprod_inplace", 0, 5, 6, 1); __PYX_ERR(0, 92, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_depth)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("siglprod_inplace", 0, 5, 6, 2); __PYX_ERR(0, 92, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channels)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("siglprod_inplace", 0, 5, 6, 3); __PYX_ERR(0, 92, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  4:
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_inds)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("siglprod_inplace", 0, 5, 6, 4); __PYX_ERR(0, 92, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  5:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_check_params);
+          if (value) { values[5] = value; kw_args--; }
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "siglprod_inplace") < 0)) __PYX_ERR(0, 92, __pyx_L3_error)
+      }
+    } else {
+      switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
+        CYTHON_FALLTHROUGH;
+        case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
+        values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+    }
+    __pyx_v_sigA = ((PyArrayObject *)values[0]);
+    __pyx_v_sigB = ((PyArrayObject *)values[1]);
+    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 95, __pyx_L3_error)
+    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[3]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L3_error)
+    __pyx_v_inds = ((PyArrayObject *)values[4]);
+    if (values[5]) {
+      __pyx_v_check_params = __Pyx_PyObject_IsTrue(values[5]); if (unlikely((__pyx_v_check_params == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
+    } else {
+
+      /* "signaturemean/cutils.pyx":98
+ *     unsigned int channels,
+ *     cnp.ndarray[int, ndim=1] inds,
+ *     bint check_params = True             # <<<<<<<<<<<<<<
+ *     ):
+ *     """
+ */
+      __pyx_v_check_params = ((int)1);
+    }
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("siglprod_inplace", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 92, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("signaturemean.cutils.siglprod_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigA), __pyx_ptype_5numpy_ndarray, 1, "sigA", 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigB), __pyx_ptype_5numpy_ndarray, 1, "sigB", 0))) __PYX_ERR(0, 94, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 97, __pyx_L1_error)
+  __pyx_r = __pyx_pf_13signaturemean_6cutils_4siglprod_inplace(__pyx_self, __pyx_v_sigA, __pyx_v_sigB, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, __pyx_v_check_params);
+
+  /* "signaturemean/cutils.pyx":92
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] siglprod_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sigA,
+ *     cnp.ndarray[double, ndim=1] sigB,
+ */
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_13signaturemean_6cutils_4siglprod_inplace(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, int __pyx_v_check_params) {
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
+  __Pyx_Buffer __pyx_pybuffer_inds;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigA;
+  __Pyx_Buffer __pyx_pybuffer_sigA;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sigB;
+  __Pyx_Buffer __pyx_pybuffer_sigB;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  struct __pyx_opt_args_13signaturemean_6cutils_siglprod_inplace __pyx_t_2;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("siglprod_inplace", 0);
+  __pyx_pybuffer_sigA.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigA.refcount = 0;
+  __pyx_pybuffernd_sigA.data = NULL;
+  __pyx_pybuffernd_sigA.rcbuffer = &__pyx_pybuffer_sigA;
+  __pyx_pybuffer_sigB.pybuffer.buf = NULL;
+  __pyx_pybuffer_sigB.refcount = 0;
+  __pyx_pybuffernd_sigB.data = NULL;
+  __pyx_pybuffernd_sigB.rcbuffer = &__pyx_pybuffer_sigB;
+  __pyx_pybuffer_inds.pybuffer.buf = NULL;
+  __pyx_pybuffer_inds.refcount = 0;
+  __pyx_pybuffernd_inds.data = NULL;
+  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigA.diminfo[0].strides = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigA.diminfo[0].shape = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sigB.diminfo[0].strides = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigB.diminfo[0].shape = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_2.__pyx_n = 1;
+  __pyx_t_2.check_params = __pyx_v_check_params;
+  __pyx_t_1 = ((PyObject *)__pyx_f_13signaturemean_6cutils_siglprod_inplace(__pyx_v_sigA, __pyx_v_sigB, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, 0, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("signaturemean.cutils.siglprod_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "signaturemean/cutils.pyx":132
  * 
  * 
  * def siginv(cnp.ndarray[double, ndim=1] sig,             # <<<<<<<<<<<<<<
@@ -2694,10 +4578,10 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_sigprod(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_13signaturemean_6cutils_3siginv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13signaturemean_6cutils_2siginv[] = "\n    Compute the inverse of an element a of the signature Lie group with formula\n    $a^{-1} = \\sum_{k=0}^m(1-a)^{\\otimes k}$ with m signature depth.\n\n    Parameters\n    ----------\n    sig : torch.tensor\n        Signature to inverse.\n    ";
-static PyMethodDef __pyx_mdef_13signaturemean_6cutils_3siginv = {"siginv", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_3siginv, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13signaturemean_6cutils_2siginv};
-static PyObject *__pyx_pw_13signaturemean_6cutils_3siginv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_13signaturemean_6cutils_7siginv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_13signaturemean_6cutils_6siginv[] = "\n    Compute the inverse of an element a of the signature Lie group with formula\n    $a^{-1} = \\sum_{k=0}^m(1-a)^{\\otimes k}$ with m signature depth.\n\n    Parameters\n    ----------\n    sig : torch.tensor\n        Signature to inverse.\n    ";
+static PyMethodDef __pyx_mdef_13signaturemean_6cutils_7siginv = {"siginv", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_7siginv, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13signaturemean_6cutils_6siginv};
+static PyObject *__pyx_pw_13signaturemean_6cutils_7siginv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_sig = 0;
   unsigned int __pyx_v_depth;
   unsigned int __pyx_v_channels;
@@ -2738,29 +4622,29 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_3siginv(PyObject *__pyx_self, 
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_depth)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 1); __PYX_ERR(0, 59, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 1); __PYX_ERR(0, 132, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channels)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 2); __PYX_ERR(0, 59, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 2); __PYX_ERR(0, 132, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_inds)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 3); __PYX_ERR(0, 59, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 3); __PYX_ERR(0, 132, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_lensig)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 4); __PYX_ERR(0, 59, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, 4); __PYX_ERR(0, 132, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "siginv") < 0)) __PYX_ERR(0, 59, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "siginv") < 0)) __PYX_ERR(0, 132, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -2772,22 +4656,22 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_3siginv(PyObject *__pyx_self, 
       values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
     }
     __pyx_v_sig = ((PyArrayObject *)values[0]);
-    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[1]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 60, __pyx_L3_error)
-    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[1]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L3_error)
+    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 134, __pyx_L3_error)
     __pyx_v_inds = ((PyArrayObject *)values[3]);
-    __pyx_v_lensig = __Pyx_PyInt_As_unsigned_int(values[4]); if (unlikely((__pyx_v_lensig == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 63, __pyx_L3_error)
+    __pyx_v_lensig = __Pyx_PyInt_As_unsigned_int(values[4]); if (unlikely((__pyx_v_lensig == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 59, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("siginv", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 132, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("signaturemean.cutils.siginv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sig), __pyx_ptype_5numpy_ndarray, 1, "sig", 0))) __PYX_ERR(0, 59, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 62, __pyx_L1_error)
-  __pyx_r = __pyx_pf_13signaturemean_6cutils_2siginv(__pyx_self, __pyx_v_sig, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, __pyx_v_lensig);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sig), __pyx_ptype_5numpy_ndarray, 1, "sig", 0))) __PYX_ERR(0, 132, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_r = __pyx_pf_13signaturemean_6cutils_6siginv(__pyx_self, __pyx_v_sig, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, __pyx_v_lensig);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2798,7 +4682,7 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_3siginv(PyObject *__pyx_self, 
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sig, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig) {
+static PyObject *__pyx_pf_13signaturemean_6cutils_6siginv(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sig, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig) {
   PyArrayObject *__pyx_v_right = 0;
   PyArrayObject *__pyx_v_summand = 0;
   PyArrayObject *__pyx_v_inv = 0;
@@ -2858,52 +4742,52 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sig.rcbuffer->pybuffer, (PyObject*)__pyx_v_sig, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 59, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sig.rcbuffer->pybuffer, (PyObject*)__pyx_v_sig, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 132, __pyx_L1_error)
   }
   __pyx_pybuffernd_sig.diminfo[0].strides = __pyx_pybuffernd_sig.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sig.diminfo[0].shape = __pyx_pybuffernd_sig.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 59, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 132, __pyx_L1_error)
   }
   __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
 
-  /* "signaturemean/cutils.pyx":75
+  /* "signaturemean/cutils.pyx":148
  *     """
  *     cdef:
  *         cnp.ndarray[double, ndim=1] right = np.empty(lensig, dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
  *         cnp.ndarray[double, ndim=1] summand = np.empty(lensig, dtype=cnp.dtype("d"))
  *         cnp.ndarray[double, ndim=1] inv = np.empty(lensig-1, dtype=cnp.dtype("d"))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 148, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_right.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_right = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_right.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 75, __pyx_L1_error)
+      __PYX_ERR(0, 148, __pyx_L1_error)
     } else {__pyx_pybuffernd_right.diminfo[0].strides = __pyx_pybuffernd_right.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_right.diminfo[0].shape = __pyx_pybuffernd_right.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -2911,43 +4795,43 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   __pyx_v_right = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "signaturemean/cutils.pyx":76
+  /* "signaturemean/cutils.pyx":149
  *     cdef:
  *         cnp.ndarray[double, ndim=1] right = np.empty(lensig, dtype=cnp.dtype("d"))
  *         cnp.ndarray[double, ndim=1] summand = np.empty(lensig, dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
  *         cnp.ndarray[double, ndim=1] inv = np.empty(lensig-1, dtype=cnp.dtype("d"))
  *     right = sig.copy()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 76, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 149, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_2);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_summand.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_summand = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_summand.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 76, __pyx_L1_error)
+      __PYX_ERR(0, 149, __pyx_L1_error)
     } else {__pyx_pybuffernd_summand.diminfo[0].strides = __pyx_pybuffernd_summand.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_summand.diminfo[0].shape = __pyx_pybuffernd_summand.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -2955,43 +4839,43 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   __pyx_v_summand = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "signaturemean/cutils.pyx":77
+  /* "signaturemean/cutils.pyx":150
  *         cnp.ndarray[double, ndim=1] right = np.empty(lensig, dtype=cnp.dtype("d"))
  *         cnp.ndarray[double, ndim=1] summand = np.empty(lensig, dtype=cnp.dtype("d"))
  *         cnp.ndarray[double, ndim=1] inv = np.empty(lensig-1, dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
  *     right = sig.copy()
  *     right[0] = 0.  # change first value from 1. to 0.
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_lensig - 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_lensig - 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 77, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 150, __pyx_L1_error)
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inv.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_inv = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_inv.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 77, __pyx_L1_error)
+      __PYX_ERR(0, 150, __pyx_L1_error)
     } else {__pyx_pybuffernd_inv.diminfo[0].strides = __pyx_pybuffernd_inv.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inv.diminfo[0].shape = __pyx_pybuffernd_inv.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -2999,14 +4883,14 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   __pyx_v_inv = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":78
+  /* "signaturemean/cutils.pyx":151
  *         cnp.ndarray[double, ndim=1] summand = np.empty(lensig, dtype=cnp.dtype("d"))
  *         cnp.ndarray[double, ndim=1] inv = np.empty(lensig-1, dtype=cnp.dtype("d"))
  *     right = sig.copy()             # <<<<<<<<<<<<<<
  *     right[0] = 0.  # change first value from 1. to 0.
  *     right = -right   # 1-a
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_sig), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_sig), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -3020,10 +4904,10 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 151, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 151, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -3040,13 +4924,13 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
       __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
     }
     __pyx_pybuffernd_right.diminfo[0].strides = __pyx_pybuffernd_right.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_right.diminfo[0].shape = __pyx_pybuffernd_right.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 78, __pyx_L1_error)
+    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 151, __pyx_L1_error)
   }
   __pyx_t_5 = 0;
   __Pyx_DECREF_SET(__pyx_v_right, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":79
+  /* "signaturemean/cutils.pyx":152
  *         cnp.ndarray[double, ndim=1] inv = np.empty(lensig-1, dtype=cnp.dtype("d"))
  *     right = sig.copy()
  *     right[0] = 0.  # change first value from 1. to 0.             # <<<<<<<<<<<<<<
@@ -3061,20 +4945,20 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   } else if (unlikely(__pyx_t_12 >= __pyx_pybuffernd_right.diminfo[0].shape)) __pyx_t_8 = 0;
   if (unlikely(__pyx_t_8 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_8);
-    __PYX_ERR(0, 79, __pyx_L1_error)
+    __PYX_ERR(0, 152, __pyx_L1_error)
   }
   *__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_right.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_right.diminfo[0].strides) = 0.;
 
-  /* "signaturemean/cutils.pyx":80
+  /* "signaturemean/cutils.pyx":153
  *     right = sig.copy()
  *     right[0] = 0.  # change first value from 1. to 0.
  *     right = -right   # 1-a             # <<<<<<<<<<<<<<
  *     summand = right.copy()
  *     inv = right[1:].copy()
  */
-  __pyx_t_1 = PyNumber_Negative(((PyObject *)__pyx_v_right)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Negative(((PyObject *)__pyx_v_right)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 80, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 153, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -3091,20 +4975,20 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
       __pyx_t_11 = __pyx_t_10 = __pyx_t_9 = 0;
     }
     __pyx_pybuffernd_right.diminfo[0].strides = __pyx_pybuffernd_right.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_right.diminfo[0].shape = __pyx_pybuffernd_right.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 80, __pyx_L1_error)
+    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 153, __pyx_L1_error)
   }
   __pyx_t_5 = 0;
   __Pyx_DECREF_SET(__pyx_v_right, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":81
+  /* "signaturemean/cutils.pyx":154
  *     right[0] = 0.  # change first value from 1. to 0.
  *     right = -right   # 1-a
  *     summand = right.copy()             # <<<<<<<<<<<<<<
  *     inv = right[1:].copy()
  * #     memcpy(right, summand, lensig)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_right), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_right), __pyx_n_s_copy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -3118,10 +5002,10 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 81, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 154, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -3138,22 +5022,22 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
       __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
     }
     __pyx_pybuffernd_summand.diminfo[0].strides = __pyx_pybuffernd_summand.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_summand.diminfo[0].shape = __pyx_pybuffernd_summand.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 81, __pyx_L1_error)
+    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 154, __pyx_L1_error)
   }
   __pyx_t_6 = 0;
   __Pyx_DECREF_SET(__pyx_v_summand, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":82
+  /* "signaturemean/cutils.pyx":155
  *     right = -right   # 1-a
  *     summand = right.copy()
  *     inv = right[1:].copy()             # <<<<<<<<<<<<<<
  * #     memcpy(right, summand, lensig)
  * #     memcpy(right, inv, lensig)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_right), __pyx_slice__3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_right), __pyx_slice__4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -3168,10 +5052,10 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 82, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 155, __pyx_L1_error)
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -3188,13 +5072,13 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
       __pyx_t_11 = __pyx_t_10 = __pyx_t_9 = 0;
     }
     __pyx_pybuffernd_inv.diminfo[0].strides = __pyx_pybuffernd_inv.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inv.diminfo[0].shape = __pyx_pybuffernd_inv.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
+    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 155, __pyx_L1_error)
   }
   __pyx_t_7 = 0;
   __Pyx_DECREF_SET(__pyx_v_inv, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":86
+  /* "signaturemean/cutils.pyx":159
  * #     memcpy(right, inv, lensig)
  *     cdef unsigned int k
  *     for k in range(1, depth+1):             # <<<<<<<<<<<<<<
@@ -3206,18 +5090,18 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
     __pyx_v_k = __pyx_t_15;
 
-    /* "signaturemean/cutils.pyx":87
+    /* "signaturemean/cutils.pyx":160
  *     cdef unsigned int k
  *     for k in range(1, depth+1):
  *         summand[1:] = sigprod(summand, right, depth, channels, inds, False)             # <<<<<<<<<<<<<<
  *         inv += summand[1:]
  *     # return inv[1:]
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sigprod); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sigprod); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(__pyx_v_depth); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 87, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(__pyx_v_depth); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_channels); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 87, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_channels); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_16 = NULL;
     __pyx_t_8 = 0;
@@ -3234,7 +5118,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[7] = {__pyx_t_16, ((PyObject *)__pyx_v_summand), ((PyObject *)__pyx_v_right), __pyx_t_2, __pyx_t_4, ((PyObject *)__pyx_v_inds), Py_False};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_8, 6+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_8, 6+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3244,7 +5128,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[7] = {__pyx_t_16, ((PyObject *)__pyx_v_summand), ((PyObject *)__pyx_v_right), __pyx_t_2, __pyx_t_4, ((PyObject *)__pyx_v_inds), Py_False};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_8, 6+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_8, 6+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3252,7 +5136,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
     } else
     #endif
     {
-      __pyx_t_17 = PyTuple_New(6+__pyx_t_8); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_17 = PyTuple_New(6+__pyx_t_8); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 160, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_17);
       if (__pyx_t_16) {
         __Pyx_GIVEREF(__pyx_t_16); PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_16); __pyx_t_16 = NULL;
@@ -3275,27 +5159,27 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
       PyTuple_SET_ITEM(__pyx_t_17, 5+__pyx_t_8, Py_False);
       __pyx_t_2 = 0;
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_17, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_17, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_summand), __pyx_slice__3, __pyx_t_1) < 0)) __PYX_ERR(0, 87, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_summand), __pyx_slice__4, __pyx_t_1) < 0)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "signaturemean/cutils.pyx":88
+    /* "signaturemean/cutils.pyx":161
  *     for k in range(1, depth+1):
  *         summand[1:] = sigprod(summand, right, depth, channels, inds, False)
  *         inv += summand[1:]             # <<<<<<<<<<<<<<
  *     # return inv[1:]
  *     return inv
  */
-    __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_summand), __pyx_slice__3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_summand), __pyx_slice__4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyNumber_InPlaceAdd(((PyObject *)__pyx_v_inv), __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_InPlaceAdd(((PyObject *)__pyx_v_inv), __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 161, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 88, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 161, __pyx_L1_error)
     __pyx_t_7 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -3312,14 +5196,14 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
         __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
       }
       __pyx_pybuffernd_inv.diminfo[0].strides = __pyx_pybuffernd_inv.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inv.diminfo[0].shape = __pyx_pybuffernd_inv.rcbuffer->pybuffer.shape[0];
-      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 88, __pyx_L1_error)
+      if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 161, __pyx_L1_error)
     }
     __pyx_t_7 = 0;
     __Pyx_DECREF_SET(__pyx_v_inv, ((PyArrayObject *)__pyx_t_3));
     __pyx_t_3 = 0;
   }
 
-  /* "signaturemean/cutils.pyx":90
+  /* "signaturemean/cutils.pyx":163
  *         inv += summand[1:]
  *     # return inv[1:]
  *     return inv             # <<<<<<<<<<<<<<
@@ -3331,7 +5215,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   __pyx_r = ((PyObject *)__pyx_v_inv);
   goto __pyx_L0;
 
-  /* "signaturemean/cutils.pyx":59
+  /* "signaturemean/cutils.pyx":132
  * 
  * 
  * def siginv(cnp.ndarray[double, ndim=1] sig,             # <<<<<<<<<<<<<<
@@ -3375,7 +5259,527 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "signaturemean/cutils.pyx":93
+/* "signaturemean/cutils.pyx":166
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] siginv_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sig,
+ *     unsigned int depth,
+ */
+
+static PyObject *__pyx_pw_13signaturemean_6cutils_9siginv_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_siginv_inplace(PyArrayObject *__pyx_v_sig, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  CYTHON_UNUSED PyArrayObject *__pyx_v_right = 0;
+  PyObject *__pyx_v_sigbis = NULL;
+  unsigned int __pyx_v_i;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
+  __Pyx_Buffer __pyx_pybuffer_inds;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_right;
+  __Pyx_Buffer __pyx_pybuffer_right;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sig;
+  __Pyx_Buffer __pyx_pybuffer_sig;
+  PyArrayObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  Py_ssize_t __pyx_t_3;
+  int __pyx_t_4;
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
+  PyArrayObject *__pyx_t_7 = NULL;
+  int __pyx_t_8;
+  unsigned int __pyx_t_9;
+  size_t __pyx_t_10;
+  int __pyx_t_11;
+  size_t __pyx_t_12;
+  Py_ssize_t __pyx_t_13;
+  unsigned int __pyx_t_14;
+  unsigned int __pyx_t_15;
+  struct __pyx_opt_args_13signaturemean_6cutils_siglprod_inplace __pyx_t_16;
+  PyObject *__pyx_t_17 = NULL;
+  PyObject *__pyx_t_18 = NULL;
+  PyObject *__pyx_t_19 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("siginv_inplace", 0);
+  __Pyx_INCREF((PyObject *)__pyx_v_sig);
+  __pyx_pybuffer_right.pybuffer.buf = NULL;
+  __pyx_pybuffer_right.refcount = 0;
+  __pyx_pybuffernd_right.data = NULL;
+  __pyx_pybuffernd_right.rcbuffer = &__pyx_pybuffer_right;
+  __pyx_pybuffer_sig.pybuffer.buf = NULL;
+  __pyx_pybuffer_sig.refcount = 0;
+  __pyx_pybuffernd_sig.data = NULL;
+  __pyx_pybuffernd_sig.rcbuffer = &__pyx_pybuffer_sig;
+  __pyx_pybuffer_inds.pybuffer.buf = NULL;
+  __pyx_pybuffer_inds.refcount = 0;
+  __pyx_pybuffernd_inds.data = NULL;
+  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sig.rcbuffer->pybuffer, (PyObject*)__pyx_v_sig, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sig.diminfo[0].strides = __pyx_pybuffernd_sig.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sig.diminfo[0].shape = __pyx_pybuffernd_sig.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
+
+  /* "signaturemean/cutils.pyx":177
+ *     I need supplementary memory for (2-a) only.
+ *     """
+ *     cdef cnp.ndarray[double, ndim=1] right = np.empty(inds[-1], dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
+ *     sigbis = sig.copy()
+ *     cdef unsigned int i = 0
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = -1L;
+  __pyx_t_4 = -1;
+  if (__pyx_t_3 < 0) {
+    __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+    if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+  } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+  if (unlikely(__pyx_t_4 != -1)) {
+    __Pyx_RaiseBufferIndexError(__pyx_t_4);
+    __PYX_ERR(0, 177, __pyx_L1_error)
+  }
+  __pyx_t_1 = __Pyx_PyInt_From_int((*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
+  __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_7 = ((PyArrayObject *)__pyx_t_6);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_right.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      __pyx_v_right = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_right.rcbuffer->pybuffer.buf = NULL;
+      __PYX_ERR(0, 177, __pyx_L1_error)
+    } else {__pyx_pybuffernd_right.diminfo[0].strides = __pyx_pybuffernd_right.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_right.diminfo[0].shape = __pyx_pybuffernd_right.rcbuffer->pybuffer.shape[0];
+    }
+  }
+  __pyx_t_7 = 0;
+  __pyx_v_right = ((PyArrayObject *)__pyx_t_6);
+  __pyx_t_6 = 0;
+
+  /* "signaturemean/cutils.pyx":178
+ *     """
+ *     cdef cnp.ndarray[double, ndim=1] right = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ *     sigbis = sig.copy()             # <<<<<<<<<<<<<<
+ *     cdef unsigned int i = 0
+ *     for i in range(inds[-1]):
+ */
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_sig), __pyx_n_s_copy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_5 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_1, function);
+    }
+  }
+  __pyx_t_6 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_sigbis = __pyx_t_6;
+  __pyx_t_6 = 0;
+
+  /* "signaturemean/cutils.pyx":179
+ *     cdef cnp.ndarray[double, ndim=1] right = np.empty(inds[-1], dtype=cnp.dtype("d"))
+ *     sigbis = sig.copy()
+ *     cdef unsigned int i = 0             # <<<<<<<<<<<<<<
+ *     for i in range(inds[-1]):
+ *         sigbis[i] = -sigbis[i]
+ */
+  __pyx_v_i = 0;
+
+  /* "signaturemean/cutils.pyx":180
+ *     sigbis = sig.copy()
+ *     cdef unsigned int i = 0
+ *     for i in range(inds[-1]):             # <<<<<<<<<<<<<<
+ *         sigbis[i] = -sigbis[i]
+ *         sig[i] = -sig[i]
+ */
+  __pyx_t_3 = -1L;
+  __pyx_t_4 = -1;
+  if (__pyx_t_3 < 0) {
+    __pyx_t_3 += __pyx_pybuffernd_inds.diminfo[0].shape;
+    if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+  } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_4 = 0;
+  if (unlikely(__pyx_t_4 != -1)) {
+    __Pyx_RaiseBufferIndexError(__pyx_t_4);
+    __PYX_ERR(0, 180, __pyx_L1_error)
+  }
+  __pyx_t_4 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_inds.diminfo[0].strides));
+  __pyx_t_8 = __pyx_t_4;
+  for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
+    __pyx_v_i = __pyx_t_9;
+
+    /* "signaturemean/cutils.pyx":181
+ *     cdef unsigned int i = 0
+ *     for i in range(inds[-1]):
+ *         sigbis[i] = -sigbis[i]             # <<<<<<<<<<<<<<
+ *         sig[i] = -sig[i]
+ *     sigbis[0] += 1.  # sigbis is (1-a)
+ */
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_sigbis, __pyx_v_i, unsigned int, 0, __Pyx_PyInt_From_unsigned_int, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_1 = PyNumber_Negative(__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (unlikely(__Pyx_SetItemInt(__pyx_v_sigbis, __pyx_v_i, __pyx_t_1, unsigned int, 0, __Pyx_PyInt_From_unsigned_int, 0, 0, 1) < 0)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "signaturemean/cutils.pyx":182
+ *     for i in range(inds[-1]):
+ *         sigbis[i] = -sigbis[i]
+ *         sig[i] = -sig[i]             # <<<<<<<<<<<<<<
+ *     sigbis[0] += 1.  # sigbis is (1-a)
+ *     sig[0] += 2.  # sig is (2-a)
+ */
+    __pyx_t_10 = __pyx_v_i;
+    __pyx_t_11 = -1;
+    if (unlikely(__pyx_t_10 >= (size_t)__pyx_pybuffernd_sig.diminfo[0].shape)) __pyx_t_11 = 0;
+    if (unlikely(__pyx_t_11 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_11);
+      __PYX_ERR(0, 182, __pyx_L1_error)
+    }
+    __pyx_t_12 = __pyx_v_i;
+    __pyx_t_11 = -1;
+    if (unlikely(__pyx_t_12 >= (size_t)__pyx_pybuffernd_sig.diminfo[0].shape)) __pyx_t_11 = 0;
+    if (unlikely(__pyx_t_11 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_11);
+      __PYX_ERR(0, 182, __pyx_L1_error)
+    }
+    *__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sig.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_sig.diminfo[0].strides) = (-(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sig.rcbuffer->pybuffer.buf, __pyx_t_10, __pyx_pybuffernd_sig.diminfo[0].strides)));
+  }
+
+  /* "signaturemean/cutils.pyx":183
+ *         sigbis[i] = -sigbis[i]
+ *         sig[i] = -sig[i]
+ *     sigbis[0] += 1.  # sigbis is (1-a)             # <<<<<<<<<<<<<<
+ *     sig[0] += 2.  # sig is (2-a)
+ *     for i in range(depth):
+ */
+  __pyx_t_13 = 0;
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_sigbis, __pyx_t_13, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_6 = __Pyx_PyFloat_AddObjC(__pyx_t_1, __pyx_float_1_, 1., 1, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 183, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (unlikely(__Pyx_SetItemInt(__pyx_v_sigbis, __pyx_t_13, __pyx_t_6, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1) < 0)) __PYX_ERR(0, 183, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+  /* "signaturemean/cutils.pyx":184
+ *         sig[i] = -sig[i]
+ *     sigbis[0] += 1.  # sigbis is (1-a)
+ *     sig[0] += 2.  # sig is (2-a)             # <<<<<<<<<<<<<<
+ *     for i in range(depth):
+ *         sig = siglprod_inplace(sigbis, sig, depth, channels, inds, True)
+ */
+  __pyx_t_3 = 0;
+  __pyx_t_4 = -1;
+  if (__pyx_t_3 < 0) {
+    __pyx_t_3 += __pyx_pybuffernd_sig.diminfo[0].shape;
+    if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+  } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_sig.diminfo[0].shape)) __pyx_t_4 = 0;
+  if (unlikely(__pyx_t_4 != -1)) {
+    __Pyx_RaiseBufferIndexError(__pyx_t_4);
+    __PYX_ERR(0, 184, __pyx_L1_error)
+  }
+  *__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sig.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_sig.diminfo[0].strides) += 2.;
+
+  /* "signaturemean/cutils.pyx":185
+ *     sigbis[0] += 1.  # sigbis is (1-a)
+ *     sig[0] += 2.  # sig is (2-a)
+ *     for i in range(depth):             # <<<<<<<<<<<<<<
+ *         sig = siglprod_inplace(sigbis, sig, depth, channels, inds, True)
+ *         sig[0] += 1.
+ */
+  __pyx_t_9 = __pyx_v_depth;
+  __pyx_t_14 = __pyx_t_9;
+  for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
+    __pyx_v_i = __pyx_t_15;
+
+    /* "signaturemean/cutils.pyx":186
+ *     sig[0] += 2.  # sig is (2-a)
+ *     for i in range(depth):
+ *         sig = siglprod_inplace(sigbis, sig, depth, channels, inds, True)             # <<<<<<<<<<<<<<
+ *         sig[0] += 1.
+ *     return sig
+ */
+    if (!(likely(((__pyx_v_sigbis) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_sigbis, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 186, __pyx_L1_error)
+    __pyx_t_16.__pyx_n = 1;
+    __pyx_t_16.check_params = 1;
+    __pyx_t_6 = ((PyObject *)__pyx_f_13signaturemean_6cutils_siglprod_inplace(((PyArrayObject *)__pyx_v_sigbis), ((PyArrayObject *)__pyx_v_sig), __pyx_v_depth, __pyx_v_channels, ((PyArrayObject *)__pyx_v_inds), 0, &__pyx_t_16)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 186, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    {
+      __Pyx_BufFmt_StackElem __pyx_stack[1];
+      __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sig.rcbuffer->pybuffer);
+      __pyx_t_4 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sig.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_6), &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack);
+      if (unlikely(__pyx_t_4 < 0)) {
+        PyErr_Fetch(&__pyx_t_17, &__pyx_t_18, &__pyx_t_19);
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sig.rcbuffer->pybuffer, (PyObject*)__pyx_v_sig, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
+          Py_XDECREF(__pyx_t_17); Py_XDECREF(__pyx_t_18); Py_XDECREF(__pyx_t_19);
+          __Pyx_RaiseBufferFallbackError();
+        } else {
+          PyErr_Restore(__pyx_t_17, __pyx_t_18, __pyx_t_19);
+        }
+        __pyx_t_17 = __pyx_t_18 = __pyx_t_19 = 0;
+      }
+      __pyx_pybuffernd_sig.diminfo[0].strides = __pyx_pybuffernd_sig.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sig.diminfo[0].shape = __pyx_pybuffernd_sig.rcbuffer->pybuffer.shape[0];
+      if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 186, __pyx_L1_error)
+    }
+    __Pyx_DECREF_SET(__pyx_v_sig, ((PyArrayObject *)__pyx_t_6));
+    __pyx_t_6 = 0;
+
+    /* "signaturemean/cutils.pyx":187
+ *     for i in range(depth):
+ *         sig = siglprod_inplace(sigbis, sig, depth, channels, inds, True)
+ *         sig[0] += 1.             # <<<<<<<<<<<<<<
+ *     return sig
+ * 
+ */
+    __pyx_t_3 = 0;
+    __pyx_t_4 = -1;
+    if (__pyx_t_3 < 0) {
+      __pyx_t_3 += __pyx_pybuffernd_sig.diminfo[0].shape;
+      if (unlikely(__pyx_t_3 < 0)) __pyx_t_4 = 0;
+    } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_sig.diminfo[0].shape)) __pyx_t_4 = 0;
+    if (unlikely(__pyx_t_4 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_4);
+      __PYX_ERR(0, 187, __pyx_L1_error)
+    }
+    *__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_sig.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_sig.diminfo[0].strides) += 1.;
+  }
+
+  /* "signaturemean/cutils.pyx":188
+ *         sig = siglprod_inplace(sigbis, sig, depth, channels, inds, True)
+ *         sig[0] += 1.
+ *     return sig             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __Pyx_XDECREF(((PyObject *)__pyx_r));
+  __Pyx_INCREF(((PyObject *)__pyx_v_sig));
+  __pyx_r = ((PyArrayObject *)__pyx_v_sig);
+  goto __pyx_L0;
+
+  /* "signaturemean/cutils.pyx":166
+ * 
+ * 
+ * cpdef cnp.ndarray[double, ndim=1] siginv_inplace(             # <<<<<<<<<<<<<<
+ *     cnp.ndarray[double, ndim=1] sig,
+ *     unsigned int depth,
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_right.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sig.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("signaturemean.cutils.siginv_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_right.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sig.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XDECREF((PyObject *)__pyx_v_right);
+  __Pyx_XDECREF(__pyx_v_sigbis);
+  __Pyx_XDECREF((PyObject *)__pyx_v_sig);
+  __Pyx_XGIVEREF((PyObject *)__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_13signaturemean_6cutils_9siginv_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_13signaturemean_6cutils_8siginv_inplace[] = "\n    Inverse computation using this trick: 1+x+x^2+x^3 = 1+x(1+x(1+x))\n    where we replace x with (1-a).\n    I need supplementary memory for (2-a) only.\n    ";
+static PyObject *__pyx_pw_13signaturemean_6cutils_9siginv_inplace(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyArrayObject *__pyx_v_sig = 0;
+  unsigned int __pyx_v_depth;
+  unsigned int __pyx_v_channels;
+  PyArrayObject *__pyx_v_inds = 0;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("siginv_inplace (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_sig,&__pyx_n_s_depth,&__pyx_n_s_channels,&__pyx_n_s_inds,0};
+    PyObject* values[4] = {0,0,0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sig)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_depth)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("siginv_inplace", 1, 4, 4, 1); __PYX_ERR(0, 166, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channels)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("siginv_inplace", 1, 4, 4, 2); __PYX_ERR(0, 166, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_inds)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("siginv_inplace", 1, 4, 4, 3); __PYX_ERR(0, 166, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "siginv_inplace") < 0)) __PYX_ERR(0, 166, __pyx_L3_error)
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+      values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+      values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+    }
+    __pyx_v_sig = ((PyArrayObject *)values[0]);
+    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[1]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L3_error)
+    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L3_error)
+    __pyx_v_inds = ((PyArrayObject *)values[3]);
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("siginv_inplace", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 166, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("signaturemean.cutils.siginv_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sig), __pyx_ptype_5numpy_ndarray, 1, "sig", 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_r = __pyx_pf_13signaturemean_6cutils_8siginv_inplace(__pyx_self, __pyx_v_sig, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds);
+
+  /* function exit code */
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_13signaturemean_6cutils_8siginv_inplace(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sig, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds) {
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
+  __Pyx_Buffer __pyx_pybuffer_inds;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_sig;
+  __Pyx_Buffer __pyx_pybuffer_sig;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("siginv_inplace", 0);
+  __pyx_pybuffer_sig.pybuffer.buf = NULL;
+  __pyx_pybuffer_sig.refcount = 0;
+  __pyx_pybuffernd_sig.data = NULL;
+  __pyx_pybuffernd_sig.rcbuffer = &__pyx_pybuffer_sig;
+  __pyx_pybuffer_inds.pybuffer.buf = NULL;
+  __pyx_pybuffer_inds.refcount = 0;
+  __pyx_pybuffernd_inds.data = NULL;
+  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sig.rcbuffer->pybuffer, (PyObject*)__pyx_v_sig, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_sig.diminfo[0].strides = __pyx_pybuffernd_sig.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sig.diminfo[0].shape = __pyx_pybuffernd_sig.rcbuffer->pybuffer.shape[0];
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 166, __pyx_L1_error)
+  }
+  __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = ((PyObject *)__pyx_f_13signaturemean_6cutils_siginv_inplace(__pyx_v_sig, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sig.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("signaturemean.cutils.siginv_inplace", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sig.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "signaturemean/cutils.pyx":191
  * 
  * 
  * def sigdist(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
@@ -3384,9 +5788,9 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_2siginv(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_13signaturemean_6cutils_5sigdist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_13signaturemean_6cutils_5sigdist = {"sigdist", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_5sigdist, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_13signaturemean_6cutils_5sigdist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_13signaturemean_6cutils_11sigdist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_13signaturemean_6cutils_11sigdist = {"sigdist", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_11sigdist, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_13signaturemean_6cutils_11sigdist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_sigA = 0;
   PyArrayObject *__pyx_v_sigB = 0;
   unsigned int __pyx_v_depth;
@@ -3430,35 +5834,35 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_5sigdist(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sigB)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 1); __PYX_ERR(0, 93, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 1); __PYX_ERR(0, 191, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_depth)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 2); __PYX_ERR(0, 93, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 2); __PYX_ERR(0, 191, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channels)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 3); __PYX_ERR(0, 93, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 3); __PYX_ERR(0, 191, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_inds)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 4); __PYX_ERR(0, 93, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 4); __PYX_ERR(0, 191, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_lensig)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 5); __PYX_ERR(0, 93, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, 5); __PYX_ERR(0, 191, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "sigdist") < 0)) __PYX_ERR(0, 93, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "sigdist") < 0)) __PYX_ERR(0, 191, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 6) {
       goto __pyx_L5_argtuple_error;
@@ -3472,23 +5876,23 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_5sigdist(PyObject *__pyx_self,
     }
     __pyx_v_sigA = ((PyArrayObject *)values[0]);
     __pyx_v_sigB = ((PyArrayObject *)values[1]);
-    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 95, __pyx_L3_error)
-    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[3]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L3_error)
+    __pyx_v_depth = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_depth == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L3_error)
+    __pyx_v_channels = __Pyx_PyInt_As_unsigned_int(values[3]); if (unlikely((__pyx_v_channels == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 194, __pyx_L3_error)
     __pyx_v_inds = ((PyArrayObject *)values[4]);
-    __pyx_v_lensig = __Pyx_PyInt_As_unsigned_int(values[5]); if (unlikely((__pyx_v_lensig == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L3_error)
+    __pyx_v_lensig = __Pyx_PyInt_As_unsigned_int(values[5]); if (unlikely((__pyx_v_lensig == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 93, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("sigdist", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 191, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("signaturemean.cutils.sigdist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigA), __pyx_ptype_5numpy_ndarray, 1, "sigA", 0))) __PYX_ERR(0, 93, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigB), __pyx_ptype_5numpy_ndarray, 1, "sigB", 0))) __PYX_ERR(0, 94, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 97, __pyx_L1_error)
-  __pyx_r = __pyx_pf_13signaturemean_6cutils_4sigdist(__pyx_self, __pyx_v_sigA, __pyx_v_sigB, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, __pyx_v_lensig);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigA), __pyx_ptype_5numpy_ndarray, 1, "sigA", 0))) __PYX_ERR(0, 191, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sigB), __pyx_ptype_5numpy_ndarray, 1, "sigB", 0))) __PYX_ERR(0, 192, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_inds), __pyx_ptype_5numpy_ndarray, 1, "inds", 0))) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_r = __pyx_pf_13signaturemean_6cutils_10sigdist(__pyx_self, __pyx_v_sigA, __pyx_v_sigB, __pyx_v_depth, __pyx_v_channels, __pyx_v_inds, __pyx_v_lensig);
 
   /* function exit code */
   goto __pyx_L0;
@@ -3499,7 +5903,7 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_5sigdist(PyObject *__pyx_self,
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig) {
+static PyObject *__pyx_pf_13signaturemean_6cutils_10sigdist(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_sigA, PyArrayObject *__pyx_v_sigB, unsigned int __pyx_v_depth, unsigned int __pyx_v_channels, PyArrayObject *__pyx_v_inds, unsigned int __pyx_v_lensig) {
   PyArrayObject *__pyx_v_invA = 0;
   PyArrayObject *__pyx_v_prod = 0;
   int __pyx_v_i;
@@ -3574,57 +5978,57 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 93, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigA.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigA, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
   __pyx_pybuffernd_sigA.diminfo[0].strides = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigA.diminfo[0].shape = __pyx_pybuffernd_sigA.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 93, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sigB.rcbuffer->pybuffer, (PyObject*)__pyx_v_sigB, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
   __pyx_pybuffernd_sigB.diminfo[0].strides = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sigB.diminfo[0].shape = __pyx_pybuffernd_sigB.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 93, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_v_inds, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
   }
   __pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
 
-  /* "signaturemean/cutils.pyx":101
+  /* "signaturemean/cutils.pyx":199
  *            ):
  *     cdef:
  *         cnp.ndarray[double, ndim=1] invA = np.zeros(lensig, dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
  *         cnp.ndarray[double, ndim=1] prod = np.zeros(lensig, dtype=cnp.dtype("d"))
  *         int i
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 101, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 199, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_invA.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_invA = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_invA.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 101, __pyx_L1_error)
+      __PYX_ERR(0, 199, __pyx_L1_error)
     } else {__pyx_pybuffernd_invA.diminfo[0].strides = __pyx_pybuffernd_invA.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_invA.diminfo[0].shape = __pyx_pybuffernd_invA.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -3632,43 +6036,43 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   __pyx_v_invA = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "signaturemean/cutils.pyx":102
+  /* "signaturemean/cutils.pyx":200
  *     cdef:
  *         cnp.ndarray[double, ndim=1] invA = np.zeros(lensig, dtype=cnp.dtype("d"))
  *         cnp.ndarray[double, ndim=1] prod = np.zeros(lensig, dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
  *         int i
  *         int ind1, ind2
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 102, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 102, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 200, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_2);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_prod.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_prod = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_prod.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 102, __pyx_L1_error)
+      __PYX_ERR(0, 200, __pyx_L1_error)
     } else {__pyx_pybuffernd_prod.diminfo[0].strides = __pyx_pybuffernd_prod.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_prod.diminfo[0].shape = __pyx_pybuffernd_prod.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -3676,17 +6080,17 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   __pyx_v_prod = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "signaturemean/cutils.pyx":105
+  /* "signaturemean/cutils.pyx":203
  *         int i
  *         int ind1, ind2
  *         int n = len(inds)-2             # <<<<<<<<<<<<<<
  *         int inc = 1
  *         double current_dist, dist = 0.
  */
-  __pyx_t_7 = PyObject_Length(((PyObject *)__pyx_v_inds)); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_7 = PyObject_Length(((PyObject *)__pyx_v_inds)); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 203, __pyx_L1_error)
   __pyx_v_n = (__pyx_t_7 - 2);
 
-  /* "signaturemean/cutils.pyx":106
+  /* "signaturemean/cutils.pyx":204
  *         int ind1, ind2
  *         int n = len(inds)-2
  *         int inc = 1             # <<<<<<<<<<<<<<
@@ -3695,7 +6099,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
  */
   __pyx_v_inc = 1;
 
-  /* "signaturemean/cutils.pyx":107
+  /* "signaturemean/cutils.pyx":205
  *         int n = len(inds)-2
  *         int inc = 1
  *         double current_dist, dist = 0.             # <<<<<<<<<<<<<<
@@ -3704,28 +6108,28 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
  */
   __pyx_v_dist = 0.;
 
-  /* "signaturemean/cutils.pyx":108
+  /* "signaturemean/cutils.pyx":206
  *         int inc = 1
  *         double current_dist, dist = 0.
  *         cnp.ndarray[int, ndim=1] indsdiff = inds[1:] - inds[:-1]             # <<<<<<<<<<<<<<
  * 
  *     invA[0] = 1.
  */
-  __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_inds), __pyx_slice__3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_inds), __pyx_slice__4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_inds), __pyx_slice__4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_inds), __pyx_slice__5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyNumber_Subtract(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Subtract(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 108, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 206, __pyx_L1_error)
   __pyx_t_8 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_indsdiff.rcbuffer->pybuffer, (PyObject*)__pyx_t_8, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_indsdiff = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_indsdiff.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 108, __pyx_L1_error)
+      __PYX_ERR(0, 206, __pyx_L1_error)
     } else {__pyx_pybuffernd_indsdiff.diminfo[0].strides = __pyx_pybuffernd_indsdiff.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_indsdiff.diminfo[0].shape = __pyx_pybuffernd_indsdiff.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -3733,7 +6137,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   __pyx_v_indsdiff = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "signaturemean/cutils.pyx":110
+  /* "signaturemean/cutils.pyx":208
  *         cnp.ndarray[int, ndim=1] indsdiff = inds[1:] - inds[:-1]
  * 
  *     invA[0] = 1.             # <<<<<<<<<<<<<<
@@ -3748,24 +6152,24 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_9 >= __pyx_pybuffernd_invA.diminfo[0].shape)) __pyx_t_10 = 0;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 110, __pyx_L1_error)
+    __PYX_ERR(0, 208, __pyx_L1_error)
   }
   *__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_invA.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_invA.diminfo[0].strides) = 1.;
 
-  /* "signaturemean/cutils.pyx":111
+  /* "signaturemean/cutils.pyx":209
  * 
  *     invA[0] = 1.
  *     invA[1:] = siginv(sigA, depth, channels, inds, lensig)             # <<<<<<<<<<<<<<
  *     prod[0] = 1.
  *     prod[1:] = sigprod(invA, sigB, depth, channels, inds, False)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_siginv); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_siginv); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(__pyx_v_depth); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(__pyx_v_depth); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_channels); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_channels); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_11 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_From_unsigned_int(__pyx_v_lensig); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __pyx_t_12 = NULL;
   __pyx_t_10 = 0;
@@ -3782,7 +6186,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_12, ((PyObject *)__pyx_v_sigA), __pyx_t_2, __pyx_t_1, ((PyObject *)__pyx_v_inds), __pyx_t_11};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3793,7 +6197,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[6] = {__pyx_t_12, ((PyObject *)__pyx_v_sigA), __pyx_t_2, __pyx_t_1, ((PyObject *)__pyx_v_inds), __pyx_t_11};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 5+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3802,7 +6206,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   } else
   #endif
   {
-    __pyx_t_13 = PyTuple_New(5+__pyx_t_10); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_13 = PyTuple_New(5+__pyx_t_10); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 209, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     if (__pyx_t_12) {
       __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_12); __pyx_t_12 = NULL;
@@ -3822,15 +6226,15 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     __pyx_t_2 = 0;
     __pyx_t_1 = 0;
     __pyx_t_11 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_13, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_13, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_invA), __pyx_slice__3, __pyx_t_3) < 0)) __PYX_ERR(0, 111, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_invA), __pyx_slice__4, __pyx_t_3) < 0)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "signaturemean/cutils.pyx":112
+  /* "signaturemean/cutils.pyx":210
  *     invA[0] = 1.
  *     invA[1:] = siginv(sigA, depth, channels, inds, lensig)
  *     prod[0] = 1.             # <<<<<<<<<<<<<<
@@ -3845,22 +6249,22 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   } else if (unlikely(__pyx_t_9 >= __pyx_pybuffernd_prod.diminfo[0].shape)) __pyx_t_10 = 0;
   if (unlikely(__pyx_t_10 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_10);
-    __PYX_ERR(0, 112, __pyx_L1_error)
+    __PYX_ERR(0, 210, __pyx_L1_error)
   }
   *__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_prod.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_prod.diminfo[0].strides) = 1.;
 
-  /* "signaturemean/cutils.pyx":113
+  /* "signaturemean/cutils.pyx":211
  *     invA[1:] = siginv(sigA, depth, channels, inds, lensig)
  *     prod[0] = 1.
  *     prod[1:] = sigprod(invA, sigB, depth, channels, inds, False)             # <<<<<<<<<<<<<<
  *     for i in range(1, n+1):
  *         ind1 = inds[i]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sigprod); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sigprod); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_13 = __Pyx_PyInt_From_unsigned_int(__pyx_v_depth); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyInt_From_unsigned_int(__pyx_v_depth); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_11 = __Pyx_PyInt_From_unsigned_int(__pyx_v_channels); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_From_unsigned_int(__pyx_v_channels); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __pyx_t_1 = NULL;
   __pyx_t_10 = 0;
@@ -3877,7 +6281,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[7] = {__pyx_t_1, ((PyObject *)__pyx_v_invA), ((PyObject *)__pyx_v_sigB), __pyx_t_13, __pyx_t_11, ((PyObject *)__pyx_v_inds), Py_False};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 6+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 6+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
@@ -3887,7 +6291,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[7] = {__pyx_t_1, ((PyObject *)__pyx_v_invA), ((PyObject *)__pyx_v_sigB), __pyx_t_13, __pyx_t_11, ((PyObject *)__pyx_v_inds), Py_False};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 6+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_10, 6+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
@@ -3895,7 +6299,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   } else
   #endif
   {
-    __pyx_t_2 = PyTuple_New(6+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(6+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -3918,15 +6322,15 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     PyTuple_SET_ITEM(__pyx_t_2, 5+__pyx_t_10, Py_False);
     __pyx_t_13 = 0;
     __pyx_t_11 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_prod), __pyx_slice__3, __pyx_t_3) < 0)) __PYX_ERR(0, 113, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_prod), __pyx_slice__4, __pyx_t_3) < 0)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "signaturemean/cutils.pyx":114
+  /* "signaturemean/cutils.pyx":212
  *     prod[0] = 1.
  *     prod[1:] = sigprod(invA, sigB, depth, channels, inds, False)
  *     for i in range(1, n+1):             # <<<<<<<<<<<<<<
@@ -3938,7 +6342,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   for (__pyx_t_10 = 1; __pyx_t_10 < __pyx_t_15; __pyx_t_10+=1) {
     __pyx_v_i = __pyx_t_10;
 
-    /* "signaturemean/cutils.pyx":115
+    /* "signaturemean/cutils.pyx":213
  *     prod[1:] = sigprod(invA, sigB, depth, channels, inds, False)
  *     for i in range(1, n+1):
  *         ind1 = inds[i]             # <<<<<<<<<<<<<<
@@ -3953,11 +6357,11 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     } else if (unlikely(__pyx_t_9 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
     if (unlikely(__pyx_t_16 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_16);
-      __PYX_ERR(0, 115, __pyx_L1_error)
+      __PYX_ERR(0, 213, __pyx_L1_error)
     }
     __pyx_v_ind1 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_inds.diminfo[0].strides));
 
-    /* "signaturemean/cutils.pyx":116
+    /* "signaturemean/cutils.pyx":214
  *     for i in range(1, n+1):
  *         ind1 = inds[i]
  *         ind2 = inds[i+1]             # <<<<<<<<<<<<<<
@@ -3972,11 +6376,11 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     } else if (unlikely(__pyx_t_9 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_16 = 0;
     if (unlikely(__pyx_t_16 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_16);
-      __PYX_ERR(0, 116, __pyx_L1_error)
+      __PYX_ERR(0, 214, __pyx_L1_error)
     }
     __pyx_v_ind2 = (*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_inds.diminfo[0].strides));
 
-    /* "signaturemean/cutils.pyx":118
+    /* "signaturemean/cutils.pyx":216
  *         ind2 = inds[i+1]
  *         current_dist = pow(
  *             ddot(&indsdiff[i], &prod[ind1], &inc, &prod[ind1], &inc),             # <<<<<<<<<<<<<<
@@ -3991,7 +6395,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     } else if (unlikely(__pyx_t_9 >= __pyx_pybuffernd_indsdiff.diminfo[0].shape)) __pyx_t_16 = 0;
     if (unlikely(__pyx_t_16 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_16);
-      __PYX_ERR(0, 118, __pyx_L1_error)
+      __PYX_ERR(0, 216, __pyx_L1_error)
     }
     __pyx_t_17 = __pyx_v_ind1;
     __pyx_t_16 = -1;
@@ -4001,7 +6405,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_prod.diminfo[0].shape)) __pyx_t_16 = 0;
     if (unlikely(__pyx_t_16 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_16);
-      __PYX_ERR(0, 118, __pyx_L1_error)
+      __PYX_ERR(0, 216, __pyx_L1_error)
     }
     __pyx_t_18 = __pyx_v_ind1;
     __pyx_t_16 = -1;
@@ -4011,10 +6415,10 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_prod.diminfo[0].shape)) __pyx_t_16 = 0;
     if (unlikely(__pyx_t_16 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_16);
-      __PYX_ERR(0, 118, __pyx_L1_error)
+      __PYX_ERR(0, 216, __pyx_L1_error)
     }
 
-    /* "signaturemean/cutils.pyx":119
+    /* "signaturemean/cutils.pyx":217
  *         current_dist = pow(
  *             ddot(&indsdiff[i], &prod[ind1], &inc, &prod[ind1], &inc),
  *             1./(2*i)             # <<<<<<<<<<<<<<
@@ -4024,10 +6428,10 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     __pyx_t_19 = (2 * __pyx_v_i);
     if (unlikely(__pyx_t_19 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 119, __pyx_L1_error)
+      __PYX_ERR(0, 217, __pyx_L1_error)
     }
 
-    /* "signaturemean/cutils.pyx":117
+    /* "signaturemean/cutils.pyx":215
  *         ind1 = inds[i]
  *         ind2 = inds[i+1]
  *         current_dist = pow(             # <<<<<<<<<<<<<<
@@ -4036,7 +6440,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
  */
     __pyx_v_current_dist = pow(__pyx_f_5scipy_6linalg_11cython_blas_ddot((&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_indsdiff.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_indsdiff.diminfo[0].strides))), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_prod.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_prod.diminfo[0].strides))), (&__pyx_v_inc), (&(*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_prod.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_prod.diminfo[0].strides))), (&__pyx_v_inc)), (1. / ((double)__pyx_t_19)));
 
-    /* "signaturemean/cutils.pyx":121
+    /* "signaturemean/cutils.pyx":219
  *             1./(2*i)
  *         )
  *         if current_dist > dist:             # <<<<<<<<<<<<<<
@@ -4046,7 +6450,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     __pyx_t_20 = ((__pyx_v_current_dist > __pyx_v_dist) != 0);
     if (__pyx_t_20) {
 
-      /* "signaturemean/cutils.pyx":122
+      /* "signaturemean/cutils.pyx":220
  *         )
  *         if current_dist > dist:
  *             dist = current_dist             # <<<<<<<<<<<<<<
@@ -4055,7 +6459,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
  */
       __pyx_v_dist = __pyx_v_current_dist;
 
-      /* "signaturemean/cutils.pyx":121
+      /* "signaturemean/cutils.pyx":219
  *             1./(2*i)
  *         )
  *         if current_dist > dist:             # <<<<<<<<<<<<<<
@@ -4065,7 +6469,7 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
     }
   }
 
-  /* "signaturemean/cutils.pyx":123
+  /* "signaturemean/cutils.pyx":221
  *         if current_dist > dist:
  *             dist = current_dist
  *     return dist             # <<<<<<<<<<<<<<
@@ -4073,13 +6477,13 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_dist); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_dist); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "signaturemean/cutils.pyx":93
+  /* "signaturemean/cutils.pyx":191
  * 
  * 
  * def sigdist(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
@@ -4126,19 +6530,200 @@ static PyObject *__pyx_pf_13signaturemean_6cutils_4sigdist(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "signaturemean/cutils.pyx":142
+/* "signaturemean/cutils.pyx":240
  * 
  * 
- * def depth_inds(int depth, int channels):             # <<<<<<<<<<<<<<
+ * cpdef cnp.ndarray[int, ndim=1] depth_inds(int depth, int channels):             # <<<<<<<<<<<<<<
  *     """
  *     Most libraries computing the signature transform output the signature as a
  */
 
+static PyObject *__pyx_pw_13signaturemean_6cutils_13depth_inds(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyArrayObject *__pyx_f_13signaturemean_6cutils_depth_inds(int __pyx_v_depth, int __pyx_v_channels, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  PyArrayObject *__pyx_v_inds = 0;
+  int __pyx_v_i;
+  int __pyx_v_sum;
+  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
+  __Pyx_Buffer __pyx_pybuffer_inds;
+  PyArrayObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyArrayObject *__pyx_t_5 = NULL;
+  Py_ssize_t __pyx_t_6;
+  int __pyx_t_7;
+  long __pyx_t_8;
+  long __pyx_t_9;
+  int __pyx_t_10;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("depth_inds", 0);
+  __pyx_pybuffer_inds.pybuffer.buf = NULL;
+  __pyx_pybuffer_inds.refcount = 0;
+  __pyx_pybuffernd_inds.data = NULL;
+  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
+
+  /* "signaturemean/cutils.pyx":247
+ *     Example: with depth=4 and channels=2, returns [0, 1, 3, 7, 15, 31].
+ *     """
+ *     cdef cnp.ndarray[int, ndim=1] inds = np.empty(depth+2, dtype=cnp.dtype("i"))             # <<<<<<<<<<<<<<
+ *     cdef int i
+ *     cdef int sum = 0
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_v_depth + 2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
+  __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_5 = ((PyArrayObject *)__pyx_t_4);
+  {
+    __Pyx_BufFmt_StackElem __pyx_stack[1];
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
+      __pyx_v_inds = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf = NULL;
+      __PYX_ERR(0, 247, __pyx_L1_error)
+    } else {__pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
+    }
+  }
+  __pyx_t_5 = 0;
+  __pyx_v_inds = ((PyArrayObject *)__pyx_t_4);
+  __pyx_t_4 = 0;
+
+  /* "signaturemean/cutils.pyx":249
+ *     cdef cnp.ndarray[int, ndim=1] inds = np.empty(depth+2, dtype=cnp.dtype("i"))
+ *     cdef int i
+ *     cdef int sum = 0             # <<<<<<<<<<<<<<
+ *     inds[0] = 0
+ *     for i in range(depth+1):
+ */
+  __pyx_v_sum = 0;
+
+  /* "signaturemean/cutils.pyx":250
+ *     cdef int i
+ *     cdef int sum = 0
+ *     inds[0] = 0             # <<<<<<<<<<<<<<
+ *     for i in range(depth+1):
+ *         sum +=  channels**i
+ */
+  __pyx_t_6 = 0;
+  __pyx_t_7 = -1;
+  if (__pyx_t_6 < 0) {
+    __pyx_t_6 += __pyx_pybuffernd_inds.diminfo[0].shape;
+    if (unlikely(__pyx_t_6 < 0)) __pyx_t_7 = 0;
+  } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_7 = 0;
+  if (unlikely(__pyx_t_7 != -1)) {
+    __Pyx_RaiseBufferIndexError(__pyx_t_7);
+    __PYX_ERR(0, 250, __pyx_L1_error)
+  }
+  *__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_inds.diminfo[0].strides) = 0;
+
+  /* "signaturemean/cutils.pyx":251
+ *     cdef int sum = 0
+ *     inds[0] = 0
+ *     for i in range(depth+1):             # <<<<<<<<<<<<<<
+ *         sum +=  channels**i
+ *         inds[i+1] = sum
+ */
+  __pyx_t_8 = (__pyx_v_depth + 1);
+  __pyx_t_9 = __pyx_t_8;
+  for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_9; __pyx_t_7+=1) {
+    __pyx_v_i = __pyx_t_7;
+
+    /* "signaturemean/cutils.pyx":252
+ *     inds[0] = 0
+ *     for i in range(depth+1):
+ *         sum +=  channels**i             # <<<<<<<<<<<<<<
+ *         inds[i+1] = sum
+ *     return(inds)
+ */
+    __pyx_v_sum = (__pyx_v_sum + __Pyx_pow_int(__pyx_v_channels, __pyx_v_i));
+
+    /* "signaturemean/cutils.pyx":253
+ *     for i in range(depth+1):
+ *         sum +=  channels**i
+ *         inds[i+1] = sum             # <<<<<<<<<<<<<<
+ *     return(inds)
+ */
+    __pyx_t_6 = (__pyx_v_i + 1);
+    __pyx_t_10 = -1;
+    if (__pyx_t_6 < 0) {
+      __pyx_t_6 += __pyx_pybuffernd_inds.diminfo[0].shape;
+      if (unlikely(__pyx_t_6 < 0)) __pyx_t_10 = 0;
+    } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_10 = 0;
+    if (unlikely(__pyx_t_10 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_10);
+      __PYX_ERR(0, 253, __pyx_L1_error)
+    }
+    *__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_inds.diminfo[0].strides) = __pyx_v_sum;
+  }
+
+  /* "signaturemean/cutils.pyx":254
+ *         sum +=  channels**i
+ *         inds[i+1] = sum
+ *     return(inds)             # <<<<<<<<<<<<<<
+ */
+  __Pyx_XDECREF(((PyObject *)__pyx_r));
+  __Pyx_INCREF(((PyObject *)__pyx_v_inds));
+  __pyx_r = ((PyArrayObject *)__pyx_v_inds);
+  goto __pyx_L0;
+
+  /* "signaturemean/cutils.pyx":240
+ * 
+ * 
+ * cpdef cnp.ndarray[int, ndim=1] depth_inds(int depth, int channels):             # <<<<<<<<<<<<<<
+ *     """
+ *     Most libraries computing the signature transform output the signature as a
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
+    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
+  __Pyx_AddTraceback("signaturemean.cutils.depth_inds", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  goto __pyx_L2;
+  __pyx_L0:;
+  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
+  __pyx_L2:;
+  __Pyx_XDECREF((PyObject *)__pyx_v_inds);
+  __Pyx_XGIVEREF((PyObject *)__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 /* Python wrapper */
-static PyObject *__pyx_pw_13signaturemean_6cutils_7depth_inds(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_13signaturemean_6cutils_6depth_inds[] = "\n    Most libraries computing the signature transform output the signature as a\n    vector. This function outputs the indices corresponding to first value of\n    each signature depth in this vector.\n    Example: with depth=4 and channels=2, returns [0, 1, 3, 7, 15, 31].\n    ";
-static PyMethodDef __pyx_mdef_13signaturemean_6cutils_7depth_inds = {"depth_inds", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_7depth_inds, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13signaturemean_6cutils_6depth_inds};
-static PyObject *__pyx_pw_13signaturemean_6cutils_7depth_inds(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_13signaturemean_6cutils_13depth_inds(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_13signaturemean_6cutils_12depth_inds[] = "\n    Most libraries computing the signature transform output the signature as a\n    vector. This function outputs the indices corresponding to first value of\n    each signature depth in this vector.\n    Example: with depth=4 and channels=2, returns [0, 1, 3, 7, 15, 31].\n    ";
+static PyObject *__pyx_pw_13signaturemean_6cutils_13depth_inds(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_v_depth;
   int __pyx_v_channels;
   int __pyx_lineno = 0;
@@ -4170,11 +6755,11 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_7depth_inds(PyObject *__pyx_se
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channels)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("depth_inds", 1, 2, 2, 1); __PYX_ERR(0, 142, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("depth_inds", 1, 2, 2, 1); __PYX_ERR(0, 240, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "depth_inds") < 0)) __PYX_ERR(0, 142, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "depth_inds") < 0)) __PYX_ERR(0, 240, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4182,209 +6767,51 @@ static PyObject *__pyx_pw_13signaturemean_6cutils_7depth_inds(PyObject *__pyx_se
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_depth = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_depth == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 142, __pyx_L3_error)
-    __pyx_v_channels = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_channels == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 142, __pyx_L3_error)
+    __pyx_v_depth = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_depth == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 240, __pyx_L3_error)
+    __pyx_v_channels = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_channels == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 240, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("depth_inds", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 142, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("depth_inds", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 240, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("signaturemean.cutils.depth_inds", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_13signaturemean_6cutils_6depth_inds(__pyx_self, __pyx_v_depth, __pyx_v_channels);
+  __pyx_r = __pyx_pf_13signaturemean_6cutils_12depth_inds(__pyx_self, __pyx_v_depth, __pyx_v_channels);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13signaturemean_6cutils_6depth_inds(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_depth, int __pyx_v_channels) {
-  PyArrayObject *__pyx_v_inds = 0;
-  int __pyx_v_i;
-  int __pyx_v_sum;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_inds;
-  __Pyx_Buffer __pyx_pybuffer_inds;
+static PyObject *__pyx_pf_13signaturemean_6cutils_12depth_inds(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_depth, int __pyx_v_channels) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  PyObject *__pyx_t_4 = NULL;
-  PyArrayObject *__pyx_t_5 = NULL;
-  Py_ssize_t __pyx_t_6;
-  int __pyx_t_7;
-  long __pyx_t_8;
-  long __pyx_t_9;
-  int __pyx_t_10;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("depth_inds", 0);
-  __pyx_pybuffer_inds.pybuffer.buf = NULL;
-  __pyx_pybuffer_inds.refcount = 0;
-  __pyx_pybuffernd_inds.data = NULL;
-  __pyx_pybuffernd_inds.rcbuffer = &__pyx_pybuffer_inds;
-
-  /* "signaturemean/cutils.pyx":149
- *     Example: with depth=4 and channels=2, returns [0, 1, 3, 7, 15, 31].
- *     """
- *     cdef cnp.ndarray[int, ndim=1] inds = np.empty(depth+2, dtype=cnp.dtype("i"))             # <<<<<<<<<<<<<<
- *     cdef int i
- *     cdef int sum = 0
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_v_depth + 2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
-  __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 149, __pyx_L1_error)
-  __pyx_t_5 = ((PyArrayObject *)__pyx_t_4);
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_inds.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
-      __pyx_v_inds = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 149, __pyx_L1_error)
-    } else {__pyx_pybuffernd_inds.diminfo[0].strides = __pyx_pybuffernd_inds.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inds.diminfo[0].shape = __pyx_pybuffernd_inds.rcbuffer->pybuffer.shape[0];
-    }
-  }
-  __pyx_t_5 = 0;
-  __pyx_v_inds = ((PyArrayObject *)__pyx_t_4);
-  __pyx_t_4 = 0;
-
-  /* "signaturemean/cutils.pyx":151
- *     cdef cnp.ndarray[int, ndim=1] inds = np.empty(depth+2, dtype=cnp.dtype("i"))
- *     cdef int i
- *     cdef int sum = 0             # <<<<<<<<<<<<<<
- *     inds[0] = 0
- *     for i in range(depth+1):
- */
-  __pyx_v_sum = 0;
-
-  /* "signaturemean/cutils.pyx":152
- *     cdef int i
- *     cdef int sum = 0
- *     inds[0] = 0             # <<<<<<<<<<<<<<
- *     for i in range(depth+1):
- *         sum +=  channels**i
- */
-  __pyx_t_6 = 0;
-  __pyx_t_7 = -1;
-  if (__pyx_t_6 < 0) {
-    __pyx_t_6 += __pyx_pybuffernd_inds.diminfo[0].shape;
-    if (unlikely(__pyx_t_6 < 0)) __pyx_t_7 = 0;
-  } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_7 = 0;
-  if (unlikely(__pyx_t_7 != -1)) {
-    __Pyx_RaiseBufferIndexError(__pyx_t_7);
-    __PYX_ERR(0, 152, __pyx_L1_error)
-  }
-  *__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_inds.diminfo[0].strides) = 0;
-
-  /* "signaturemean/cutils.pyx":153
- *     cdef int sum = 0
- *     inds[0] = 0
- *     for i in range(depth+1):             # <<<<<<<<<<<<<<
- *         sum +=  channels**i
- *         inds[i+1] = sum
- */
-  __pyx_t_8 = (__pyx_v_depth + 1);
-  __pyx_t_9 = __pyx_t_8;
-  for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_9; __pyx_t_7+=1) {
-    __pyx_v_i = __pyx_t_7;
-
-    /* "signaturemean/cutils.pyx":154
- *     inds[0] = 0
- *     for i in range(depth+1):
- *         sum +=  channels**i             # <<<<<<<<<<<<<<
- *         inds[i+1] = sum
- *     return(inds)
- */
-    __pyx_v_sum = (__pyx_v_sum + __Pyx_pow_int(__pyx_v_channels, __pyx_v_i));
-
-    /* "signaturemean/cutils.pyx":155
- *     for i in range(depth+1):
- *         sum +=  channels**i
- *         inds[i+1] = sum             # <<<<<<<<<<<<<<
- *     return(inds)
- * 
- */
-    __pyx_t_6 = (__pyx_v_i + 1);
-    __pyx_t_10 = -1;
-    if (__pyx_t_6 < 0) {
-      __pyx_t_6 += __pyx_pybuffernd_inds.diminfo[0].shape;
-      if (unlikely(__pyx_t_6 < 0)) __pyx_t_10 = 0;
-    } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_inds.diminfo[0].shape)) __pyx_t_10 = 0;
-    if (unlikely(__pyx_t_10 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_10);
-      __PYX_ERR(0, 155, __pyx_L1_error)
-    }
-    *__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_inds.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_inds.diminfo[0].strides) = __pyx_v_sum;
-  }
-
-  /* "signaturemean/cutils.pyx":156
- *         sum +=  channels**i
- *         inds[i+1] = sum
- *     return(inds)             # <<<<<<<<<<<<<<
- * 
- * 
- */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(((PyObject *)__pyx_v_inds));
-  __pyx_r = ((PyObject *)__pyx_v_inds);
+  __pyx_t_1 = ((PyObject *)__pyx_f_13signaturemean_6cutils_depth_inds(__pyx_v_depth, __pyx_v_channels, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 240, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
   goto __pyx_L0;
-
-  /* "signaturemean/cutils.pyx":142
- * 
- * 
- * def depth_inds(int depth, int channels):             # <<<<<<<<<<<<<<
- *     """
- *     Most libraries computing the signature transform output the signature as a
- */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_4);
-  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
-    __Pyx_PyThreadState_declare
-    __Pyx_PyThreadState_assign
-    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
-  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
   __Pyx_AddTraceback("signaturemean.cutils.depth_inds", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
-  goto __pyx_L2;
   __pyx_L0:;
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_inds.rcbuffer->pybuffer);
-  __pyx_L2:;
-  __Pyx_XDECREF((PyObject *)__pyx_v_inds);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":735
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":735
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -4401,7 +6828,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":736
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":736
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -4415,7 +6842,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":735
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":735
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -4434,7 +6861,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":738
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":738
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -4451,7 +6878,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":739
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":739
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -4465,7 +6892,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":738
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":738
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -4484,7 +6911,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":741
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":741
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -4501,7 +6928,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":742
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":742
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -4515,7 +6942,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":741
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":741
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -4534,7 +6961,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":744
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":744
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4551,7 +6978,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":745
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":745
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -4565,7 +6992,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":744
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":744
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4584,7 +7011,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":747
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":747
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4601,7 +7028,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":748
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":748
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -4615,7 +7042,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":747
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":747
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4634,7 +7061,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":750
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":750
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4648,7 +7075,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":751
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":751
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4658,7 +7085,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = (PyDataType_HASSUBARRAY(__pyx_v_d) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":752
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":752
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -4670,7 +7097,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":751
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":751
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4679,7 +7106,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":754
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":754
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -4693,7 +7120,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":750
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":750
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4708,7 +7135,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":929
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":929
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4720,7 +7147,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":930
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":930
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -4729,7 +7156,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":931
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":931
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -4738,7 +7165,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":929
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":929
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4750,7 +7177,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":933
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":933
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4765,7 +7192,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":934
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":934
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -4774,7 +7201,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":935
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":935
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4784,7 +7211,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":936
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":936
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -4795,7 +7222,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":935
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":935
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4804,7 +7231,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":937
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":937
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -4816,7 +7243,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":933
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":933
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4831,7 +7258,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":941
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":941
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4855,7 +7282,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":942
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":942
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4871,7 +7298,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":943
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":943
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -4880,7 +7307,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 943, __pyx_L3_error)
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":942
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":942
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4894,7 +7321,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":944
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":944
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4909,14 +7336,14 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":945
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":945
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_umath() except -1:
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 945, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 945, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -4925,7 +7352,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":942
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":942
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4940,7 +7367,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":941
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":941
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4963,7 +7390,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":947
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":947
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4987,7 +7414,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":948
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":948
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5003,7 +7430,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":949
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":949
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -5012,7 +7439,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 949, __pyx_L3_error)
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":948
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":948
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5026,7 +7453,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":950
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":950
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -5041,14 +7468,14 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":951
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":951
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_ufunc() except -1:
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 951, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 951, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -5057,7 +7484,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":948
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":948
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5072,7 +7499,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":947
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":947
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -5095,7 +7522,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":953
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":953
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -5119,7 +7546,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":954
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":954
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5135,7 +7562,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":955
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":955
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -5144,7 +7571,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 955, __pyx_L3_error)
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":954
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":954
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5158,7 +7585,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":956
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":956
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -5173,14 +7600,14 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":957
+      /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":957
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef extern from *:
  */
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 957, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_ImportError, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(1, 957, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_Raise(__pyx_t_8, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -5189,7 +7616,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":954
+    /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":954
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -5204,7 +7631,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":953
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":953
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -5227,7 +7654,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":967
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":967
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -5240,7 +7667,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_timedelta64_object", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":979
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":979
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -5250,7 +7677,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":967
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":967
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -5264,7 +7691,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":982
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":982
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -5277,7 +7704,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_datetime64_object", 0);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":994
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":994
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -5287,7 +7714,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":982
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":982
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -5301,7 +7728,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":997
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":997
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5312,7 +7739,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1004
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1004
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -5322,7 +7749,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":997
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":997
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5335,7 +7762,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1007
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1007
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5346,7 +7773,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1011
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1011
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -5356,7 +7783,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1007
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1007
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5369,7 +7796,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1014
+/* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1014
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5380,7 +7807,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1018
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1018
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -5388,7 +7815,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1014
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1014
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5402,6 +7829,10 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
 }
 
 static PyMethodDef __pyx_methods[] = {
+  {"sigrprod_inplace", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_3sigrprod_inplace, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13signaturemean_6cutils_2sigrprod_inplace},
+  {"siglprod_inplace", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_5siglprod_inplace, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13signaturemean_6cutils_4siglprod_inplace},
+  {"siginv_inplace", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_9siginv_inplace, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13signaturemean_6cutils_8siginv_inplace},
+  {"depth_inds", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13signaturemean_6cutils_13depth_inds, METH_VARARGS|METH_KEYWORDS, __pyx_doc_13signaturemean_6cutils_12depth_inds},
   {0, 0, 0, 0}
 };
 
@@ -5448,18 +7879,21 @@ static struct PyModuleDef __pyx_moduledef = {
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_First_value_of_sigA_and_sigB_sho, __pyx_k_First_value_of_sigA_and_sigB_sho, sizeof(__pyx_k_First_value_of_sigA_and_sigB_sho), 0, 1, 0, 0},
+  {&__pyx_kp_u_Got, __pyx_k_Got, sizeof(__pyx_k_Got), 0, 1, 0, 0},
   {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
+  {&__pyx_kp_u_Signatures_should_be_of_length, __pyx_k_Signatures_should_be_of_length, sizeof(__pyx_k_Signatures_should_be_of_length), 0, 1, 0, 0},
   {&__pyx_kp_u_Signatures_should_be_of_same_tru, __pyx_k_Signatures_should_be_of_same_tru, sizeof(__pyx_k_Signatures_should_be_of_same_tru), 0, 1, 0, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
+  {&__pyx_kp_u__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 1, 0, 0},
   {&__pyx_kp_u_and, __pyx_k_and, sizeof(__pyx_k_and), 0, 1, 0, 0},
   {&__pyx_n_s_channels, __pyx_k_channels, sizeof(__pyx_k_channels), 0, 0, 1, 1},
   {&__pyx_n_s_check_params, __pyx_k_check_params, sizeof(__pyx_k_check_params), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
   {&__pyx_n_s_current_dist, __pyx_k_current_dist, sizeof(__pyx_k_current_dist), 0, 0, 1, 1},
+  {&__pyx_kp_s_cutils_pyx, __pyx_k_cutils_pyx, sizeof(__pyx_k_cutils_pyx), 0, 0, 1, 0},
   {&__pyx_n_u_d, __pyx_k_d, sizeof(__pyx_k_d), 0, 1, 0, 1},
   {&__pyx_n_s_depth, __pyx_k_depth, sizeof(__pyx_k_depth), 0, 0, 1, 1},
-  {&__pyx_n_s_depth_inds, __pyx_k_depth_inds, sizeof(__pyx_k_depth_inds), 0, 0, 1, 1},
   {&__pyx_n_s_dist, __pyx_k_dist, sizeof(__pyx_k_dist), 0, 0, 1, 1},
   {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
   {&__pyx_n_s_empty, __pyx_k_empty, sizeof(__pyx_k_empty), 0, 0, 1, 1},
@@ -5499,16 +7933,14 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_signature_coefficients, __pyx_k_signature_coefficients, sizeof(__pyx_k_signature_coefficients), 0, 1, 0, 0},
   {&__pyx_n_s_signaturemean_cutils, __pyx_k_signaturemean_cutils, sizeof(__pyx_k_signaturemean_cutils), 0, 0, 1, 1},
   {&__pyx_n_s_sigprod, __pyx_k_sigprod, sizeof(__pyx_k_sigprod), 0, 0, 1, 1},
-  {&__pyx_kp_s_src_signaturemean_cutils_pyx, __pyx_k_src_signaturemean_cutils_pyx, sizeof(__pyx_k_src_signaturemean_cutils_pyx), 0, 0, 1, 0},
-  {&__pyx_n_s_sum, __pyx_k_sum, sizeof(__pyx_k_sum), 0, 0, 1, 1},
   {&__pyx_n_s_summand, __pyx_k_summand, sizeof(__pyx_k_summand), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 23, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 39, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 945, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -5519,130 +7951,118 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "signaturemean/cutils.pyx":23
+  /* "signaturemean/cutils.pyx":25
  *     if check_params:
  *         if sigA[0] != 1. or sigB[0] != 1.:
  *             raise ValueError(             # <<<<<<<<<<<<<<
  *                 "First value of sigA and sigB should be 1."
  *             )
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_First_value_of_sigA_and_sigB_sho); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_First_value_of_sigA_and_sigB_sho); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "signaturemean/cutils.pyx":33
+  /* "signaturemean/cutils.pyx":35
  *         )
  *     # cdef double[:] prod = np.zeros(len(sigA)-1, dtype=np.dtype("d"))
  *     cdef cnp.ndarray[double, ndim=1] prod = np.zeros(len(sigA)-1, dtype=cnp.dtype("d"))             # <<<<<<<<<<<<<<
  *     cdef int sh1 = 0, sh2 = 0, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
  *     # cdef int[:] cinds = inds
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_n_u_d); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_n_u_d); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "signaturemean/cutils.pyx":82
+  /* "signaturemean/cutils.pyx":155
  *     right = -right   # 1-a
  *     summand = right.copy()
  *     inv = right[1:].copy()             # <<<<<<<<<<<<<<
  * #     memcpy(right, summand, lensig)
  * #     memcpy(right, inv, lensig)
  */
-  __pyx_slice__3 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) __PYX_ERR(0, 82, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_slice__3);
-  __Pyx_GIVEREF(__pyx_slice__3);
+  __pyx_slice__4 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__4)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_slice__4);
+  __Pyx_GIVEREF(__pyx_slice__4);
 
-  /* "signaturemean/cutils.pyx":108
+  /* "signaturemean/cutils.pyx":206
  *         int inc = 1
  *         double current_dist, dist = 0.
  *         cnp.ndarray[int, ndim=1] indsdiff = inds[1:] - inds[:-1]             # <<<<<<<<<<<<<<
  * 
  *     invA[0] = 1.
  */
-  __pyx_slice__4 = PySlice_New(Py_None, __pyx_int_neg_1, Py_None); if (unlikely(!__pyx_slice__4)) __PYX_ERR(0, 108, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_slice__4);
-  __Pyx_GIVEREF(__pyx_slice__4);
+  __pyx_slice__5 = PySlice_New(Py_None, __pyx_int_neg_1, Py_None); if (unlikely(!__pyx_slice__5)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_slice__5);
+  __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "signaturemean/cutils.pyx":149
+  /* "signaturemean/cutils.pyx":247
  *     Example: with depth=4 and channels=2, returns [0, 1, 3, 7, 15, 31].
  *     """
  *     cdef cnp.ndarray[int, ndim=1] inds = np.empty(depth+2, dtype=cnp.dtype("i"))             # <<<<<<<<<<<<<<
  *     cdef int i
  *     cdef int sum = 0
  */
-  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_n_u_i); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 149, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__5);
-  __Pyx_GIVEREF(__pyx_tuple__5);
+  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_u_i); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__6);
+  __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":945
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":945
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_umath() except -1:
  */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_multiarray_failed_to); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(1, 945, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__6);
-  __Pyx_GIVEREF(__pyx_tuple__6);
+  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_multiarray_failed_to); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(1, 945, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__7);
+  __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":951
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":951
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
  * 
  * cdef inline int import_ufunc() except -1:
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_umath_failed_to_impor); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(1, 951, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__7);
-  __Pyx_GIVEREF(__pyx_tuple__7);
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_u_numpy_core_umath_failed_to_impor); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(1, 951, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__8);
+  __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "signaturemean/cutils.pyx":14
- * 
+  /* "signaturemean/cutils.pyx":16
+ * # cpdef cnp.ndarray[double, ndim=1] sigprod():
  * 
  * def sigprod(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
  *             cnp.ndarray[double, ndim=1] sigB,
  *             unsigned int depth,
  */
-  __pyx_tuple__8 = PyTuple_Pack(15, __pyx_n_s_sigA, __pyx_n_s_sigB, __pyx_n_s_depth, __pyx_n_s_channels, __pyx_n_s_inds, __pyx_n_s_check_params, __pyx_n_s_prod, __pyx_n_s_sh1, __pyx_n_s_sh2, __pyx_n_s_idx_depth, __pyx_n_s_i, __pyx_n_s_inc, __pyx_n_s_lenleft, __pyx_n_s_lenright, __pyx_n_s_one); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 14, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__8);
-  __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(6, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_signaturemean_cutils_pyx, __pyx_n_s_sigprod, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(15, __pyx_n_s_sigA, __pyx_n_s_sigB, __pyx_n_s_depth, __pyx_n_s_channels, __pyx_n_s_inds, __pyx_n_s_check_params, __pyx_n_s_prod, __pyx_n_s_sh1, __pyx_n_s_sh2, __pyx_n_s_idx_depth, __pyx_n_s_i, __pyx_n_s_inc, __pyx_n_s_lenleft, __pyx_n_s_lenright, __pyx_n_s_one); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__9);
+  __Pyx_GIVEREF(__pyx_tuple__9);
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(6, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cutils_pyx, __pyx_n_s_sigprod, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "signaturemean/cutils.pyx":59
+  /* "signaturemean/cutils.pyx":132
  * 
  * 
  * def siginv(cnp.ndarray[double, ndim=1] sig,             # <<<<<<<<<<<<<<
  *            unsigned int depth,
  *            unsigned int channels,
  */
-  __pyx_tuple__10 = PyTuple_Pack(9, __pyx_n_s_sig, __pyx_n_s_depth, __pyx_n_s_channels, __pyx_n_s_inds, __pyx_n_s_lensig, __pyx_n_s_right, __pyx_n_s_summand, __pyx_n_s_inv, __pyx_n_s_k); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 59, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__10);
-  __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(5, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_signaturemean_cutils_pyx, __pyx_n_s_siginv, 59, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(9, __pyx_n_s_sig, __pyx_n_s_depth, __pyx_n_s_channels, __pyx_n_s_inds, __pyx_n_s_lensig, __pyx_n_s_right, __pyx_n_s_summand, __pyx_n_s_inv, __pyx_n_s_k); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__11);
+  __Pyx_GIVEREF(__pyx_tuple__11);
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(5, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cutils_pyx, __pyx_n_s_siginv, 132, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 132, __pyx_L1_error)
 
-  /* "signaturemean/cutils.pyx":93
+  /* "signaturemean/cutils.pyx":191
  * 
  * 
  * def sigdist(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
  *             cnp.ndarray[double, ndim=1] sigB,
  *             unsigned int depth,
  */
-  __pyx_tuple__12 = PyTuple_Pack(16, __pyx_n_s_sigA, __pyx_n_s_sigB, __pyx_n_s_depth, __pyx_n_s_channels, __pyx_n_s_inds, __pyx_n_s_lensig, __pyx_n_s_invA, __pyx_n_s_prod, __pyx_n_s_i, __pyx_n_s_ind1, __pyx_n_s_ind2, __pyx_n_s_n, __pyx_n_s_inc, __pyx_n_s_current_dist, __pyx_n_s_dist, __pyx_n_s_indsdiff); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 93, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__12);
-  __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(6, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_signaturemean_cutils_pyx, __pyx_n_s_sigdist, 93, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 93, __pyx_L1_error)
-
-  /* "signaturemean/cutils.pyx":142
- * 
- * 
- * def depth_inds(int depth, int channels):             # <<<<<<<<<<<<<<
- *     """
- *     Most libraries computing the signature transform output the signature as a
- */
-  __pyx_tuple__14 = PyTuple_Pack(5, __pyx_n_s_depth, __pyx_n_s_channels, __pyx_n_s_inds, __pyx_n_s_i, __pyx_n_s_sum); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 142, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__14);
-  __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_signaturemean_cutils_pyx, __pyx_n_s_depth_inds, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(16, __pyx_n_s_sigA, __pyx_n_s_sigB, __pyx_n_s_depth, __pyx_n_s_channels, __pyx_n_s_inds, __pyx_n_s_lensig, __pyx_n_s_invA, __pyx_n_s_prod, __pyx_n_s_i, __pyx_n_s_ind1, __pyx_n_s_ind2, __pyx_n_s_n, __pyx_n_s_inc, __pyx_n_s_current_dist, __pyx_n_s_dist, __pyx_n_s_indsdiff); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__13);
+  __Pyx_GIVEREF(__pyx_tuple__13);
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(6, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cutils_pyx, __pyx_n_s_sigdist, 191, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5652,6 +8072,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
 static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
+  __pyx_float_1_ = PyFloat_FromDouble(1.); if (unlikely(!__pyx_float_1_)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_neg_1 = PyInt_FromLong(-1); if (unlikely(!__pyx_int_neg_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
@@ -6000,52 +8421,40 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":14
- * 
+  /* "signaturemean/cutils.pyx":16
+ * # cpdef cnp.ndarray[double, ndim=1] sigprod():
  * 
  * def sigprod(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
  *             cnp.ndarray[double, ndim=1] sigB,
  *             unsigned int depth,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13signaturemean_6cutils_1sigprod, NULL, __pyx_n_s_signaturemean_cutils); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13signaturemean_6cutils_1sigprod, NULL, __pyx_n_s_signaturemean_cutils); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sigprod, __pyx_t_1) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sigprod, __pyx_t_1) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":59
+  /* "signaturemean/cutils.pyx":132
  * 
  * 
  * def siginv(cnp.ndarray[double, ndim=1] sig,             # <<<<<<<<<<<<<<
  *            unsigned int depth,
  *            unsigned int channels,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13signaturemean_6cutils_3siginv, NULL, __pyx_n_s_signaturemean_cutils); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13signaturemean_6cutils_7siginv, NULL, __pyx_n_s_signaturemean_cutils); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_siginv, __pyx_t_1) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_siginv, __pyx_t_1) < 0) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "signaturemean/cutils.pyx":93
+  /* "signaturemean/cutils.pyx":191
  * 
  * 
  * def sigdist(cnp.ndarray[double, ndim=1] sigA,             # <<<<<<<<<<<<<<
  *             cnp.ndarray[double, ndim=1] sigB,
  *             unsigned int depth,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13signaturemean_6cutils_5sigdist, NULL, __pyx_n_s_signaturemean_cutils); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13signaturemean_6cutils_11sigdist, NULL, __pyx_n_s_signaturemean_cutils); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sigdist, __pyx_t_1) < 0) __PYX_ERR(0, 93, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "signaturemean/cutils.pyx":142
- * 
- * 
- * def depth_inds(int depth, int channels):             # <<<<<<<<<<<<<<
- *     """
- *     Most libraries computing the signature transform output the signature as a
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_13signaturemean_6cutils_7depth_inds, NULL, __pyx_n_s_signaturemean_cutils); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_depth_inds, __pyx_t_1) < 0) __PYX_ERR(0, 142, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sigdist, __pyx_t_1) < 0) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "signaturemean/cutils.pyx":1
@@ -6058,7 +8467,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../../../../../../tmp/build-env-gamkwphx/lib/python3.8/site-packages/numpy/__init__.pxd":1014
+  /* "../../../../../../../../../usr/local/lib/python3.8/dist-packages/numpy/__init__.pxd":1014
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -7583,6 +9992,81 @@ static CYTHON_INLINE PyObject *__Pyx__GetModuleGlobalName(PyObject *name)
     return 0;
 }
 
+/* CIntToPyUnicode */
+  static CYTHON_INLINE PyObject* __Pyx_PyUnicode_From_int(int value, Py_ssize_t width, char padding_char, char format_char) {
+    char digits[sizeof(int)*3+2];
+    char *dpos, *end = digits + sizeof(int)*3+2;
+    const char *hex_digits = DIGITS_HEX;
+    Py_ssize_t length, ulength;
+    int prepend_sign, last_one_off;
+    int remaining;
+#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
+#endif
+    const int neg_one = (int) -1, const_zero = (int) 0;
+#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+#pragma GCC diagnostic pop
+#endif
+    const int is_unsigned = neg_one > const_zero;
+    if (format_char == 'X') {
+        hex_digits += 16;
+        format_char = 'x';
+    }
+    remaining = value;
+    last_one_off = 0;
+    dpos = end;
+    do {
+        int digit_pos;
+        switch (format_char) {
+        case 'o':
+            digit_pos = abs((int)(remaining % (8*8)));
+            remaining = (int) (remaining / (8*8));
+            dpos -= 2;
+            memcpy(dpos, DIGIT_PAIRS_8 + digit_pos * 2, 2);
+            last_one_off = (digit_pos < 8);
+            break;
+        case 'd':
+            digit_pos = abs((int)(remaining % (10*10)));
+            remaining = (int) (remaining / (10*10));
+            dpos -= 2;
+            memcpy(dpos, DIGIT_PAIRS_10 + digit_pos * 2, 2);
+            last_one_off = (digit_pos < 10);
+            break;
+        case 'x':
+            *(--dpos) = hex_digits[abs((int)(remaining % 16))];
+            remaining = (int) (remaining / 16);
+            break;
+        default:
+            assert(0);
+            break;
+        }
+    } while (unlikely(remaining != 0));
+    if (last_one_off) {
+        assert(*dpos == '0');
+        dpos++;
+    }
+    length = end - dpos;
+    ulength = length;
+    prepend_sign = 0;
+    if (!is_unsigned && value <= neg_one) {
+        if (padding_char == ' ' || width <= length + 1) {
+            *(--dpos) = '-';
+            ++length;
+        } else {
+            prepend_sign = 1;
+        }
+        ++ulength;
+    }
+    if (width > ulength) {
+        ulength = width;
+    }
+    if (ulength == 1) {
+        return PyUnicode_FromOrdinal(*dpos);
+    }
+    return __Pyx_PyUnicode_BuildFromAscii(ulength, dpos, (int) length, prepend_sign, padding_char);
+}
+
 /* PyObjectCallNoArg */
   #if CYTHON_COMPILING_IN_CPYTHON
 static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func) {
@@ -7727,8 +10211,134 @@ static PyObject *__Pyx_PyObject_GetItem(PyObject *obj, PyObject* key) {
 }
 #endif
 
+/* SetItemInt */
+  static int __Pyx_SetItemInt_Generic(PyObject *o, PyObject *j, PyObject *v) {
+    int r;
+    if (!j) return -1;
+    r = PyObject_SetItem(o, j, v);
+    Py_DECREF(j);
+    return r;
+}
+static CYTHON_INLINE int __Pyx_SetItemInt_Fast(PyObject *o, Py_ssize_t i, PyObject *v, int is_list,
+                                               CYTHON_NCP_UNUSED int wraparound, CYTHON_NCP_UNUSED int boundscheck) {
+#if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS && CYTHON_USE_TYPE_SLOTS
+    if (is_list || PyList_CheckExact(o)) {
+        Py_ssize_t n = (!wraparound) ? i : ((likely(i >= 0)) ? i : i + PyList_GET_SIZE(o));
+        if ((!boundscheck) || likely(__Pyx_is_valid_index(n, PyList_GET_SIZE(o)))) {
+            PyObject* old = PyList_GET_ITEM(o, n);
+            Py_INCREF(v);
+            PyList_SET_ITEM(o, n, v);
+            Py_DECREF(old);
+            return 1;
+        }
+    } else {
+        PySequenceMethods *m = Py_TYPE(o)->tp_as_sequence;
+        if (likely(m && m->sq_ass_item)) {
+            if (wraparound && unlikely(i < 0) && likely(m->sq_length)) {
+                Py_ssize_t l = m->sq_length(o);
+                if (likely(l >= 0)) {
+                    i += l;
+                } else {
+                    if (!PyErr_ExceptionMatches(PyExc_OverflowError))
+                        return -1;
+                    PyErr_Clear();
+                }
+            }
+            return m->sq_ass_item(o, i, v);
+        }
+    }
+#else
+#if CYTHON_COMPILING_IN_PYPY
+    if (is_list || (PySequence_Check(o) && !PyDict_Check(o)))
+#else
+    if (is_list || PySequence_Check(o))
+#endif
+    {
+        return PySequence_SetItem(o, i, v);
+    }
+#endif
+    return __Pyx_SetItemInt_Generic(o, PyInt_FromSsize_t(i), v);
+}
+
+/* PyFloatBinop */
+  #if !CYTHON_COMPILING_IN_PYPY
+static PyObject* __Pyx_PyFloat_AddObjC(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check) {
+    const double b = floatval;
+    double a, result;
+    (void)inplace;
+    (void)zerodivision_check;
+    if (likely(PyFloat_CheckExact(op1))) {
+        a = PyFloat_AS_DOUBLE(op1);
+        
+    } else
+    #if PY_MAJOR_VERSION < 3
+    if (likely(PyInt_CheckExact(op1))) {
+        a = (double) PyInt_AS_LONG(op1);
+        
+    } else
+    #endif
+    if (likely(PyLong_CheckExact(op1))) {
+        #if CYTHON_USE_PYLONG_INTERNALS
+        const digit* digits = ((PyLongObject*)op1)->ob_digit;
+        const Py_ssize_t size = Py_SIZE(op1);
+        switch (size) {
+            case  0: a = 0.0; break;
+            case -1: a = -(double) digits[0]; break;
+            case  1: a = (double) digits[0]; break;
+            case -2:
+            case 2:
+                if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (1 * PyLong_SHIFT < 53))) {
+                    a = (double) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
+                    if ((8 * sizeof(unsigned long) < 53) || (2 * PyLong_SHIFT < 53) || (a < (double) ((PY_LONG_LONG)1 << 53))) {
+                        if (size == -2)
+                            a = -a;
+                        break;
+                    }
+                }
+                CYTHON_FALLTHROUGH;
+            case -3:
+            case 3:
+                if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (2 * PyLong_SHIFT < 53))) {
+                    a = (double) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
+                    if ((8 * sizeof(unsigned long) < 53) || (3 * PyLong_SHIFT < 53) || (a < (double) ((PY_LONG_LONG)1 << 53))) {
+                        if (size == -3)
+                            a = -a;
+                        break;
+                    }
+                }
+                CYTHON_FALLTHROUGH;
+            case -4:
+            case 4:
+                if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (3 * PyLong_SHIFT < 53))) {
+                    a = (double) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
+                    if ((8 * sizeof(unsigned long) < 53) || (4 * PyLong_SHIFT < 53) || (a < (double) ((PY_LONG_LONG)1 << 53))) {
+                        if (size == -4)
+                            a = -a;
+                        break;
+                    }
+                }
+                CYTHON_FALLTHROUGH;
+            default:
+        #else
+        {
+        #endif
+            a = PyLong_AsDouble(op1);
+            if (unlikely(a == -1.0 && PyErr_Occurred())) return NULL;
+            
+        }
+    } else {
+        return (inplace ? PyNumber_InPlaceAdd : PyNumber_Add)(op1, op2);
+    }
+        
+        PyFPE_START_PROTECT("add", return NULL)
+        result = a + b;
+        PyFPE_END_PROTECT(result)
+        return PyFloat_FromDouble(result);
+}
+#endif
+
 /* GetTopmostException */
-  #if CYTHON_USE_EXC_INFO_STACK
+    #if CYTHON_USE_EXC_INFO_STACK
 static _PyErr_StackItem *
 __Pyx_PyErr_GetTopmostException(PyThreadState *tstate)
 {
@@ -7743,7 +10353,7 @@ __Pyx_PyErr_GetTopmostException(PyThreadState *tstate)
 #endif
 
 /* SaveResetException */
-  #if CYTHON_FAST_THREAD_STATE
+    #if CYTHON_FAST_THREAD_STATE
 static CYTHON_INLINE void __Pyx__ExceptionSave(PyThreadState *tstate, PyObject **type, PyObject **value, PyObject **tb) {
     #if CYTHON_USE_EXC_INFO_STACK
     _PyErr_StackItem *exc_info = __Pyx_PyErr_GetTopmostException(tstate);
@@ -7784,7 +10394,7 @@ static CYTHON_INLINE void __Pyx__ExceptionReset(PyThreadState *tstate, PyObject 
 #endif
 
 /* PyErrExceptionMatches */
-  #if CYTHON_FAST_THREAD_STATE
+    #if CYTHON_FAST_THREAD_STATE
 static int __Pyx_PyErr_ExceptionMatchesTuple(PyObject *exc_type, PyObject *tuple) {
     Py_ssize_t i, n;
     n = PyTuple_GET_SIZE(tuple);
@@ -7809,7 +10419,7 @@ static CYTHON_INLINE int __Pyx_PyErr_ExceptionMatchesInState(PyThreadState* tsta
 #endif
 
 /* GetException */
-  #if CYTHON_FAST_THREAD_STATE
+    #if CYTHON_FAST_THREAD_STATE
 static int __Pyx__GetException(PyThreadState *tstate, PyObject **type, PyObject **value, PyObject **tb)
 #else
 static int __Pyx_GetException(PyObject **type, PyObject **value, PyObject **tb)
@@ -7883,7 +10493,7 @@ bad:
 }
 
 /* TypeImport */
-  #ifndef __PYX_HAVE_RT_ImportType
+    #ifndef __PYX_HAVE_RT_ImportType
 #define __PYX_HAVE_RT_ImportType
 static PyTypeObject *__Pyx_ImportType(PyObject *module, const char *module_name, const char *class_name,
     size_t size, enum __Pyx_ImportType_CheckSize check_size)
@@ -7944,7 +10554,7 @@ bad:
 #endif
 
 /* Import */
-  static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
+    static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
     PyObject *empty_list = 0;
     PyObject *module = 0;
     PyObject *global_dict = 0;
@@ -8009,7 +10619,7 @@ bad:
 }
 
 /* CLineInTraceback */
-  #ifndef CYTHON_CLINE_IN_TRACEBACK
+    #ifndef CYTHON_CLINE_IN_TRACEBACK
 static int __Pyx_CLineForTraceback(CYTHON_NCP_UNUSED PyThreadState *tstate, int c_line) {
     PyObject *use_cline;
     PyObject *ptype, *pvalue, *ptraceback;
@@ -8051,7 +10661,7 @@ static int __Pyx_CLineForTraceback(CYTHON_NCP_UNUSED PyThreadState *tstate, int 
 #endif
 
 /* CodeObjectCache */
-  static int __pyx_bisect_code_objects(__Pyx_CodeObjectCacheEntry* entries, int count, int code_line) {
+    static int __pyx_bisect_code_objects(__Pyx_CodeObjectCacheEntry* entries, int count, int code_line) {
     int start = 0, mid = 0, end = count - 1;
     if (end >= 0 && code_line > entries[end].code_line) {
         return count;
@@ -8131,7 +10741,7 @@ static void __pyx_insert_code_object(int code_line, PyCodeObject* code_object) {
 }
 
 /* AddTraceback */
-  #include "compile.h"
+    #include "compile.h"
 #include "frameobject.h"
 #include "traceback.h"
 static PyCodeObject* __Pyx_CreateCodeObjectForTraceback(
@@ -8241,8 +10851,8 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
 #endif
 
 
-  /* CIntFromPyVerify */
-  #define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
+    /* CIntFromPyVerify */
+    #define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
     __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 0)
 #define __PYX_VERIFY_RETURN_INT_EXC(target_type, func_type, func_value)\
     __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 1)
@@ -8264,7 +10874,7 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
     }
 
 /* IntPow */
-  static CYTHON_INLINE long __Pyx_pow_long(long b, long e) {
+    static CYTHON_INLINE long __Pyx_pow_long(long b, long e) {
     long t = b;
     switch (e) {
         case 3:
@@ -8291,7 +10901,7 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
 }
 
 /* IntPow */
-  static CYTHON_INLINE int __Pyx_pow_int(int b, int e) {
+    static CYTHON_INLINE int __Pyx_pow_int(int b, int e) {
     int t = b;
     switch (e) {
         case 3:
@@ -8318,7 +10928,7 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
 }
 
 /* Declarations */
-  #if CYTHON_CCOMPLEX
+    #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
     static CYTHON_INLINE __pyx_t_float_complex __pyx_t_float_complex_from_parts(float x, float y) {
       return ::std::complex< float >(x, y);
@@ -8338,7 +10948,7 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
 #endif
 
 /* Arithmetic */
-  #if CYTHON_CCOMPLEX
+    #if CYTHON_CCOMPLEX
 #else
     static CYTHON_INLINE int __Pyx_c_eq_float(__pyx_t_float_complex a, __pyx_t_float_complex b) {
        return (a.real == b.real) && (a.imag == b.imag);
@@ -8472,7 +11082,7 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
 #endif
 
 /* Declarations */
-  #if CYTHON_CCOMPLEX
+    #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
     static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(double x, double y) {
       return ::std::complex< double >(x, y);
@@ -8492,7 +11102,7 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
 #endif
 
 /* Arithmetic */
-  #if CYTHON_CCOMPLEX
+    #if CYTHON_CCOMPLEX
 #else
     static CYTHON_INLINE int __Pyx_c_eq_double(__pyx_t_double_complex a, __pyx_t_double_complex b) {
        return (a.real == b.real) && (a.imag == b.imag);
@@ -8626,7 +11236,7 @@ static void __Pyx_ReleaseBuffer(Py_buffer *view) {
 #endif
 
 /* CIntFromPy */
-  static CYTHON_INLINE unsigned int __Pyx_PyInt_As_unsigned_int(PyObject *x) {
+    static CYTHON_INLINE unsigned int __Pyx_PyInt_As_unsigned_int(PyObject *x) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
@@ -8822,7 +11432,7 @@ raise_neg_overflow:
 }
 
 /* CIntFromPy */
-  static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {
+    static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
@@ -9018,7 +11628,7 @@ raise_neg_overflow:
 }
 
 /* CIntToPy */
-  static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
+    static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
@@ -9056,7 +11666,7 @@ raise_neg_overflow:
 }
 
 /* CIntToPy */
-  static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
+    static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
@@ -9094,7 +11704,7 @@ raise_neg_overflow:
 }
 
 /* CIntToPy */
-  static CYTHON_INLINE PyObject* __Pyx_PyInt_From_unsigned_int(unsigned int value) {
+    static CYTHON_INLINE PyObject* __Pyx_PyInt_From_unsigned_int(unsigned int value) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
@@ -9132,7 +11742,7 @@ raise_neg_overflow:
 }
 
 /* CIntFromPy */
-  static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {
+    static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
@@ -9328,7 +11938,7 @@ raise_neg_overflow:
 }
 
 /* FastTypeChecks */
-  #if CYTHON_COMPILING_IN_CPYTHON
+    #if CYTHON_COMPILING_IN_CPYTHON
 static int __Pyx_InBases(PyTypeObject *a, PyTypeObject *b) {
     while (a) {
         a = a->tp_base;
@@ -9428,7 +12038,7 @@ static CYTHON_INLINE int __Pyx_PyErr_GivenExceptionMatches2(PyObject *err, PyObj
 #endif
 
 /* CheckBinaryVersion */
-  static int __Pyx_check_binary_version(void) {
+    static int __Pyx_check_binary_version(void) {
     char ctversion[4], rtversion[4];
     PyOS_snprintf(ctversion, 4, "%d.%d", PY_MAJOR_VERSION, PY_MINOR_VERSION);
     PyOS_snprintf(rtversion, 4, "%s", Py_GetVersion());
@@ -9444,7 +12054,7 @@ static CYTHON_INLINE int __Pyx_PyErr_GivenExceptionMatches2(PyObject *err, PyObj
 }
 
 /* FunctionImport */
-  #ifndef __PYX_HAVE_RT_ImportFunction
+    #ifndef __PYX_HAVE_RT_ImportFunction
 #define __PYX_HAVE_RT_ImportFunction
 static int __Pyx_ImportFunction(PyObject *module, const char *funcname, void (**f)(void), const char *sig) {
     PyObject *d = 0;
@@ -9498,7 +12108,7 @@ bad:
 #endif
 
 /* InitStrings */
-  static int __Pyx_InitStrings(__Pyx_StringTabEntry *t) {
+    static int __Pyx_InitStrings(__Pyx_StringTabEntry *t) {
     while (t->p) {
         #if PY_MAJOR_VERSION < 3
         if (t->is_unicode) {

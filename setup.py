@@ -1,4 +1,5 @@
-from setuptools import setup, Extension
+from setuptools import setup, Extension 
+# setuptools>=18.0 handles extensions
 
 """
 Note
@@ -12,7 +13,7 @@ as recommended from the official setuptools documentation.
 
 ext = Extension(
     name='signaturemean.cutils',
-    sources=['src/signaturemean/cutils.pyx'], # if not working, try `sources=['src/signaturemean/cutils.pyx']`
+    sources=['src/signaturemean/cutils.pyx'],
 )
 
 setup(

@@ -5,6 +5,9 @@ __pycache__/
 # C extensions
 *.so
 
+# HTML files (resulting from Cython)
+*.html
+
 # Distribution / packaging
 bin/
 build/
@@ -23,6 +26,9 @@ var/
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Jupyter notebooks
+.ipynb_checkpoints/
 
 # Unit test / coverage reports
 .tox/

@@ -50,7 +50,7 @@ def sigprod(cnp.ndarray[double, ndim=1] sigA,
     return prod
 
 
-cpdef cnp.ndarray[double, ndim=1] sigprod_inplace(
+cpdef cnp.ndarray[double, ndim=1] sigrprod_inplace(
     cnp.ndarray[double, ndim=1] sigA,
     cnp.ndarray[double, ndim=1] sigB,
     unsigned int depth,
@@ -58,7 +58,10 @@ cpdef cnp.ndarray[double, ndim=1] sigprod_inplace(
     cnp.ndarray[int, ndim=1] inds,
     bint check_params = True
     ):
-    if check_params:  # to be removed
+    """
+    Right inplace product in signature space: a <- a*b
+    """
+    if check_params:  # checks are to be removed
         if len(sigA) != inds[-1]:
             raise ValueError(
                 f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
@@ -69,22 +72,61 @@ cpdef cnp.ndarray[double, ndim=1] sigprod_inplace(
                 f"same number of signature coefficients. Got {len(sigA)} "
                 f"and {len(sigB)} signature coefficients"
             )
+    cdef cnp.ndarray[double, ndim=1] sigAcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+    sigAcopy = sigA.copy()
     cdef double one = 1.0
     cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
     for idx_depth in range(depth+1, 0, -1):
         start = inds[idx_depth-1]
-        # for i in range(0, idx_depth):
-        for i in range(idx_depth-1, -1, -1):  # Careful! Must use sig[start:] in first iteration
+        for i in range(idx_depth-1, -1, -1):  # Careful! Must make use of sigA[start:] in first iteration
             lenleft = inds[i+1]-inds[i]
             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
-            print(f"idx_d {idx_depth}, i {i}, lenl {lenleft}, lenr {lenright}")
-            print(f"sigA bef {sigA}")
             dger(&lenright, &lenleft, &one,
                  &sigB[inds[idx_depth-i-1]], &inc,
                  &sigA[inds[i]], &inc,
                  &sigA[start], &lenright)  # Careful! In place modif of `sigA`
-            print(f"sigA aft {sigA}") 
+    sigA -= sigAcopy
     return sigA
+
+
+cpdef cnp.ndarray[double, ndim=1] siglprod_inplace(
+    cnp.ndarray[double, ndim=1] sigA,
+    cnp.ndarray[double, ndim=1] sigB,
+    unsigned int depth,
+    unsigned int channels,
+    cnp.ndarray[int, ndim=1] inds,
+    bint check_params = True
+    ):
+    """
+    Same as previous function, but the result product is stored in `sigB`
+    instead of `sigA`.
+    """
+    if check_params:  # checks are to be removed
+        if len(sigA) != inds[-1]:
+            raise ValueError(
+                f"Signatures should be of length {inds[-1]}. Got {len(sigA)} "
+            )
+        if len(sigA) != len(sigB):
+            raise ValueError(
+                f"Signatures should be of same truncated order (i.e. have the "
+                f"same number of signature coefficients. Got {len(sigA)} "
+                f"and {len(sigB)} signature coefficients"
+            )
+    cdef cnp.ndarray[double, ndim=1] sigBcopy = np.empty(inds[-1], dtype=cnp.dtype("d"))
+    sigBcopy = sigB.copy()
+    cdef double one = 1.0
+    cdef int start, idx_depth, i, inc = 1, lenleft = 0, lenright = 0
+    for idx_depth in range(depth+1, 0, -1):
+        start = inds[idx_depth-1]
+        for i in range(idx_depth):  # Careful! Must make use of sigB[start:] in first iteration
+            lenleft = inds[i+1]-inds[i]
+            lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
+            dger(&lenright, &lenleft, &one,
+                 &sigB[inds[idx_depth-i-1]], &inc,
+                 &sigA[inds[i]], &inc,
+                 &sigB[start], &lenright)  # Careful! In place modif of `sigB`
+    sigB -= sigBcopy
+    return sigB
 
 
 def siginv(cnp.ndarray[double, ndim=1] sig,
@@ -134,13 +176,14 @@ cpdef cnp.ndarray[double, ndim=1] siginv_inplace(
     """
     cdef cnp.ndarray[double, ndim=1] right = np.empty(inds[-1], dtype=cnp.dtype("d"))
     sigbis = sig.copy()
-    sigbis = -sigbis
-    sigbis[0] += 1.  # sigbis is (1-a)
-    sig = -sig
-    sig[0] += 2.  # sig is (2-a)
     cdef unsigned int i = 0
+    for i in range(inds[-1]):
+        sigbis[i] = -sigbis[i]
+        sig[i] = -sig[i]
+    sigbis[0] += 1.  # sigbis is (1-a)
+    sig[0] += 2.  # sig is (2-a)
     for i in range(depth):
-        sig = sigprod_inplace(sigbis, sig, depth, channels, inds, True)
+        sig = siglprod_inplace(sigbis, sig, depth, channels, inds, True)
         sig[0] += 1.
     return sig
 
