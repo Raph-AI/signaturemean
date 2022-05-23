@@ -4,11 +4,11 @@ A toolbox for signature averaging.
 
 ## Signature barycenters
 
-This repository contains three approaches to compute a barycenter of _iterated integrals signatures_ of paths. The three methods are the following:
+This repository contains three approaches to compute a barycenter of _iterated integrals signatures_ of paths. Let $X:[0,1]\to\mathbb{R}^D$ be a path and denote $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ its associated signature up to order $m$. From a dataset $(X_i)_{1\leq i \leq n}$ we define the following barycenters:
 
-1. `mean_le.py` : Log Euclidean mean method [2, Equation 3].
-2. `mean_pennec.py` : Group Exponential mean method [2, Algorithm 1].
-3. `mean_pathopt.py` : Optimization on path space method.
+1. `signaturemean.mean_le` : Log Euclidean mean method $$\bar{\mathbb{X}} = \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ \mathbb{X}_i\Bigg) .$$
+2. `signaturemean.mean_pennec` : Group Exponential mean method [2, Algorithm 1] $$m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ (m_{(k)}^{-1}\otimes \mathbb{X}_i)\Bigg) .$$
+3. `signaturemean.mean_pathopt` : Optimization on path space method $$\bar X = \argmin_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
 
 
 <!-- - `mean_pathopt_proj.py` **WIP** : method of Nozomi Sugiura (see Appendix B in [3]). -->
@@ -42,20 +42,20 @@ sigbarycenter2 = mean_pennec.mean(sigs, depth, channels)  # a signature
 pathbarycenter = mean_pathopt.mean(paths, depth, n_init=3)  # a list of 3 paths
 ```
 
-**Remarks.**
+**Remarks**
 
-- Note that the `mean_pathopt.mean` returns a list of paths and not a signature.
+- Note that `signaturemean.mean_tsoptim.mean()` returns a list of paths and not a signature.
 - In the example above, data is shifted and scaled. This step is not necessary but required.
 
 ## Requirements
 
-1. See `requirements.txt`.
-2. Requires pip >= 10
-3. Signatory must be compatible with your `torch` package version. E.g.
+1. Use `requirements.txt`.
+2. Requires `pip>=10`.
+3. Verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation:
     - torch 1.7.1+cu101 (CUDA 10.1) `pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html`
     - signatory 1.2.6.1.7.1 `pip install signatory==1.2.6.1.7.1 --no-cache-dir --force-reinstall`
-4. If using `mean_pathopt.py`:
-    - Requires PyManOpt from git: `python3 -m pip install git+https://github.com/pymanopt/pymanopt.git@master` (does not work with `pip install pymanopt`).
+4. If using `signaturemean.mean_tsoptim`:
+    - Install PyManOpt from git: `python3 -m pip install git+https://github.com/pymanopt/pymanopt.git@master` (does not work with `pip install pymanopt`).
 
 
 <!-- ## Example -->
