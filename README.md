@@ -6,17 +6,17 @@ A toolbox for signature averaging.
 
 This repository contains three approaches to compute a barycenter of _iterated integrals signatures_ of paths. Let $X:[0,1]\to\mathbb{R}^D$ be a path and denote $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ its associated signature up to order $m$. From a dataset $(X_i)_{1\leq i \leq n}$ we define the following barycenters:
 
-1. `signaturemean.mean_le` : Log Euclidean mean method
+- `signaturemean.mean_le` : Log Euclidean mean method
 
 $$\bar{\mathbb{X}} = \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ \mathbb{X}_i\Bigg) .$$
 
-2. `signaturemean.mean_pennec` : Group Exponential mean method [2, Algorithm 1]
+- `signaturemean.mean_pennec` : Group Exponential mean method [2, Algorithm 1]
 
 $$m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ (m_{(k)}^{-1}\otimes \mathbb{X}_i)\Bigg) .$$
 
-3. `signaturemean.mean_pathopt` : Optimization on path space method
+- `signaturemean.mean_pathopt` : Optimization on path space method
 
-$$\bar X = \argmin_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
+$$\bar X = \mathrm{argmin}_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
 
 
 <!-- - `mean_pathopt_proj.py` **WIP** : method of Nozomi Sugiura (see Appendix B in [3]). -->
