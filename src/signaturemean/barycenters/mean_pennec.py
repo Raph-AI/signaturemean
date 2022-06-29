@@ -58,7 +58,7 @@ def mean(datasig, depth, channels, max_iter_pe=5):
     while n_iter < max_iter_pe:
         sigbarycenter1 = np.concatenate(([1.], sigbarycenter))
         inv_sigbarycenter = csiginv(
-            sigbarycenter1, depth, channels, inds0, lensig1
+            sigbarycenter1, depth, channels, inds0
         )
         inv_sigbarycenter1 = np.concatenate(([1.], inv_sigbarycenter))
         mean_logsSX = 0.
