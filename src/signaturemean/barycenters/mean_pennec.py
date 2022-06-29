@@ -17,7 +17,7 @@ def mean(datasig, depth, channels, max_iter_pe=5):
     ----------
     datasig : (batch, stream, channels) torch.Tensor
         Dataset containing signatures over which the mean is computed,
-        along the batch axis.
+        along the batch axis. For instance, an output of `signatory.signature` .
 
     depth : int
         Maximum depth of the signature which is used to compute the mean.
@@ -66,6 +66,7 @@ def mean(datasig, depth, channels, max_iter_pe=5):
             obs = datasig[idx]
             obs1 = np.concatenate(([1.], obs))
             prod = csigprod(inv_sigbarycenter1, obs1, depth, channels, inds0)
+            prod = prod[1:]
             prod = torch.from_numpy(prod)
             prod = prod.unsqueeze(0)
             logSX = stoLogS.forward(prod)

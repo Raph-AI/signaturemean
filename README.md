@@ -31,27 +31,34 @@ For an introduction on the iterated integrals signature transform, the reader ca
 
 ``` python
 import torch
+import numpy as np
 import signatory
-import mean_le
-import mean_pennec
-import mean_pathopt
-import utils
+
+from signaturemean.barycenters import mean_le
+from signaturemean.barycenters import mean_pennec
+from signaturemean.barycenters import mean_tsoptim
+from signaturemean import utils
 
 batch = 5     # number of time series
 stream = 30   # number of timestamps for each time series
 channels = 3  # number of dimensions
-depth = 6     # depth (order) of truncation of the signature
+depth = 4     # depth (order) of truncation of the signature
 
 # Simulate random data
 paths = torch.rand(batch, stream, channels)   # simulate random numbers
-paths = utils.datashift(paths)  # paths start at zero
+paths = utils.datashift(paths)    # paths start at zero
 paths = utils.datascaling(paths)  # paths have total variation = 1
-sigs = signatory.signature(paths, depth)
+SX = signatory.signature(X, depth=depth)
 
-# Compute barycenter with each approach
-sigbarycenter = mean_le.mean(sigs, depth, channels)       # a signature
-sigbarycenter2 = mean_pennec.mean(sigs, depth, channels)  # a signature
-pathbarycenter = mean_pathopt.mean(paths, depth, n_init=3)  # a list of 3 paths
+## Compute barycenter with each approach
+# Approach 1: log euclidean mean
+print(mean_le.mean(SX, depth, channels))  # returns a signature
+# Approach 2: group exponential method
+print(mean_pennec.mean(SX, depth, channels))  # returns a signature
+# Approach 3: optimization on path space
+tso = mean_tsoptim.TSoptim(depth, channels, 1641)
+tso.fit(X)
+print(tso.barycenter_ts)  # returns a path
 ```
 
 **Remarks**
