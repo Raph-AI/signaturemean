@@ -4,7 +4,11 @@ A toolbox for signature averaging.
 
 ## Signature barycenters
 
-This repository contains three approaches to compute a barycenter of _iterated integrals signatures_ of paths. Let $X:[0,1]\to\mathbb{R}^D$ be a path and denote $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ its associated signature up to order $m$. From a dataset $(X_i)_{1\leq i \leq n}$ we define the following barycenters:
+This repository contains three approaches to compute a barycenter of _iterated integrals signatures_ of paths. Let $X:[0,1]\to\mathbb{R}^D$
+
+be a path and denote $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ its associated signature up to order m.
+
+From a dataset $(X_i)_{1\leq i \leq n}$ we define the following barycenters:
 
 - `signaturemean.mean_le` : Log Euclidean mean method
 
@@ -57,7 +61,7 @@ pathbarycenter = mean_pathopt.mean(paths, depth, n_init=3)  # a list of 3 paths
 
 ## Requirements
 
-1. Use `requirements.txt`.
+1. `python3 -m pip install -U requirements.txt`.
 2. Requires `pip>=10`.
 3. Verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation:
     - torch 1.7.1+cu101 (CUDA 10.1) `pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html`
