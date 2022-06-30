@@ -79,7 +79,7 @@ def mean(datasig, depth, channels, max_iter_pe=5):
         )
         sigbarycenter = sigbarycenter_new
         n_iter += 1
-    return sigbarycenter
+    return sigbarycenter[1:]  # omit scalar value
 
 
 # def mean(datasig, depth, channels, max_iter_pe=5):

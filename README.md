@@ -64,7 +64,7 @@ print(tso.barycenter_ts)  # returns a path
 **Remarks**
 
 - Note that `signaturemean.mean_tsoptim.mean()` returns a list of paths and not a signature.
-- In the example above, data is shifted and scaled. This step is not necessary but required.
+- In the example above, data is shifted and scaled. This step is not necessary, only required.
 
 ## Requirements
 
