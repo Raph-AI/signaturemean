@@ -1,4 +1,4 @@
-# signaturemean
+# <p align='center'> signaturemean </p> 
 
 A toolbox for signature averaging.
 
@@ -18,7 +18,7 @@ $$\bar{\mathbb{X}} = \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ \ma
 
 $$m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ (m_{(k)}^{-1}\otimes \mathbb{X}_i)\Bigg) .$$
 
-- `signaturemean.mean_pathopt` : Optimization on path space method
+- `signaturemean.mean_tsoptim` : Optimization on time series space method
 
 $$\min_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
 
