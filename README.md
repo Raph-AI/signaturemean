@@ -1,4 +1,4 @@
-# <p align='center'> signaturemean </p> 
+# <p align='center'> signaturemean </p>
 
 A toolbox for signature averaging.
 
@@ -10,15 +10,15 @@ be a path and denote $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ its associated signa
 
 From a dataset $(X_i)_{1\leq i \leq n}$ we define the following barycenters:
 
-- `signaturemean.mean_le` : Log Euclidean mean method
+- `signaturemean.barycenters.mean_le` : Log Euclidean mean method
 
 $$\bar{\mathbb{X}} = \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ \mathbb{X}_i\Bigg) .$$
 
-- `signaturemean.mean_pennec` : Group Exponential mean method [2, Algorithm 1]
+- `signaturemean.barycenters.mean_pennec` : Group Exponential mean method [2, Algorithm 1]
 
 $$m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ (m_{(k)}^{-1}\otimes \mathbb{X}_i)\Bigg) .$$
 
-- `signaturemean.mean_tsoptim` : Optimization on time series space method
+- `signaturemean.barycenters.mean_tsoptim` : Optimization on time series space method
 
 $$\min_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
 
