@@ -45,14 +45,14 @@ channels = 3  # number of dimensions
 depth = 4     # depth (order) of truncation of the signature
 
 # Simulate random data
-paths = torch.rand(batch, stream, channels)   # simulate random numbers
-paths = utils.datashift(paths)    # paths start at zero
-paths = utils.datascaling(paths)  # paths have total variation = 1
+X = torch.rand(batch, stream, channels)   # simulate random numbers
+X = utils.datashift(X)    # paths start at zero
+X = utils.datascaling(X)  # paths have total variation = 1
 SX = signatory.signature(X, depth=depth)
 
 ## Compute barycenter with each approach
 # Approach 1: log euclidean mean
-print(mean_le.mean(SX, depth, channels))  # returns a signature
+print(mean_le.mean(SX, depth, channels))      # returns a signature
 # Approach 2: group exponential method
 print(mean_pennec.mean(SX, depth, channels))  # returns a signature
 # Approach 3: optimization on path space
@@ -63,18 +63,19 @@ print(tso.barycenter_ts)  # returns a path
 
 **Remarks**
 
-- Note that `signaturemean.mean_tsoptim.mean()` returns a list of paths and not a signature.
+- Note that `tso.barycenter_ts` is a list of paths and not a signature.
 - In the example above, data is shifted and scaled. This step is not necessary, only required.
 
 ## Requirements
 
 1. `python3 -m pip install -U requirements.txt`.
 2. Requires `pip>=10`.
-3. Verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation:
-    - torch 1.7.1+cu101 (CUDA 10.1) `pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html`
-    - signatory 1.2.6.1.7.1 `pip install signatory==1.2.6.1.7.1 --no-cache-dir --force-reinstall`
-4. If using `signaturemean.mean_tsoptim`:
-    - Install PyManOpt from git: `python3 -m pip install git+https://github.com/pymanopt/pymanopt.git@master` (does not work with `pip install pymanopt`).
+3. Requires `signatory`. [How to install signatory](https://signatory.readthedocs.io/en/latest/pages/usage/installation.html). NB: verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation: torch 1.7.1 and signatory 1.2.6.1.7.1
+    ```
+    pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2
+    pip install signatory==1.2.6.1.7.1 --no-cache-dir --force-reinstall
+    ```
+
 
 
 <!-- ## Example -->
