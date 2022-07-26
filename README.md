@@ -68,7 +68,7 @@ print(tso.barycenter_ts)  # returns a path
 
 ## Requirements
 
-1. `python3 -m pip install -U requirements.txt`.
+1. `python3 -m pip install -r requirements.txt`.
 2. Requires `pip>=10`.
 3. Requires `signatory`. [How to install signatory](https://signatory.readthedocs.io/en/latest/pages/usage/installation.html). NB: verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation: torch 1.7.1 and signatory 1.2.6.1.7.1
     ```
