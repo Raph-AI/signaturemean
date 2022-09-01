@@ -49,6 +49,30 @@ class KMeansSignature():
     ----------
     labels_ : numpy.ndarray
         Label of each point.
+
+    Example
+    -------
+    >>> from signaturemean.clustering.kmeans import KMeansSignature
+    >>> batch = 20     # number of time series
+    >>> stream = 30   # number of timestamps for each time series
+    >>> channels = 3  # number of dimensions
+    >>> depth = 4     # depth (order) of truncation of the signature
+    >>> X = torch.rand(batch, stream, channels)   # simulate random numbers
+    >>> SX = signatory.signature(X, depth=depth)
+
+    >>> # log euclidean barycenter
+    >>> km1 = KMeansSignature(n_clusters=10, depth=depth, channels=channels, random_state=1708, metric='euclidean', averaging='LE')
+    >>> km1.fit(SX)
+
+    >>> # pennec barycenter
+    >>> km2 = KMeansSignature(n_clusters=10, depth=depth, channels=channels, random_state=1708, metric='euclidean', averaging='PE')
+    >>> km2.fit(SX)
+
+    >>> # tsoptim barycenter
+    >>> km3 = KMeansSignature(n_clusters=10, depth=depth, channels=channels, random_state=1708, metric='euclidean', averaging='PO')
+    >>> km3.fit(X)  # Careful: must fit X and not SX.
+
+    >>> print(km1.labels_)
     """
 
     """
@@ -157,12 +181,12 @@ class KMeansSignature():
                     channels=self.channels
                 )
             elif self.averaging == 'PE':
-                self.cluster_centers_[k], times = mean_pennec.mean(
+                self.cluster_centers_[k] = mean_pennec.mean(
                     SX[self.labels_ == k],
                     depth=self.depth,
                     channels=self.channels
                 )
-                self.times_pe += times
+                # self.times_pe += times
             elif self.averaging == 'PO':
                 tsoptim = mean_tsoptim.TSoptim(
                     self.depth, self.channels, random_state=self.random_state,
@@ -186,7 +210,7 @@ class KMeansSignature():
         SX : (batch, channels**1 + ... + channels**depth) torch.tensor
             Array of signatures.
         """
-        self.times_pe = np.array([0., 0., 0., 0., 0.])
+        # self.times_pe = np.array([0., 0., 0., 0., 0.])
         self._check_params(SX)
         self.labels_ = None
         self.cluster_centers_ = None
@@ -201,11 +225,6 @@ class KMeansSignature():
             except EmptyClusterError:
                 if self.verbose:
                     print("Interrupted because of empty cluster")
-        print(f"time sig inv: {self.times_pe[0]:.2f} sec")
-        print(f"time sig prods: {self.times_pe[1]:.2f} sec")
-        print(f"time stologs: {self.times_pe[2]:.2f} sec")
-        print(f"time logstos: {self.times_pe[3]:.2f} sec")
-        print(f"total time : {self.times_pe[4]:.2f} sec")
         return self
 
 
