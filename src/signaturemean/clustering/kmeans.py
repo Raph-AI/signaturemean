@@ -3,6 +3,7 @@ import torch
 # from signaturemean.utils import dist_on_sigs
 # from scipy.spatial.distance import cdist
 from sklearn.utils import check_random_state
+import signatory
 
 # Personal libraries
 from signaturemean.clustering.utils import EmptyClusterError
@@ -32,18 +33,36 @@ class KMeansSignature():
     n_clusters : int (default: 3)
         Number of clusters to form.
 
+    averaging : string (default: "LE")
+        Averaging strategy. Should be one of "LE" (mean_le), "pennec" (mean_pennec),
+        "tsoptim" (mean_tsoptim). Careful: if using "tsoptim", the input of fit() function
+        should be paths and not signatures.
+
     max_iter : int (default: 10)
         Maximum number of iterations of the k-means algorithm for a single run.
 
-    seed : int
+    random_state : int
         Determines random number generation for centroid initialization.
 
-    minibatch : boolean
-        Apply MiniBatch strategy.
-
-    po_mean_stream : int
-        Only when using averaging='PO'. Path length (stream) to use for the
+    po_mean_stream : int (default: 10)
+        Only when using averaging="tsoptim". Path length (stream) to use for the
         optimization space.
+
+    verbose : boolean (default: True)
+        Print information about algorithm progress.
+
+    minibatch : boolean
+        Apply MiniBatch strategy. NB: not yet supported.
+
+    n_init : int (default: 1)
+        Number of time the k-means algorithm will be run with different
+        centroid seeds. The final results will be the best output of n_init
+        consecutive runs in terms of inertia. NB: not yet supported, thus
+        n_init should be set to 1.
+
+    init : string (default: "random")
+        Method for the initialization of the cluster centers. NB: currently only
+        "random" is supported.
 
     Attributes
     ----------
@@ -53,7 +72,7 @@ class KMeansSignature():
     Example
     -------
     >>> from signaturemean.clustering.kmeans import KMeansSignature
-    >>> batch = 20     # number of time series
+    >>> batch = 5     # number of time series
     >>> stream = 30   # number of timestamps for each time series
     >>> channels = 3  # number of dimensions
     >>> depth = 4     # depth (order) of truncation of the signature
@@ -61,15 +80,21 @@ class KMeansSignature():
     >>> SX = signatory.signature(X, depth=depth)
 
     >>> # log euclidean barycenter
-    >>> km1 = KMeansSignature(n_clusters=10, depth=depth, channels=channels, random_state=1708, metric='euclidean', averaging='LE')
+    >>> km1 = KMeansSignature(n_clusters=2, max_iter=2, depth=depth,
+                              channels=channels, random_state=1708,
+                              metric='euclidean', averaging='LE')
     >>> km1.fit(SX)
 
     >>> # pennec barycenter
-    >>> km2 = KMeansSignature(n_clusters=10, depth=depth, channels=channels, random_state=1708, metric='euclidean', averaging='PE')
+    >>> km2 = KMeansSignature(n_clusters=2, max_iter=2, depth=depth,
+                              channels=channels, random_state=1708,
+                              metric='euclidean', averaging='pennec')
     >>> km2.fit(SX)
 
     >>> # tsoptim barycenter
-    >>> km3 = KMeansSignature(n_clusters=10, depth=depth, channels=channels, random_state=1708, metric='euclidean', averaging='PO')
+    >>> km3 = KMeansSignature(n_clusters=2, depth=depth,
+                              channels=channels, random_state=1708,
+                              metric='euclidean', averaging='tsoptim')
     >>> km3.fit(X)  # Careful: must fit X and not SX.
 
     >>> print(km1.labels_)
@@ -81,21 +106,33 @@ class KMeansSignature():
     fit : check_array , _check_initial_guess
     """
 
-    def __init__(self, depth, channels, random_state, metric, n_clusters=3, max_iter=10, n_init=1,
-                 init='random', averaging='LE',
-                 minibatch=False, verbose=False, po_mean_stream=10):
+    def __init__(self,
+                 depth,
+                 channels,
+                 random_state,
+                 metric,
+                 n_clusters=3,
+                 max_iter=10,
+                 n_init=1,
+                 init='random',
+                 averaging='LE',
+                 stream_fixed=True,
+                 minibatch=False,
+                 verbose=False,
+                 tsoptim_mean_stream=10):
         self.depth = depth
         self.channels = channels
+        self.random_state = random_state
+        self.metric = metric
         self.n_clusters = n_clusters
         self.max_iter = max_iter
         self.n_init = n_init
         self.init = init
         self.averaging = averaging
-        self.metric = metric
-        self.random_state = random_state
+        self.stream_fixed = stream_fixed
         self.minibatch = minibatch
         self.verbose = verbose
-        self.po_mean_stream = po_mean_stream
+        self.tsoptim_mean_stream = tsoptim_mean_stream
 
     def _check_params(self, SX):
         # n_init
@@ -108,35 +145,68 @@ class KMeansSignature():
             raise ValueError(f"max_iter should be > 0, got {self.max_iter} instead.")
 
         # n_clusters
-        if SX.shape[0] < self.n_clusters:
+        if self.batch_ < self.n_clusters:
             raise ValueError(
-                f"n_samples={SX.shape[0]} should be >= n_clusters={self.n_clusters}."
+                f"The number of samples should be greater than the number of "
+                f"clusters. Got {self.batch_} samples and "
+                f"`n_clusters`={self.n_clusters}."
             )
 
-        if self.averaging=='LE' or self.averaging=='PE':
+        list_methods = ['LE', 'pennec', 'tsoptim']
+        if not self.averaging in list_methods:
+            raise ValueError(
+                f"Parameter `averaging` should be one of {list_methods}, got "
+                f"{self.averaging} instead."
+            )
+
+        if self.averaging=='LE' or self.averaging=='pennec':
             if len(SX.shape) != 2:
                 raise ValueError(
                     f"SX input shape is {SX.shape}, should have two dimensions : batch "
                     "and signature coefficients"
                 )
-        if self.averaging=='PO':
-            if len(SX.shape) != 3:
+        if self.averaging=='tsoptim':
+            if self.stream_fixed==True and len(SX.shape) != 3:
                 raise ValueError(
-                    f"SX input shape is {SX.shape}, should have three dimensions : batch, "
-                    "stream and channels"
+                    f"Input data should have three-dimensional shape (batch, "
+                    f"stream, channels), got shape {SX.shape} instead."
+                )
+            elif self.stream_fixed==False and len(SX[0].shape) != 2:
+                raise ValueError(
+                    f"Input list should have elements with two-dimensional "
+                    f"shape (stream, channels). Got element with shape "
+                    f"{SX[0].shape} instead."
                 )
 
     def _fit_one_init(self, SX, rs):
         if self.init == "random":
-            indices = rs.choice(SX.shape[0], self.n_clusters, replace=False)
-            if self.averaging == 'LE' or self.averaging == 'PE':
+            indices = rs.choice(self.batch_, self.n_clusters, replace=False)
+            if self.averaging != 'tsoptim':
                 self.cluster_centers_ = SX[indices].clone()
-            elif self.averaging == 'PO':
-                stream_inds = np.sort(rs.choice(SX.shape[1]-2, self.po_mean_stream-2, replace=False))+1
-                # keep first and last value
-                stream_inds = np.concatenate((np.array([0]), stream_inds, np.array([SX.shape[1]-1])), 0)
-                self.cluster_centers_ = SX[indices].clone()
-                self.cluster_centers_ = self.cluster_centers_[:, stream_inds, :]
+            else:
+                if self.stream_fixed == False:
+                    self.cluster_centers_ = torch.empty((self.n_clusters, self.tsoptim_mean_stream, self.channels))
+                    for j, i in enumerate(indices):
+                        obs = SX[i]
+                        idx_stream = np.sort(rs.choice(
+                            range(1, len(obs)-1),
+                            size=self.tsoptim_mean_stream-2,
+                            replace=False
+                            ))
+                        idx_stream = np.concatenate(([0], idx_stream, [len(obs)-1]))
+                        self.cluster_centers_[j] = obs[idx_stream, :].clone()
+                else:
+                    idx_stream = np.sort(rs.choice(
+                        range(1, len(SX[0])-1),
+                        size=self.tsoptim_mean_stream-2,
+                        replace=False
+                        ))
+                    idx_stream = np.concatenate(
+                        (np.array([0]), idx_stream, np.array([SX.shape[1]-1])),
+                        0
+                    )
+                    self.cluster_centers_ = SX[indices].clone()
+                    self.cluster_centers_ = self.cluster_centers_[:, idx_stream, :]
         else:
             raise ValueError(
                 f"Value for parameter 'init' is invalid : got {self.init}"
@@ -150,21 +220,36 @@ class KMeansSignature():
         return self
 
     def _transform(self, SX):
+        """
+        Compute distance `metric` between each signature observation and every
+        signature cluster centers.
+        """
         if self.metric == "euclidean":
-            if self.averaging == 'PO':
-                return torch.cdist(
-                    SX.reshape((SX.shape[0], -1)),
-                    self.cluster_centers_.reshape((self.n_clusters, -1)),
-                    p=2.0
+            if self.averaging == 'tsoptim':
+                # return torch.cdist(
+                #     SX.reshape((SX.shape[0], -1)),
+                #     self.cluster_centers_.reshape((self.n_clusters, -1)),
+                #     p=2.0
+                # )
+                self.Scluster_centers_ = signatory.signature(
+                    self.cluster_centers_,
+                    depth=self.depth
                 )
+                self.SSX = self.SSX.double()
+                self.Scluster_centers_ = self.Scluster_centers_.double()
+                return torch.cdist(self.SSX, self.Scluster_centers_, p=2.0)
             else:
                 return torch.cdist(SX, self.cluster_centers_, p=2.0)
         else:
             raise ValueError(
-                f"Incorrect metric : {self.metric} (should be one of 'euclidean')"
+                f"Metric should be 'euclidean', got {self.metric} "
+                "instead."
             ) # (TO DO) add signature metric
 
     def _assign(self, SX):
+        """
+        Assign each observation to the cluster with nearest center.
+        """
         dists = self._transform(SX)
         # print(f"_assign : dists = \n{dists}")
         matched_labels = dists.argmin(dim=1)
@@ -180,26 +265,37 @@ class KMeansSignature():
                     depth=self.depth,
                     channels=self.channels
                 )
-            elif self.averaging == 'PE':
+            elif self.averaging == 'pennec':
                 self.cluster_centers_[k] = mean_pennec.mean(
                     SX[self.labels_ == k],
                     depth=self.depth,
                     channels=self.channels
                 )
                 # self.times_pe += times
-            elif self.averaging == 'PO':
+            elif self.averaging == 'tsoptim' and self.stream_fixed==True:
                 tsoptim = mean_tsoptim.TSoptim(
-                    self.depth, self.channels, random_state=self.random_state,
+                    self.depth,
+                    random_state=self.random_state,
                     n_init=1,
-                    mean_stream=self.po_mean_stream
+                    mean_stream=self.tsoptim_mean_stream,
+                    stream_fixed=self.stream_fixed
                 )
                 tsoptim.fit(SX[self.labels_ == k])
                 self.cluster_centers_[k] = tsoptim.barycenter_ts
-            else:
-                raise ValueError(
-                    f"Incorrect averaging method : got {self.averaging}. "
-                    "Should be one of 'LE', 'PE', 'PO'"
+            elif self.averaging == 'tsoptim' and self.stream_fixed==False:
+                tsoptim = mean_tsoptim.TSoptim(
+                    self.depth,
+                    random_state=self.random_state,
+                    n_init=1,
+                    mean_stream=self.tsoptim_mean_stream,
+                    stream_fixed=self.stream_fixed
                 )
+                listtofit = []
+                for i in range(self.batch_):
+                    if self.labels_[i] == k:
+                        listtofit.append(SX[i])
+                tsoptim.fit(listtofit)
+                self.cluster_centers_[k] = tsoptim.barycenter_ts
 
     def fit(self, SX):
         """
@@ -211,10 +307,23 @@ class KMeansSignature():
             Array of signatures.
         """
         # self.times_pe = np.array([0., 0., 0., 0., 0.])
+        self.batch_ = len(SX)
         self._check_params(SX)
         self.labels_ = None
         self.cluster_centers_ = None
+        self.Scluster_centers_ = None
         self.n_iter_ = 0
+        if self.averaging == 'tsoptim' and self.stream_fixed == True:
+            self.SSX = signatory.signature(SX, depth=self.depth)
+        elif self.averaging == 'tsoptim' and self.stream_fixed == False:
+            ts_temp = SX[0].unsqueeze(0)
+            self.SSX = signatory.signature(ts_temp, self.depth)
+            for i in range(len(SX)):
+                ts_temp = SX[i].unsqueeze(0)
+                self.SSX = torch.cat(
+                    (self.SSX, signatory.signature(ts_temp, self.depth)),
+                    dim=0
+                    )
         rs = check_random_state(self.random_state)
         # _check_initial_guess(self.init, self.n_clusters)
         init_idx = 0

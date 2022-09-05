@@ -200,7 +200,8 @@ def sigprod_inv(sig1, sig2, sig_depth, channels):
 def siginv(sig, sig_depth, channels):
     r"""
     Compute the inverse of an element a of the signature Lie group with formula
-    $a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}$ with m signature depth.
+    :math:`a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}` with :math:`m` signature
+    depth.
 
     Parameters
     ----------
@@ -378,15 +379,23 @@ def datashift(data):
     """
     Shift the data so that it starts at zero.
     """
-    batch, stream, channels = data.shape
-    datashifted = data.clone()
-    for idx_obs in range(batch):
-        data0 = data[idx_obs, 0, :]
-        for idx_stream in range(stream):
-            # print(data[idx_obs, idx_stream, :])
-            # print(data0)
-            datashifted[idx_obs, idx_stream,
-                        :] = data[idx_obs, idx_stream, :] - data0
+    if torch.is_tensor(data):
+        batch, stream, channels = data.shape
+        datashifted = data.clone()
+        for idx_obs in range(batch):
+            data0 = data[idx_obs, 0, :]
+            for idx_stream in range(stream):
+                # print(data[idx_obs, idx_stream, :])
+                # print(data0)
+                datashifted[idx_obs, idx_stream,
+                            :] = data[idx_obs, idx_stream, :] - data0
+    elif type(data) is list:
+        datashifted = []
+        for obs in data:
+            obsshift = obs.clone()
+            for idx_stream in range(obs.shape[0]):
+                obsshift[idx_stream, :] = obs[idx_stream, :] - obs[0, :]
+            datashifted.append(obsshift)
     return(datashifted)
 
 
@@ -394,20 +403,47 @@ def datascaling(data):
     """
     Each observation is set to have total variation norm equals to 1.
     """
-    batch, stream, channels = data.shape
-    datascaled = data.clone()
-    for i in range(batch):
-        variations = [np.linalg.norm(data[i, k, :]-data[i, k-1, :])
-                      for k in range(1, stream)]
-        tvnorm = np.sum(np.array(variations), axis=0)
-        datascaled[i] = data[i]/tvnorm
+    if torch.is_tensor(data):
+        batch, stream, channels = data.shape
+        datascaled = data.clone()
+        for i in range(batch):
+            variations = [np.linalg.norm(data[i, k, :]-data[i, k-1, :])
+                          for k in range(1, stream)]
+            tvnorm = np.sum(np.array(variations), axis=0)
+            datascaled[i] = data[i]/tvnorm
+    elif type(data) is list:
+        datascaled = []
+        for obs in data:
+            stream = obs.shape[0]
+            variations = [np.linalg.norm(obs[k, :]-obs[k-1, :])
+                for k in range(1, stream)]
+            tvnorm = np.sum(np.array(variations), axis=0)
+            obsscaled = obs/tvnorm
+            datascaled.append(obsscaled)
     return(datascaled)
 
 
 def sigscaling(sig, depth, channels):
     """
-    each signature tensor of depth m is multiplied by factorial m
-    Careful: use datascaling before computation of signature and use of sigscaling.
+    Each signature tensor of depth m is multiplied by factorial m.
+    Careful: should use `utils.datascaling` before computation of signature and
+    use of `utils.sigscaling`.
+
+    Parameters
+    ----------
+    sig : torch.tensor
+        Signature to scale.
+
+    depth : int
+        Depth of the signature.
+
+    channels : int
+        Number of channels (space dimensions).
+
+    Returns
+    -------
+    sig : torch.tensor
+        Scaled signature.
     """
     # indices of each signature tensor
     inds = np.cumsum([0]+[channels**k for k in range(1, depth+1)])
