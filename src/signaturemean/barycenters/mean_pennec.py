@@ -52,7 +52,7 @@ def mean(datasig, depth, channels, max_iter_pe=5):
     # S2 (= lyndon basis), corresponds to 'brackets' in Signatory
     datasig = datasig.numpy()
     sigbarycenter = sigbarycenter.numpy()
-    inds0 = cdepth_inds(depth, channels)
+    inds0 = cdepth_inds(depth, channels, scalar=True)
 
     n_iter = 0
     while n_iter < max_iter_pe:
@@ -79,7 +79,7 @@ def mean(datasig, depth, channels, max_iter_pe=5):
         )
         sigbarycenter = sigbarycenter_new
         n_iter += 1
-    return sigbarycenter[1:]  # omit scalar value
+    return torch.from_numpy(sigbarycenter[1:])  # omit scalar value
 
 
 # def mean(datasig, depth, channels, max_iter_pe=5):

@@ -199,14 +199,21 @@ def sigprod_inv(sig1, sig2, sig_depth, channels):
 
 def siginv(sig, sig_depth, channels):
     r"""
-    Compute the inverse of an element a of the signature Lie group with formula
-    :math:`a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}` with :math:`m` signature
-    depth.
+    Compute the inverse of an element :math:`a` of the signature Lie group with
+    formula:
 
-    Parameters
-    ----------
+    .. math::
+        a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}
+
+    with :math:`m` is the signature depth.
+    Computation uses that: :math:`1+x+x^2+x^3=1+x(1+x(1+x))` where we replace
+    :math:`x` with :math:`(1-a)` (Horner's method).
+
+    Input
+    -----
     sig : torch.tensor
-        Signature to inverse.
+        Signature to inverse. Caution: the signature must NOT comprise the
+        scalar value `1.` as it first value.
     """
     if len(sig.shape) > 1:
         raise ValueError(
@@ -557,7 +564,8 @@ def depth_inds(depth, channels, scalar=False):
     """
     Most libraries computing the signature transform output the signature as a
     vector. This function outputs the indices corresponding to first value of
-    each signature depth in this vector.
+    each signature depth in this vector. Example: with depth=4 and channels=2,
+    returns [2, 6, 14, 30] (or [1, 3, 7, 15, 31] if scalar=True).
     Parameters
     ----------
     scalar : boolean

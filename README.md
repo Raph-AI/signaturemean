@@ -10,15 +10,15 @@ be a path and denote $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ its associated signa
 
 From a dataset $(X_i)_{1\leq i \leq n}$ we define the following barycenters:
 
-- `signaturemean.barycenters.mean_le` : Log Euclidean mean method
+-   `signaturemean.barycenters.mean_le` : Log Euclidean mean method
 
 $$\bar{\mathbb{X}} = \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ \mathbb{X}_i\Bigg) .$$
 
-- `signaturemean.barycenters.mean_pennec` : Group Exponential mean method [2, Algorithm 1]
+-   `signaturemean.barycenters.mean_pennec` : Group Exponential mean method [2, Algorithm 1]
 
 $$m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ (m_{(k)}^{-1}\otimes \mathbb{X}_i)\Bigg) .$$
 
-- `signaturemean.barycenters.mean_tsoptim` : Optimization on time series space method
+-   `signaturemean.barycenters.mean_tsoptim` : Optimization on time series space method
 
 $$\min_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
 
@@ -56,21 +56,21 @@ print(mean_le.mean(SX, depth, channels))      # returns a signature
 # Approach 2: group exponential method
 print(mean_pennec.mean(SX, depth, channels))  # returns a signature
 # Approach 3: optimization on path space
-tso = mean_tsoptim.TSoptim(depth, channels, 1641)
+tso = mean_tsoptim.TSoptim(depth=depth, random_state=1641)
 tso.fit(X)
 print(tso.barycenter_ts)  # returns a path
 ```
 
 **Remarks**
 
-- Note that `tso.barycenter_ts` is a list of paths and not a signature.
-- In the example above, data is shifted and scaled. This step is not necessary, only required.
+-   Note that `tso.barycenter_ts` is a list of paths and not a signature.
+-   In the example above, data is shifted and scaled. This step is not necessary, only required.
 
 ## Requirements
 
-1. `python3 -m pip install -r requirements.txt`.
-2. Requires `pip>=10`.
-3. Requires `signatory`. [How to install signatory](https://signatory.readthedocs.io/en/latest/pages/usage/installation.html). NB: verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation: torch 1.7.1 and signatory 1.2.6.1.7.1
+1.  `python3 -m pip install -r requirements.txt`.
+2.  Requires `pip>=10`.
+3.  Requires `signatory`. [How to install signatory](https://signatory.readthedocs.io/en/latest/pages/usage/installation.html). NB: verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation: torch 1.7.1 and signatory 1.2.6.1.7.1
     ```
     pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2
     pip install signatory==1.2.6.1.7.1 --no-cache-dir --force-reinstall

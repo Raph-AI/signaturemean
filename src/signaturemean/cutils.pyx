@@ -27,7 +27,7 @@ cpdef cnp.ndarray[double, ndim=1] sigprod(
     sigA, sigB : nd.array
         The two signature we want the product of. Scalar value must be included.
     inds : nd.array
-        The output of cutils.depth_inds().
+        The output of :func:`signaturemean.cutils.depth_inds`.
 
     Returns
     -------
@@ -57,10 +57,17 @@ cpdef cnp.ndarray[double, ndim=1] sigprod(
         for i in range(0, idx_depth):
             lenleft = inds[i+1]-inds[i]
             lenright = inds[idx_depth-i]-inds[idx_depth-i-1]
-            dger(&lenright, &lenleft, &one,
-                 &sigB[inds[idx_depth-i-1]], &inc,
-                 &sigA[inds[i]], &inc,
-                 &prod[start], &lenright)
+            dger(
+                &lenright,
+                &lenleft,
+                &one,
+                &sigB[inds[idx_depth-i-1]],
+                &inc,
+                &sigA[inds[i]],
+                &inc,
+                &prod[start],
+                &lenright
+            )
             # Careful! fortran order (column major): sigA and sigB switched !
         # sh1 = sh2
     return prod
@@ -187,10 +194,21 @@ cpdef cnp.ndarray[double, ndim=1] siginv(
     cnp.ndarray[int, ndim=1] inds,
     ):
     r"""
-    Compute the inverse of an element a of the signature Lie group with formula
-    $a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}$ with m signature depth.
-    Computation uses that: 1+x+x^2+x^3 = 1+x(1+x(1+x)) where we replace x
-    with (1-a). (:= Horner's method)
+    Compute the inverse of an element :math:`a` of the signature Lie group with
+    formula:
+
+    .. math::
+        a^{-1} = \sum_{k=0}^m(1-a)^{\otimes k}
+
+    with :math:`m` is the signature depth.
+    Computation uses that: :math:`1+x+x^2+x^3=1+x(1+x(1+x))` where we replace
+    :math:`x` with :math:`(1-a)` (Horner's method).
+
+    Input
+    -----
+    sig : array-like
+        Signature to inverse. Caution: the signature must comprise the scalar
+        value `1.` (convention) as it first value.
     """
     cdef cnp.ndarray[double, ndim=1] sigbis = np.empty(inds[-1], dtype=cnp.dtype("d"))
     cdef cnp.ndarray[double, ndim=1] inv = np.empty(inds[-1], dtype=cnp.dtype("d"))
@@ -215,9 +233,8 @@ cpdef cnp.ndarray[double, ndim=1] siginv_inplace(
     cnp.ndarray[int, ndim=1] inds
     ):
     """
-    Inverse computation using this trick: 1+x+x^2+x^3 = 1+x(1+x(1+x))
-    where we replace x with (1-a).
-    I need supplementary memory for (2-a) only.
+    In place version of :func:`signaturemean.cutils.siginv`. Note: I need
+    supplementary memory for (2-a) only.
     """
     cdef cnp.ndarray[double, ndim=1] sigbis = np.empty(inds[-1], dtype=cnp.dtype("d"))
     sigbis = sig.copy()
@@ -286,18 +303,26 @@ def sigdist(cnp.ndarray[double, ndim=1] sigA,
 # }
 
 
-cpdef cnp.ndarray[int, ndim=1] depth_inds(int depth, int channels):
+cpdef cnp.ndarray[int, ndim=1] depth_inds(int depth, int channels, bint scalar):
     """
     Most libraries computing the signature transform output the signature as a
     vector. This function outputs the indices corresponding to first value of
     each signature depth in this vector.
-    Example: with depth=4 and channels=2, returns [0, 1, 3, 7, 15, 31].
+    Example: with depth=4 and channels=2, returns [0, 2, 6, 14, 30]
+    (or returns [0, 1, 3, 7, 15, 31] if scalar=True).
+
+    Input
+    -----
+    scalar : boolean
+        Presence of scalar as first value of the signature coordinates. By
+        default, `signatory.signature` returns signature vectors without the
+        scalar value.
     """
-    cdef cnp.ndarray[int, ndim=1] inds = np.empty(depth+2, dtype=cnp.dtype("i"))
+    cdef cnp.ndarray[int, ndim=1] inds = np.empty(depth+1+scalar, dtype=np.int32)
     cdef int i
     cdef int sum = 0
     inds[0] = 0
-    for i in range(depth+1):
-        sum +=  channels**i
-        inds[i+1] = sum
+    for i in range((1-scalar), depth+1):
+        sum += channels**i
+        inds[i+scalar] = sum
     return(inds)
