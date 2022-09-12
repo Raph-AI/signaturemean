@@ -25,14 +25,16 @@ cpdef cnp.ndarray[double, ndim=1] sigprod(
     Parameters
     ----------
     sigA, sigB : nd.array
-        The two signature we want the product of. Scalar value must be included.
+        The two signature we want the product of. Caution: scalar value must be
+        included.
+
     inds : nd.array
         The output of :func:`signaturemean.cutils.depth_inds`.
 
     Returns
     -------
     prod : nd.array
-        The product of sigA and sigB. Scalar value is included.
+        The product of sigA and sigB. NB: scalar value is included.
 
     """
     # if check_params:
@@ -204,11 +206,17 @@ cpdef cnp.ndarray[double, ndim=1] siginv(
     Computation uses that: :math:`1+x+x^2+x^3=1+x(1+x(1+x))` where we replace
     :math:`x` with :math:`(1-a)` (Horner's method).
 
-    Input
-    -----
+    Parameters
+    ----------
     sig : array-like
         Signature to inverse. Caution: the signature must comprise the scalar
-        value `1.` (convention) as it first value.
+        value `1.` (convention) as its first value.
+
+    Returns
+    -------
+    inv : array-like (same shape as parameter `sig`)
+        Inverse of `sig` in signature space. NB: scalar value as first value is
+        kept.
     """
     cdef cnp.ndarray[double, ndim=1] sigbis = np.empty(inds[-1], dtype=cnp.dtype("d"))
     cdef cnp.ndarray[double, ndim=1] inv = np.empty(inds[-1], dtype=cnp.dtype("d"))

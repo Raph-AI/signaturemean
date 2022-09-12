@@ -9,9 +9,17 @@ from ..cutils import siginv as csiginv
 from ..cutils import depth_inds as cdepth_inds
 
 
-def mean(datasig, depth, channels, max_iter_pe=5):
+def mean(datasig, depth, channels, max_iter=20):
     """
-    Compute the Group Exponential Mean from a dataset of signatures.
+    Compute the Group Exponential Mean from a dataset of signatures (see [1]),
+    i.e. apply the following procedure:
+
+    .. math::
+        m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ (m_{(k)}^{-1}\otimes \mathbb{X}_i)\Bigg)
+
+    where :math:`m` is the mean that is returned, :math:`\mathrm{Exp}` and
+    :math:`\mathrm{Log}` are the exponential and logarithm map on the Lie group
+    of signatures.
 
     Parameters
     ----------
@@ -22,9 +30,11 @@ def mean(datasig, depth, channels, max_iter_pe=5):
     depth : int
         Maximum depth of the signature which is used to compute the mean.
 
-    max_iter_pe : int (default=5)
-        Number of iterations until the algorithm stops. Usually, requires
-        less than 10 iterations to converge to a solution.
+    max_iter : int (default=20)
+        Number of iterations until the procedure defined as in the Equation
+        above stops. The greater `channels` is, the greater `max_iter` must be
+        set. Caution: if `max_iter` is too small, different runs might provides
+        different means (due to randomness of the initialization).
 
     Returns
     -------
@@ -34,41 +44,44 @@ def mean(datasig, depth, channels, max_iter_pe=5):
 
     References
     ----------
-    Pennec, Xavier, and Vincent Arsigny. 2013. “Exponential Barycenters of the
+    [1] Pennec, Xavier, and Vincent Arsigny. 2013. “Exponential Barycenters of the
     Canonical Cartan Connection and Invariant Means on Lie Groups.” In Matrix
     Information Geometry, edited by Frank Nielsen and Rajendra Bhatia, 123–66.
     Berlin, Heidelberg: Springer Berlin Heidelberg.
     https://doi.org/10.1007/978-3-642-30232-9_7
     """
     batch = datasig.shape[0]
-    lensig1 = datasig.shape[1]+1
+    # lensig1 = datasig.shape[1]+1
     idx_rd = np.random.randint(batch)
     sigbarycenter = datasig[idx_rd]  # random initialization
     stoLogS = signatory.SignatureToLogSignature(
         channels, depth, mode='brackets'
         )
-    # brackets (= lyndon basis), because we then need LogSigtoSig
+    # NB: brackets (= lyndon basis), because we then need LogSigtoSig
     logStoS = iisignature.prepare(channels, depth, "S2")
-    # S2 (= lyndon basis), corresponds to 'brackets' in Signatory
+    # NB: S2 (= lyndon basis), corresponds to 'brackets' in Signatory
     datasig = datasig.numpy()
     sigbarycenter = sigbarycenter.numpy()
+    sigbarycenter1 = np.concatenate(([1.], sigbarycenter))
     inds0 = cdepth_inds(depth, channels, scalar=True)
-
     n_iter = 0
-    while n_iter < max_iter_pe:
-        sigbarycenter1 = np.concatenate(([1.], sigbarycenter))
+
+    while n_iter < max_iter:
         inv_sigbarycenter = csiginv(
             sigbarycenter1, depth, channels, inds0
         )
-        inv_sigbarycenter1 = np.concatenate(([1.], inv_sigbarycenter))
+        # inv_sigbarycenter1 = np.concatenate(([1.], inv_sigbarycenter)) # !!!
         mean_logsSX = 0.
         for idx in range(batch):
             obs = datasig[idx]
             obs1 = np.concatenate(([1.], obs))
-            prod = csigprod(inv_sigbarycenter1, obs1, depth, channels, inds0)
-            prod = prod[1:]
-            prod = torch.from_numpy(prod)
-            prod = prod.unsqueeze(0)
+            if len(inv_sigbarycenter) != len(obs1):
+                raise ValueError(
+                    f"Product between signatures of different sizes: got "
+                    f"{len(inv_sigbarycenter)} and {len(obs1)}."
+                )
+            prod = csigprod(inv_sigbarycenter, obs1, depth, channels, inds0)
+            prod = (torch.from_numpy(prod[1:])).unsqueeze(0)
             logSX = stoLogS.forward(prod)
             mean_logsSX += logSX
         mean_logsSX = mean_logsSX*1./batch
@@ -77,9 +90,9 @@ def mean(datasig, depth, channels, max_iter_pe=5):
         sigbarycenter_new = csigprod(
             sigbarycenter1, exp_sigbarycenter1, depth, channels, inds0
         )
-        sigbarycenter = sigbarycenter_new
+        sigbarycenter1 = sigbarycenter_new
         n_iter += 1
-    return torch.from_numpy(sigbarycenter[1:])  # omit scalar value
+    return torch.from_numpy(sigbarycenter1[1:])  # omit scalar value
 
 
 # def mean(datasig, depth, channels, max_iter_pe=5):
