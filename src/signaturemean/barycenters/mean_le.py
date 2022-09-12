@@ -6,7 +6,14 @@ from signaturemean.utils import sigscaling
 
 def mean(datasig, depth, channels, rescaling=False):
     """
-    Compute the Log Euclidean mean from a dataset of signatures.
+    Compute the Log Euclidean mean from a dataset of signatures, that is
+
+    .. math::
+        \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ \mathbb{X}_i\Bigg)
+
+    where :math:`\mathrm{Exp}` and :math:`\mathrm{Log}` are the exponential and
+    logarithm map on the Lie group of signatures and :math:`(X_i)_i` is the
+    dataset of signatures to average.
 
     Parameters
     ----------
@@ -15,11 +22,12 @@ def mean(datasig, depth, channels, rescaling=False):
               along the batch axis.
 
     depth : int
-            max depth of the signature which is used to compute the mean.
+            Corresponding depth of the signatures stored in `datasig`.
 
     rescaling : boolean (default=False)
-                utils.sigscaling is applied on signatures before computing
-                the mean.
+                Apply a normalization of signatures `datasig`:
+                :func:`signaturemean.utils.sigscaling` is applied on `datasig`
+                before computing the mean.
 
     Returns
     -------
