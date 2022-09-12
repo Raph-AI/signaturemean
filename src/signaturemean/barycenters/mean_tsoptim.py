@@ -93,6 +93,13 @@ class TSoptim():
                     f"Input data type should be `torch.Tensor`, got type "
                     f"{type(X)} instead."
                 )
+            if self.mean_stream > X.shape[1]:
+                raise ValueError(
+                    f"Parameter mean_stream should be less than stream (second "
+                    f"dimension of dataset X): got {self.mean_stream} > "
+                    f"{X.shape[1]}."
+                )
+
         elif self.stream_fixed==False:
             if not type(X)==list:
                 raise TypeError(
@@ -109,6 +116,8 @@ class TSoptim():
                     f"Input data should have two-dimensional shape  "
                     f"(stream, channels), got shape {X[0].shape} instead."
                 )
+
+
 
     def _create_cost(self):
         @pymanopt.function.PyTorch
@@ -135,8 +144,6 @@ class TSoptim():
             # draw observation index randomly
             idx_obs = rs.integers(len(X), size=1)[0]
             # draw time indices randomly (to obtain subsample of sample)
-            print(idx_obs)
-            print(len(X[0]))
             idx_stream = np.sort(rs.choice(
                 range(1, len(X[idx_obs])-1),
                 size=self.mean_stream-2,
