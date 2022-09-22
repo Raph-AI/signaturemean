@@ -30,7 +30,7 @@ def to_tens_alg(sig, sig_depth, channels):
 
     Parameters
     ----------
-    sig : torch.tensor
+    sig : torch.Tensor
         A signature as obtained with `signatory.signature` module.
     """
     inds = np.cumsum([channels**k for k in range(1, sig_depth+1)])
@@ -211,7 +211,7 @@ def siginv(sig, sig_depth, channels):
 
     Input
     -----
-    sig : torch.tensor
+    sig : torch.Tensor
         Signature to inverse. Caution: the signature must NOT comprise the
         scalar value `1.` as it first value.
     """
@@ -385,8 +385,14 @@ def augment_stream(path, stream):
 def datashift(data):
     """
     Shift the data so that it starts at zero.
+
+    Parameters
+    ----------
+    data : array-like or list
+        Type should be list if stream value is not the same for every
+        observation.
     """
-    if torch.is_tensor(data):
+    if type(data) == torch.Tensor:
         batch, stream, channels = data.shape
         datashifted = data.clone()
         for idx_obs in range(batch):
@@ -394,9 +400,8 @@ def datashift(data):
             for idx_stream in range(stream):
                 # print(data[idx_obs, idx_stream, :])
                 # print(data0)
-                datashifted[idx_obs, idx_stream,
-                            :] = data[idx_obs, idx_stream, :] - data0
-    elif type(data) is list:
+                datashifted[idx_obs, idx_stream, :] = data[idx_obs, idx_stream, :] - data0
+    elif type(data) == list:
         datashifted = []
         for obs in data:
             obsshift = obs.clone()
@@ -409,28 +414,38 @@ def datashift(data):
 def datascaling(data):
     """
     Each observation is set to have total variation norm equals to 1.
+
+    Parameters
+    ----------
+    data : array-like or list
+        Type should be list if stream value is not the same for every
+        observation.
     """
-    if torch.is_tensor(data):
+    if type(data) == torch.Tensor:
         batch, stream, channels = data.shape
         datascaled = data.clone()
         for i in range(batch):
             variations = [np.linalg.norm(data[i, k, :]-data[i, k-1, :])
                           for k in range(1, stream)]
             tvnorm = np.sum(np.array(variations), axis=0)
-            datascaled[i] = data[i]/tvnorm
-    elif type(data) is list:
+            if tvnorm != 0.:  # case: data[i] is constant
+                datascaled[i] = data[i]/tvnorm
+    elif type(data) == list:
         datascaled = []
         for obs in data:
             stream = obs.shape[0]
             variations = [np.linalg.norm(obs[k, :]-obs[k-1, :])
                 for k in range(1, stream)]
             tvnorm = np.sum(np.array(variations), axis=0)
-            obsscaled = obs/tvnorm
-            datascaled.append(obsscaled)
+            if tvnorm != 0.:  # case: obs is constant
+                obsscaled = obs/tvnorm
+                datascaled.append(obsscaled)
+            else:
+                datascaled.append(obs)
     return(datascaled)
 
 
-def sigscaling(sig, depth, channels):
+def sigscaling(SX, depth, channels):
     """
     Each signature tensor of depth m is multiplied by factorial m.
     Careful: should use `utils.datascaling` before computation of signature and
@@ -438,8 +453,8 @@ def sigscaling(sig, depth, channels):
 
     Parameters
     ----------
-    sig : torch.tensor
-        Signature to scale.
+    SX : torch.Tensor
+        An array of signature to scale.
 
     depth : int
         Depth of the signature.
@@ -449,15 +464,23 @@ def sigscaling(sig, depth, channels):
 
     Returns
     -------
-    sig : torch.tensor
-        Scaled signature.
+    SX : torch.Tensor
+        Scaled signatures.
     """
+    if len(SX.shape) != 2:
+        raise ValueError(
+            "Input SX should be a batch of signatures, i.e. 2-dim array,"
+            f" got {SX.shape} instead. If only one signature to rescale, "
+            "reshape your input using `SX.reshape((1,)+SX.shape)`."
+        )
     # indices of each signature tensor
     inds = np.cumsum([0]+[channels**k for k in range(1, depth+1)])
-    for d in range(1, depth+1):
-        idx1, idx2 = inds[d-1], inds[d]
-        sig[idx1:idx2] *= math.factorial(d)
-    return(sig)
+    SX_scaled = torch.empty((SX.shape))
+    for i in range(len(SX)):
+        for d in range(1, depth+1):
+            idx1, idx2 = inds[d-1], inds[d]
+            SX_scaled[i, idx1:idx2] = SX[i, idx1:idx2]*math.factorial(d)
+    return(SX_scaled)
 
 
 # def datasigscaling(datasig, depth, channels):
@@ -484,37 +507,6 @@ def sigscaling_reverse(sig, depth, channels):
         idx1, idx2 = inds[d-1], inds[d]
         sig[idx1:idx2] /= math.factorial(d)
     return(sig)
-
-
-def sigscalingv1(sig, depth, channels):
-    """
-    each signature tensor of order m is multiplied by factorial m
-    /!\ NB: function designed only for 3-dimensional signals.
-    """
-    if len(sig.shape) == 2:
-        sigs = []
-        for s in sig:
-            sigs.append(sigscaling(s, depth, channels))
-        sigstorch = torch.empty(size=(len(sigs), len(sigs[0])))
-        for i, elem in enumerate(sigs):
-            sigstorch[i] = elem
-        return(sigstorch)
-    sigres = np.copy(sig)
-    tmp1 = channels*np.ones(depth, dtype=np.int8)
-    tmp2 = np.arange(1, depth+1, 1)
-    tmp3 = np.power(tmp1, tmp2)
-    idx_orders = np.cumsum(tmp3)
-    idx1 = 0
-    # print(sig)
-    for order in range(1, depth+1):
-        idx2 = idx_orders[order-1]
-        # print("icite",order, idx1, idx2)
-        # print(sig[idx1:idx2])
-        sigres[idx1:idx2] *= math.factorial(order)
-        # print(sig[idx1:idx2])
-        idx1 = idx2
-    sigres = torch.from_numpy(sigres)
-    return(sigres)
 
 
 # def sigdownscaling(sig, depth, channels):
@@ -551,6 +543,106 @@ def sigscalingv1(sig, depth, channels):
 #     # print(sigres)
 #     sigres = torch.from_numpy(sigres)
 #     return(sigres)
+
+
+# def leadlag_embedding(X, lag=1):
+#     """
+#     Apply lead-lag transform to paths dataset.
+#
+#     Parameters
+#     ----------
+#     lag : int
+#         If lag=1, a new channel is created with lag 1 data. If lag=2, 2 new
+#         channels are created with the first channel lag 1 data and the second
+#         lag 2 data.
+#     """
+#
+#     if torch.is_tensor(X):
+#         if len(X.shape) != 3:
+#             raise ValueError(
+#                 "Input data should be 3-dimensional (batch, stream, channels), "
+#                 f"got {X.shape} instead."
+#             )
+#         batch, stream, channels = X.shape
+#         X_ll = torch.empty(batch, stream+lag, channels+lag)
+#
+#         X_ll[:, :channels, :stream] =
+#         for l in range(lag):
+#
+#
+#     elif type(X) is list:
+
+
+def leadlag_embedding(X):
+    """
+    Apply lead-lag transform to paths dataset. Caution: if used,
+    :func:`time_embedding` should be applied AFTER and not BEFORE.
+
+    Parameters
+    ----------
+    X : torch.Tensor or list
+        Data to embed with lead-lag.
+    """
+    if type(X) == torch.Tensor:
+        if len(X.shape) != 3:
+            raise ValueError(
+                "Input data should be 3-dimensional (batch, stream, channels), "
+                f"got {X.shape} instead."
+            )
+        batch, stream, channels = X.shape
+        X_ll = torch.empty(batch, stream+1, 2*channels)
+
+        X_ll[:, :-1, :channels] = torch.clone(X)
+        X_ll[:, -1, :channels] = X_ll[:, -2, :channels]  # repeat last value
+
+        X_ll[:, 1:, channels:] = torch.clone(X)
+        X_ll[:, 0, channels:] = X_ll[:, 1, channels:]
+
+    elif type(X) == list:
+        X_ll = []
+        for obs in X:
+            obs_extended = obs.reshape((1,)+obs.shape)
+            if type(obs_extended) == np.ndarray:
+                obs_extended = torch.from_numpy(obs_extended)
+            obs_extended = leadlag_embedding(obs_extended)
+            obs_ = obs_extended[0]
+            X_ll.append(obs_)
+
+    return(X_ll)
+
+
+def time_embedding(X):
+    """
+    Add a new dimension which is time: [-1,3,4] becomes [[-1, 3, 4], [0, 1, 2]].
+    Should not be performed before using :func:`leadlag_embedding`.
+    """
+    if type(X) != torch.Tensor and type(X) != list:
+        raise ValueError(
+            f"Input data type should be list or torch.Tensor, got {type(X)} "
+            "instead."
+        )
+
+    if type(X) == torch.Tensor:
+        if len(X.shape) != 3:
+            raise ValueError(
+                "Input data should be 3-dimensional (batch, stream, channels), "
+                f"got {X.shape} instead."
+            )
+        batch, stream, channels = X.shape
+        time_ = torch.Tensor(range(stream)).reshape((1, stream, 1))
+        time_ = time_.repeat((batch, 1, 1))
+        X_time = torch.cat((X, time_), axis=2)
+    elif type(X) == list:
+        X_time = []
+        for obs in X:
+            obs_extended = obs.reshape((1,)+obs.shape)
+            if type(obs_extended) == np.ndarray:
+                obs_extended = torch.from_numpy(obs_extended)
+            obs_extended = time_embedding(obs_extended)
+            obs_ = obs_extended[0]
+            X_time.append(obs_)
+
+    return X_time
 
 
 def nsigterms(depth, channels):

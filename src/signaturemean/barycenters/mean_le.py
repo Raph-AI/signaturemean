@@ -4,7 +4,7 @@ import signatory
 from signaturemean.utils import sigscaling
 
 
-def mean(datasig, depth, channels, rescaling=False):
+def mean(datasig, depth, channels):
     """
     Compute the Log Euclidean mean from a dataset of signatures, that is
 
@@ -24,19 +24,12 @@ def mean(datasig, depth, channels, rescaling=False):
     depth : int
             Corresponding depth of the signatures stored in `datasig`.
 
-    rescaling : boolean (default=False)
-                Apply a normalization of signatures `datasig`:
-                :func:`signaturemean.utils.sigscaling` is applied on `datasig`
-                before computing the mean.
-
     Returns
     -------
     sigbarycenter : (channels**1 + ... + channels**depth) torch.Tensor
                     A signature which is the barycenter of the signatures
                     in datasig.
     """
-    if rescaling:  # normalization
-        datasig = sigscaling(datasig, depth, channels)
     stoLogS = signatory.SignatureToLogSignature(channels, depth, mode='brackets')
     datalogsig = stoLogS.forward(datasig)
     logbarycenter = torch.mean(datalogsig, dim=0)
@@ -45,8 +38,6 @@ def mean(datasig, depth, channels, rescaling=False):
     s_lyndon = iisignature.prepare(channels, depth, "S2")
     sigbarycenter = iisignature.logsigtosig(logbarycenter, s_lyndon)
     sigbarycenter = torch.from_numpy(sigbarycenter)
-    # if rescaling:
-    #     sigbarycenter = utils.sigscaling_reverse(sigbarycenter, depth, channels)
     return(sigbarycenter)
 
 

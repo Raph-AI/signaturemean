@@ -206,9 +206,9 @@ class KMeansSignature():
     def _fit_one_init(self, SX, rs):
         if self.init == "random":
             indices = rs.choice(self.batch_, self.n_clusters, replace=False)
-            if self.averaging != 'tsoptim':
+            if self.averaging in ['LE', 'pennec', 'group']:
                 self.cluster_centers_ = SX[indices].clone()
-            else:
+            elif self.averaging == 'tsoptim':
                 if self.stream_fixed == False:
                     self.cluster_centers_ = torch.empty((self.n_clusters, self.tsoptim_mean_stream, self.channels))
                     for j, i in enumerate(indices):
@@ -234,12 +234,12 @@ class KMeansSignature():
                     self.cluster_centers_ = self.cluster_centers_[:, idx_stream, :]
         else:
             raise ValueError(
-                f"Value for parameter 'init' is invalid : got {self.init}"
+                f"Value for parameter 'init' is invalid : got '{self.init}'."
             )
         if self.verbose:
-            print("iteration #0")
+            print("kmeans iteration #0")
             print("cluster_centers : ")
-            print(self.cluster_centers_.numpy())
+            print(self.cluster_centers_)
         # self.cluster_centers_ = _check_full_length(self.cluster_centers_)  # should do this (check if NaNs)
         for it in range(self.max_iter):
             if self.verbose:
@@ -248,9 +248,9 @@ class KMeansSignature():
             self._assign(SX)
             self._update_centroids(SX, rs)
             if self.verbose:
-                print(f"clusters : {self.labels_.numpy()}")
+                print(f"clusters : {self.labels_}")
                 print("cluster_centers : ")
-                print(self.cluster_centers_.numpy())
+                print(self.cluster_centers_)
         return self
 
     def _transform(self, SX):
@@ -258,6 +258,8 @@ class KMeansSignature():
         Compute distance `metric` between each signature observation and every
         signature cluster centers.
         """
+        if self.verbose:
+            print("kmeans transform step")
         if self.metric == "euclidean":
             if self.averaging == 'tsoptim':
                 # return torch.cdist(
@@ -273,6 +275,11 @@ class KMeansSignature():
                 self.Scluster_centers_ = self.Scluster_centers_.double()
                 return torch.cdist(self.SSX, self.Scluster_centers_, p=2.0)
             else:
+                # #########################################################################################
+                # ssx = sigscaling(SX, depth=self.depth, channels=self.channels)
+                # centers = sigscaling(self.cluster_centers_, depth=self.depth, channels=self.channels)
+                # return torch.cdist(ssx, centers, p=2.0)
+                # #########################################################################################
                 return torch.cdist(SX, self.cluster_centers_, p=2.0)
 
 
@@ -280,6 +287,8 @@ class KMeansSignature():
         """
         Assign each observation to the cluster with nearest center.
         """
+        if self.verbose:
+            print("kmeans assign step")
         dists = self._transform(SX)
         if self.verbose:
             print(f"_assign : dists = \n{dists}")
@@ -289,6 +298,8 @@ class KMeansSignature():
         return matched_labels
 
     def _update_centroids(self, SX, rs):
+        if self.verbose:
+            print("kmeans update centroids step")
         for k in range(self.n_clusters):
             if self.averaging == 'LE':
                 self.cluster_centers_[k] = mean_le.mean(
@@ -342,7 +353,7 @@ class KMeansSignature():
 
         Parameters
         ----------
-        SX : (batch, channels**1 + ... + channels**depth) torch.tensor
+        SX : (batch, channels**1 + ... + channels**depth) torch.Tensor
             Array of signatures.
         """
         # self.times_pe = np.array([0., 0., 0., 0., 0.])
@@ -354,8 +365,11 @@ class KMeansSignature():
         self.n_iter_ = 0
         if self.averaging == 'group':
             self.dinds = depth_inds(self.depth, self.channels, False)
-            if torch.is_tensor(SX):
+            if type(SX) == torch.Tensor:
                 self.SXnp = SX.numpy()
+            elif type(SX) == np.ndarray:
+                self.SXnp = SX.copy()
+                SX = torch.from_numpy(SX)
             self.SXnp = (self.SXnp).astype('double')
         if self.averaging == 'tsoptim' and self.stream_fixed == True:
             self.SSX = signatory.signature(SX, depth=self.depth)
@@ -372,8 +386,6 @@ class KMeansSignature():
         # _check_initial_guess(self.init, self.n_clusters)
         init_idx = 0
         while init_idx < self.n_init:
-            # self._fit_one_init(SX, rs)
-            # init_idx += 1
             try:
                 self._fit_one_init(SX, rs)
                 init_idx += 1
