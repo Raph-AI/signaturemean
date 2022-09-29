@@ -1,4 +1,4 @@
 numpy==1.21.0
 torch>=1.6.0
-pymanopt==0.2.6rc1
+pymanopt==2.0.1
 iisignature

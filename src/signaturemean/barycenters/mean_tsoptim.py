@@ -1,12 +1,9 @@
 import numpy as np
 import signatory
 import torch
-# Caution ! Requires PyManOpt from Git (main branch) :
-# python3 -m pip install git+https://github.com/pymanopt/pymanopt.git@master
-from pymanopt.manifolds import Euclidean
-from pymanopt import Problem
-from pymanopt.solvers import SteepestDescent  # ConjugateGradient, TrustRegions, ParticleSwarm
-import pymanopt
+import pymanopt  # tested under pymanopt==2.0.1
+import pymanopt.manifolds
+import pymanopt.optimizers
 
 
 class TSoptim():
@@ -38,6 +35,9 @@ class TSoptim():
         Maximum number of iterations of the averaging algorithm for a
         single run.
 
+    weights : array-like
+        Barycenter weights. Default is 1/batch.
+
     verbose : boolean, default=False
         If activated, print information.
 
@@ -59,6 +59,7 @@ class TSoptim():
                  mean_stream=10,
                  metric='euclidean',
                  max_iter=200,
+                 weights=None,
                  verbose=False,
                  penalty=None):
         self.depth = depth
@@ -68,6 +69,7 @@ class TSoptim():
         self.mean_stream = mean_stream
         self.metric = metric
         self.max_iter = max_iter
+        self.weights = weights
         self.verbose = verbose
         self.penalty = penalty
 
@@ -117,15 +119,29 @@ class TSoptim():
                     f"(stream, channels), got shape {X[0].shape} instead."
                 )
 
-
+        if self.weights != None:
+            if len(self.weights) != len(X):
+                raise ValueError(
+                    f"Length of weigths should be equal to len(X), got length "
+                    f"{len(self.weights)} instead."
+                )
 
     def _create_cost(self):
-        @pymanopt.function.PyTorch
+        @pymanopt.function.pytorch(self.manifold)
         def cost(ts):
             ts = ts.reshape((1, ts.shape[0], ts.shape[1]))
             Sts = signatory.signature(ts, self.depth)
-            return torch.sum(torch.linalg.norm(self.SX-Sts, dim=1))
+            if self.weights == None:
+                return torch.sum(torch.linalg.norm(self.SX-Sts, dim=1))
+            else:
+                val = torch.mul(
+                    self.weights,
+                    torch.linalg.norm(self.SX-Sts, dim=1)
+                )
+                val = torch.sum(val)
+                return val
         return cost
+
 
     def _fit_one_init(self, X, rs):
         if self.stream_fixed==True:
@@ -152,14 +168,25 @@ class TSoptim():
             idx_stream = np.concatenate(([0], idx_stream, [len(X[idx_obs])-1]))
             self.init_ts_ = X[idx_obs][idx_stream, :].clone()
 
-        manifold = Euclidean(self.channels, self.mean_stream)
+        # manifold = Euclidean(self.channels, self.mean_stream)
+        # cost = self._create_cost()
+        # problem = Problem(manifold=manifold, cost=cost, verbosity=self.verbose)
+        # solver = SteepestDescent(maxiter=self.max_iter, logverbosity=self.verbose)
+
+        self.manifold = pymanopt.manifolds.Euclidean(self.channels, self.mean_stream)
         cost = self._create_cost()
-        problem = Problem(manifold=manifold, cost=cost, verbosity=self.verbose)
-        solver = SteepestDescent(maxiter=self.max_iter, logverbosity=self.verbose)
+        problem = pymanopt.Problem(manifold = self.manifold, cost = cost)
+        optimizer = pymanopt.optimizers.SteepestDescent(
+            max_iterations=self.max_iter,
+            verbosity = self.verbose
+        )
 
         self.init_ts_ = self.init_ts_.numpy()
-        bary = solver.solve(problem, x=self.init_ts_)
-        costbary = cost(bary)
+        result = optimizer.run(problem = problem, initial_point = self.init_ts_)
+        # bary = solver.solve(problem, x=self.init_ts_)
+        # costbary = cost(bary)
+        bary = result.point
+        costbary = result.cost
         if costbary < self.cost_value_:  # runs with multiple inits
             bary = torch.from_numpy(bary)
             self.cost_value_ = costbary
@@ -193,6 +220,6 @@ class TSoptim():
             self.channels = X[0].shape[1]
         init_idx = 0
         while init_idx < self.n_init:
-            bary = self._fit_one_init(X, rs)
+            self._fit_one_init(X, rs)
             init_idx += 1
         return self

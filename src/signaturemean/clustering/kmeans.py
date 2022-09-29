@@ -71,9 +71,9 @@ class KMeansSignature():
         paths and not signatures.
 
     stream_fixed : bool (default: True)
-        True if number of time recordings (stream) is the same for every path
-        observation of the dataset. Relevant only when using
-        `averaging='tsoptim'`.
+        Relevant only when using `averaging='tsoptim'`.True if number of time
+        recordings (stream) is the same for every path observation of the
+        dataset.
 
     minibatch : boolean
         Apply MiniBatch strategy. NB: not yet supported.
@@ -109,19 +109,6 @@ class KMeansSignature():
                               channels=channels, random_state=1708,
                               metric='euclidean', averaging='LE')
     >>> km1.fit(SX)
-
-    >>> # pennec barycenter
-    >>> km2 = KMeansSignature(n_clusters=2, max_iter=2, depth=depth,
-                              channels=channels, random_state=1708,
-                              metric='euclidean', averaging='pennec')
-    >>> km2.fit(SX)
-
-    >>> # tsoptim barycenter
-    >>> km3 = KMeansSignature(n_clusters=2, depth=depth,
-                              channels=channels, random_state=1708,
-                              metric='euclidean', averaging='tsoptim')
-    >>> km3.fit(X)  # Careful: must fit X and not SX.
-
     >>> print(km1.labels_)
     """
     def __init__(self,
@@ -186,11 +173,12 @@ class KMeansSignature():
                     f"{SX.shape} instead."
                 )
         if self.averaging=='tsoptim':
-            if self.stream_fixed==True and len(SX.shape) != 3:
-                raise ValueError(
-                    f"Input data should have three-dimensional shape (batch, "
-                    f"stream, channels), got shape {SX.shape} instead."
-                )
+            if self.stream_fixed==True:
+                if len(SX.shape) != 3:
+                    raise ValueError(
+                        f"Input data should have three-dimensional shape (batch, "
+                        f"stream, channels), got shape {SX.shape} instead."
+                    )
             elif self.stream_fixed==False and len(SX[0].shape) != 2:
                 raise ValueError(
                     f"Input list should have elements with two-dimensional "
@@ -314,14 +302,20 @@ class KMeansSignature():
                     channels=self.channels,
                     max_iter=self.max_iter_pe
                 )
+            # elif self.averaging == 'group':  # for cython version
+            #     m = mean_group.mean(
+            #         self.SXnp[self.labels_ == k],
+            #         depth=self.depth,
+            #         channels=self.channels,
+            #         inds=self.dinds
+            #     )
+            #     self.cluster_centers_[k] = torch.from_numpy(m)
             elif self.averaging == 'group':
-                m = mean_group.mean(
-                    self.SXnp[self.labels_ == k],
-                    depth=self.depth,
-                    channels=self.channels,
-                    inds=self.dinds
+                self.cluster_centers_[k] = mean_group.mean(
+                    SX = SX[self.labels_ == k],
+                    depth = self.depth,
+                    channels = self.channels
                 )
-                self.cluster_centers_[k] = torch.from_numpy(m)
             elif self.averaging == 'tsoptim' and self.stream_fixed==True:
                 tsoptim = mean_tsoptim.TSoptim(
                     self.depth,
@@ -363,14 +357,14 @@ class KMeansSignature():
         self.cluster_centers_ = None
         self.Scluster_centers_ = None
         self.n_iter_ = 0
-        if self.averaging == 'group':
-            self.dinds = depth_inds(self.depth, self.channels, False)
-            if type(SX) == torch.Tensor:
-                self.SXnp = SX.numpy()
-            elif type(SX) == np.ndarray:
-                self.SXnp = SX.copy()
-                SX = torch.from_numpy(SX)
-            self.SXnp = (self.SXnp).astype('double')
+        # if self.averaging == 'group':
+        #     self.dinds = depth_inds(self.depth, self.channels, False)
+        #     if type(SX) == torch.Tensor:
+        #         self.SXnp = SX.numpy()
+        #     elif type(SX) == np.ndarray:
+        #         self.SXnp = SX.copy()
+        #         SX = torch.from_numpy(SX)
+        #     self.SXnp = (self.SXnp).astype('double')
         if self.averaging == 'tsoptim' and self.stream_fixed == True:
             self.SSX = signatory.signature(SX, depth=self.depth)
         elif self.averaging == 'tsoptim' and self.stream_fixed == False:
