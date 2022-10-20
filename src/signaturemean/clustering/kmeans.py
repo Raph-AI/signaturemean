@@ -125,6 +125,8 @@ class KMeansSignature():
                  minibatch=False,
                  verbose=False,
                  tsoptim_mean_stream=10,
+                 tsoptim_n_init = 1,
+                 max_iter_tsoptim=200,
                  max_iter_pe=20):
         self.depth = depth
         self.channels = channels
@@ -139,6 +141,8 @@ class KMeansSignature():
         self.minibatch = minibatch
         self.verbose = verbose
         self.tsoptim_mean_stream = tsoptim_mean_stream
+        self.tsoptim_n_init = tsoptim_n_init
+        self.max_iter_tsoptim = max_iter_tsoptim
         self.max_iter_pe = max_iter_pe
 
     def _check_params(self, SX):
@@ -311,16 +315,19 @@ class KMeansSignature():
             #     )
             #     self.cluster_centers_[k] = torch.from_numpy(m)
             elif self.averaging == 'group':
-                self.cluster_centers_[k] = mean_group.mean(
-                    SX = SX[self.labels_ == k],
-                    depth = self.depth,
-                    channels = self.channels
+                m = mean_group.mean(
+                    SX       = self.SXnp[self.labels_ == k],
+                    depth    = self.depth,
+                    channels = self.channels,
+                    dinds    = self.dinds
                 )
+                self.cluster_centers_[k] = torch.from_numpy(m)
             elif self.averaging == 'tsoptim' and self.stream_fixed==True:
                 tsoptim = mean_tsoptim.TSoptim(
                     self.depth,
                     random_state=self.random_state,
                     n_init=1,
+                    max_iter=200,
                     mean_stream=self.tsoptim_mean_stream,
                     stream_fixed=self.stream_fixed
                 )
@@ -330,7 +337,8 @@ class KMeansSignature():
                 tsoptim = mean_tsoptim.TSoptim(
                     self.depth,
                     random_state=self.random_state,
-                    n_init=1,
+                    n_init=self.n_init,
+                    max_iter=self.max_iter_tsoptim,
                     mean_stream=self.tsoptim_mean_stream,
                     stream_fixed=self.stream_fixed
                 )
@@ -357,14 +365,14 @@ class KMeansSignature():
         self.cluster_centers_ = None
         self.Scluster_centers_ = None
         self.n_iter_ = 0
-        # if self.averaging == 'group':
-        #     self.dinds = depth_inds(self.depth, self.channels, False)
-        #     if type(SX) == torch.Tensor:
-        #         self.SXnp = SX.numpy()
-        #     elif type(SX) == np.ndarray:
-        #         self.SXnp = SX.copy()
-        #         SX = torch.from_numpy(SX)
-        #     self.SXnp = (self.SXnp).astype('double')
+        if self.averaging == 'group':
+            self.dinds = depth_inds(self.depth, self.channels, scalar=True)
+            if type(SX) == torch.Tensor:
+                self.SXnp = SX.numpy()
+            elif type(SX) == np.ndarray:
+                self.SXnp = SX.copy()
+                SX = torch.from_numpy(SX)
+            self.SXnp = (self.SXnp).astype('double')
         if self.averaging == 'tsoptim' and self.stream_fixed == True:
             self.SSX = signatory.signature(SX, depth=self.depth)
         elif self.averaging == 'tsoptim' and self.stream_fixed == False:

@@ -11,7 +11,6 @@ from libc.math cimport sqrt
 # from libcpp cimport bool
 
 
-# cpdef cnp.ndarray[double, ndim=1] sigprod():
 
 cpdef cnp.ndarray[double, ndim=1] sigprod(
     cnp.ndarray[double, ndim=1] sigA,
@@ -29,7 +28,8 @@ cpdef cnp.ndarray[double, ndim=1] sigprod(
         included.
 
     inds : nd.array
-        The output of :func:`signaturemean.cutils.depth_inds`.
+        The output of :func:`signaturemean.cutils.depth_inds` with param
+        `scalar=True`.
 
     Returns
     -------
@@ -69,10 +69,64 @@ cpdef cnp.ndarray[double, ndim=1] sigprod(
                 &inc,
                 &prod[start],
                 &lenright
-            )
-            # Careful! fortran order (column major): sigA and sigB switched !
+            ) # Careful! fortran order (column major): sigA and sigB switched !
         # sh1 = sh2
     return prod
+
+
+
+cpdef cnp.ndarray[double, ndim=1] sigprodlastlevel(
+    cnp.ndarray[double, ndim=1] sigA,
+    cnp.ndarray[double, ndim=1] sigB,
+    unsigned int depth,
+    unsigned int channels,
+    cnp.ndarray[int, ndim=1] inds,
+    unsigned int leading_zeros_sigA = 0,
+    unsigned int leading_zeros_sigB = 0
+    ):
+    """
+    Variant of :func:`sigprod`. Only the signature at depth :attr:`depth` is
+    computed. Whereas with `sigprod`, all depth=0, ..., `depth` are computed.
+
+    Parameters
+    ----------
+    sigA, sigB : nd.array
+        The two signature we want the product of. Caution: scalar value must be
+        included.
+
+    inds : nd.array
+        The output of :func:`signaturemean.cutils.depth_inds` with scalar=True.
+
+    leading_zeros_sigA, leading_zeros_sigB : int (default=0)
+        Number of signature levels filled with zeros.
+
+    Returns
+    -------
+    prod : nd.array
+        The product of sigA and sigB. NB: scalar value is included.
+    """
+    cdef cnp.ndarray[double, ndim=1] prod = np.zeros(
+        inds[-1]-inds[-2],
+        dtype=cnp.dtype("d")
+    )
+    cdef int i, inc = 1, lenleft = 0, lenright = 0
+    cdef double one = 1.0
+    for i in range(leading_zeros_sigA, depth+1-leading_zeros_sigB):
+        lenleft = inds[i+1]-inds[i]
+        lenright = inds[depth+1-i]-inds[depth+1-i-1]
+        dger(
+            &lenright,
+            &lenleft,
+            &one,
+            &sigB[inds[depth-i]],
+            &inc,
+            &sigA[inds[i]],
+            &inc,
+            &prod[0],
+            &lenright
+        )  # Careful! fortran order (column major): sigA and sigB switched !
+    return prod
+
 
 
 cpdef cnp.ndarray[double, ndim=1] sigrprod_inplace(
@@ -227,7 +281,9 @@ cpdef cnp.ndarray[double, ndim=1] siginv(
         sigbis[i] = -sigbis[i]
         inv[i] = -inv[i]
     sigbis[0] += 1.  # sigbis is (1-a)
-    inv[0] += 2.  # inv is (2-a)
+    inv[0] += 2.     # inv is (2-a)
+
+    # Horner's iterations
     for i in range(depth):
         inv = sigprod(sigbis, inv, depth, channels, inds, True)
         inv[0] += 1.

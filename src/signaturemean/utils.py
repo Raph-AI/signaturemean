@@ -81,6 +81,10 @@ def sigprod(sig1, sig2, sig_depth, channels):
     Product between two signatures (in other words: two elements of the tensor
     algebra).
     $a \otimes b = (c_0, ..., c_N)$
+    Parameters
+    ----------
+    sig1 : torch.Tensor
+        Signature, e.g. the output of :func:`signatory.signature()`.
     """
     if len(sig1) != len(sig2):
         raise ValueError(

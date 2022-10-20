@@ -24,7 +24,7 @@ ext2 = Extension(
     )
 ext3 = Extension(
     name='signaturemean.barycenters.mean_group',
-    sources=['src/signaturemean/barycenters/mean_group_mallocerror.pyx'],
+    sources=['src/signaturemean/barycenters/mean_group.pyx'],
     include_dirs=[numpy.get_include()]
     )
 

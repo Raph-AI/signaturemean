@@ -23,8 +23,6 @@ $$m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{
 $$\min_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
 
 
-<!-- - `mean_pathopt_proj.py` **WIP** : method of Nozomi Sugiura (see Appendix B in [3]). -->
-
 For an introduction on the iterated integrals signature transform, the reader can refer itself to [1].
 
 ## Usage
@@ -69,10 +67,10 @@ print(tso.barycenter_ts)  # returns a path
 ## Requirements
 
 1.  `python3 -m pip install -r requirements.txt`.
-2.  Requires `signatory`. [How to install signatory](https://signatory.readthedocs.io/en/latest/pages/usage/installation.html). NB: verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation: torch 1.7.1 and signatory 1.2.6.1.7.1
+2.  Requires `signatory`. [How to install signatory](https://signatory.readthedocs.io/en/latest/pages/usage/installation.html). NB: verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation: torch 1.9.0 and signatory 1.2.6.1.9.0
     ```
-    pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2
-    pip install signatory==1.2.6.1.7.1 --no-cache-dir --force-reinstall
+    pip install torch==1.9.0
+    pip install signatory==1.2.6.1.9.0 --no-cache-dir --force-reinstall
     ```
 
 
@@ -88,5 +86,3 @@ Figure: Representation in three-dimensional path space of various barycenters. I
 [1] Chevyrev, I. and Kormilitzin, A. (2016) ‘A Primer on the Signature Method in Machine Learning’, arXiv:1603.03788 [cs, stat] [Preprint]. Available at: http://arxiv.org/abs/1603.03788 (Accessed: 9 August 2021).
 
 [2] Pennec, Xavier, and Vincent Arsigny. 2013. “Exponential Barycenters of the Canonical Cartan Connection and Invariant Means on Lie Groups.” In Matrix Information Geometry, edited by Frank Nielsen and Rajendra Bhatia, 123–66. Berlin, Heidelberg: Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-30232-9_7.
-
-<!-- [3] Sugiura, Nozomi. 2021. “Clustering Global Ocean Profiles According to Temperature-Salinity Structure.” ArXiv:2103.14165 [Physics], March. http://arxiv.org/abs/2103.14165. -->

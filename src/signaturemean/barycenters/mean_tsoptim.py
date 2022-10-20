@@ -54,6 +54,7 @@ class TSoptim():
     def __init__(self,
                  depth,
                  random_state,
+                 random_index=None,
                  stream_fixed=True,
                  n_init=1,
                  mean_stream=10,
@@ -64,6 +65,7 @@ class TSoptim():
                  penalty=None):
         self.depth = depth
         self.random_state = random_state
+        self.random_index = random_index
         self.stream_fixed = stream_fixed
         self.n_init = n_init
         self.mean_stream = mean_stream
@@ -125,6 +127,12 @@ class TSoptim():
                     f"Length of weigths should be equal to len(X), got length "
                     f"{len(self.weights)} instead."
                 )
+        if self.random_index != None:
+            if self.random_index > len(X) or self.random_index < 0:
+                raise ValueError(
+                    f"Random index for initialization should be less than number "
+                    f"of obervations. Got {self.random_index} > {len(X)} instead."
+                )
 
     def _create_cost(self):
         @pymanopt.function.pytorch(self.manifold)
@@ -145,8 +153,11 @@ class TSoptim():
 
     def _fit_one_init(self, X, rs):
         if self.stream_fixed==True:
-            # draw observation index randomly
-            idx_obs = rs.integers(X.shape[0], size=1)
+            if self.random_index == None:
+                # draw observation index randomly
+                idx_obs = rs.integers(X.shape[0], size=1)
+            else:
+                idx_obs = [self.random_index]
             # draw time indices randomly (to obtain subsample of sample)
             idx_stream = np.sort(rs.choice(
                 range(1, X.shape[1]-1),
@@ -157,8 +168,11 @@ class TSoptim():
             self.init_ts_ = X[idx_obs][:, idx_stream, :].clone()
             self.init_ts_ = self.init_ts_[0]
         else:
-            # draw observation index randomly
-            idx_obs = rs.integers(len(X), size=1)[0]
+            if self.random_index == None:
+                # draw observation index randomly
+                idx_obs = rs.integers(len(X), size=1)[0]
+            else:
+                idx_obs = self.random_index
             # draw time indices randomly (to obtain subsample of sample)
             idx_stream = np.sort(rs.choice(
                 range(1, len(X[idx_obs])-1),
@@ -167,11 +181,6 @@ class TSoptim():
                 ))
             idx_stream = np.concatenate(([0], idx_stream, [len(X[idx_obs])-1]))
             self.init_ts_ = X[idx_obs][idx_stream, :].clone()
-
-        # manifold = Euclidean(self.channels, self.mean_stream)
-        # cost = self._create_cost()
-        # problem = Problem(manifold=manifold, cost=cost, verbosity=self.verbose)
-        # solver = SteepestDescent(maxiter=self.max_iter, logverbosity=self.verbose)
 
         self.manifold = pymanopt.manifolds.Euclidean(self.channels, self.mean_stream)
         cost = self._create_cost()
@@ -183,14 +192,11 @@ class TSoptim():
 
         self.init_ts_ = self.init_ts_.numpy()
         result = optimizer.run(problem = problem, initial_point = self.init_ts_)
-        # bary = solver.solve(problem, x=self.init_ts_)
-        # costbary = cost(bary)
         bary = result.point
         costbary = result.cost
         if costbary < self.cost_value_:  # runs with multiple inits
-            bary = torch.from_numpy(bary)
             self.cost_value_ = costbary
-            self.barycenter_ts = bary
+            self.barycenter_ts = torch.from_numpy(bary)
         return self
 
     def fit(self, X):
@@ -213,10 +219,10 @@ class TSoptim():
         else:
             ts_temp = X[0].unsqueeze(0)
             self.SX = signatory.signature(ts_temp, self.depth)
-            for i in range(len(X)):
+            for i in range(1, len(X)):
                 ts_temp = X[i].unsqueeze(0)
-                self.SX = torch.cat((self.SX,
-                    signatory.signature(ts_temp, self.depth)), 0)
+                self.SX = torch.cat(
+                    (self.SX, signatory.signature(ts_temp, self.depth)), 0)
             self.channels = X[0].shape[1]
         init_idx = 0
         while init_idx < self.n_init:
