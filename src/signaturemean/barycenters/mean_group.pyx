@@ -8,36 +8,75 @@ cimport numpy as cnp
 # from ..cutils import depth_inds
 from ..cutils import siginv
 from ..cutils import sigprodlastlevel
+from ..cutils import depth_inds
 
 
-"""
-
-`mean_group_dger.py` but in cython
-
-"""
 
 
 cpdef cnp.ndarray[double, ndim=1] mean(
     cnp.ndarray[double, ndim=2] SX,
     unsigned int depth,
     unsigned int channels,
-    cnp.ndarray[int, ndim=1] dinds
+    cnp.ndarray[double, ndim=1] weights
     ):
+    """
+    Compute explicit solution :math:`m` of
+    .. math::
+        \sum_{i=1}^n \log(m^{-1}\boxtimes x_i) = 0
+    where :math:`x_i` are signatures and :math:`\log` is the logsignature
+    transform.
+
+    Parameters
+    ----------
+    SX : (batch, 1 + channels**1 + ... + channels**depth) numpy.ndarray
+        Signatures to average (scalar value included).
+
+    depth : int
+        Depth of signature.
+
+    channels : int
+        Number of space dimensions.
+
+    Returns
+    -------
+    sigbarycenter : (1 + channels**1 + ... + channels**depth) numpy.ndarray
+        A signature which is the barycenter of the signatures in SX.
+
+    Example
+    -------
+    >>> from signaturemean.barycenters import mean_group
+    >>> batch = 5     # number of time series
+    >>> stream = 30   # number of timestamps for each time series
+    >>> channels = 2  # number of dimensions
+    >>> depth = 3     # depth (order) of truncation of the signature
+    >>> X = torch.rand(batch, stream, channels)   # simulate random numbers
+    >>> SX = signatory.signature(X, depth, scalar_term=True).numpy()
+    >>> m = mean_group.mean(SX, depth, channels)
+    """
 
     cdef unsigned int batch = len(SX)
+    cdef cnp.ndarray[int, ndim=1] \
+        dinds = depth_inds(depth, channels, scalar=True)
 
     cdef cnp.ndarray[double, ndim=1] \
-        a = np.empty(SX.shape[1]+1, dtype=cnp.dtype("d"))
+        a = np.empty(dinds[-1], dtype=cnp.dtype("d"))
     a[0] = 1.
     cdef cnp.ndarray[double, ndim=2] \
-        b = np.empty((batch, SX.shape[1]+1), dtype=cnp.dtype("d"))
-    b = np.concatenate((np.ones((batch, 1)), SX), 1, dtype=cnp.dtype("d"))
+        b = np.empty((batch, dinds[-1]), dtype=cnp.dtype("d"))
+    SX = SX.astype('double')
+    if SX.shape[1] == dinds[-1]:
+        b = SX.copy()
+    elif SX.shape[1] == dinds[-1]-1:
+        b = np.concatenate(
+            (np.ones((batch, 1)), SX.copy), 1, dtype=cnp.dtype("d"))
+    else:
+        raise ValueError("Wrong number of signature coordinates.")
     cdef cnp.ndarray[double, ndim=2] \
-        p = np.zeros((batch, SX.shape[1]+1), dtype=cnp.dtype("d"))
+        p = np.zeros((batch, dinds[-1]), dtype=cnp.dtype("d"))
     cdef cnp.ndarray[double, ndim=2] \
-        q = np.zeros((batch, SX.shape[1]+1), dtype=cnp.dtype("d"))
+        q = np.zeros((batch, dinds[-1]), dtype=cnp.dtype("d"))
     cdef cnp.ndarray[double, ndim=3] \
-        v = np.zeros((batch, depth, SX.shape[1]+1), dtype=cnp.dtype("d"))
+        v = np.zeros((batch, depth, dinds[-1]), dtype=cnp.dtype("d"))
     # add dimension to store powers of vi.
     # vi shape =(batch, powers, sigterms)
     # /!\ careful to not add it as 3rd dim (but 2nd dim)
@@ -90,4 +129,4 @@ cpdef cnp.ndarray[double, ndim=1] mean(
                                     axis=0)
 
     mp = siginv(a, depth, channels, dinds)
-    return(mp[1:])
+    return(mp)

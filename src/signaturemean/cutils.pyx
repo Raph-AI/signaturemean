@@ -168,6 +168,7 @@ cpdef cnp.ndarray[double, ndim=1] sigrprod_inplace(
     return sigA
 
 
+
 cpdef cnp.ndarray[double, ndim=1] siglprod_inplace(
     cnp.ndarray[double, ndim=1] sigA,
     cnp.ndarray[double, ndim=1] sigB,
@@ -243,6 +244,7 @@ cpdef cnp.ndarray[double, ndim=1] siglprod_inplace(
 #     return inv
 
 
+
 cpdef cnp.ndarray[double, ndim=1] siginv(
     cnp.ndarray[double, ndim=1] sig,
     unsigned int depth,
@@ -264,7 +266,7 @@ cpdef cnp.ndarray[double, ndim=1] siginv(
     ----------
     sig : array-like
         Signature to inverse. Caution: the signature must comprise the scalar
-        value `1.` (convention) as its first value.
+        value `1.` as its first value (convention).
 
     Returns
     -------
