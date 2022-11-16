@@ -37,6 +37,9 @@ cpdef cnp.ndarray[double, ndim=1] mean(
     channels : int
         Number of space dimensions.
 
+    weights : (batch) numpy.ndarray
+        Weights of the barycenter. Must sum to one.
+
     Returns
     -------
     sigbarycenter : (1 + channels**1 + ... + channels**depth) numpy.ndarray
@@ -50,7 +53,8 @@ cpdef cnp.ndarray[double, ndim=1] mean(
     >>> channels = 2  # number of dimensions
     >>> depth = 3     # depth (order) of truncation of the signature
     >>> X = torch.rand(batch, stream, channels)   # simulate random numbers
-    >>> SX = signatory.signature(X, depth, scalar_term=True).numpy()
+    >>> SX = signatory.signature(X, depth, scalar_term=True)
+    >>> SX = SX.numpy().astype('float')
     >>> m = mean_group.mean(SX, depth, channels)
     """
 
@@ -122,11 +126,16 @@ cpdef cnp.ndarray[double, ndim=1] mean(
                 # update p
                 p[i, left:right] += p_coeffs[j]*v[i, power, left:right]
 
-        # update a
-        a[left:right] = -np.mean(b[:, left:right]
-                                    + q[:, left:right]
-                                    + p[:, left:right],
-                                    axis=0)
+        # # update a
+        # a[left:right] = -np.mean(b[:, left:right]
+        #                             + q[:, left:right]
+        #                             + p[:, left:right],
+        #                             axis=0)
 
+        # update a
+        a[left:right] = -np.sum(
+            (weights*(b[:, left:right] + q[:, left:right] + p[:, left:right]).transpose()).transpose(),
+            axis=0
+        )  # double transpose : take advantage of numpy broadcasting
     mp = siginv(a, depth, channels, dinds)
     return(mp)

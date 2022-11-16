@@ -17,12 +17,8 @@ ext1 = Extension(
     sources=['src/signaturemean/cutils.pyx'],
     include_dirs=[numpy.get_include()]
     )
+
 ext2 = Extension(
-    name='signaturemean.barycenters.cmean_pennec',
-    sources=['src/signaturemean/barycenters/cmean_pennec.pyx'],
-    include_dirs=[numpy.get_include()]
-    )
-ext3 = Extension(
     name='signaturemean.barycenters.mean_group',
     sources=['src/signaturemean/barycenters/mean_group.pyx'],
     include_dirs=[numpy.get_include()]
@@ -35,7 +31,7 @@ setup(
 #        'setuptools>=18.0',  # automatically handles Cython extensions
 #        'cython>=0.28.4',
 #    ], # Using setup_requires is discouraged in favor of PEP-518.
-    ext_modules=[ext1, ext2, ext3]
+    ext_modules=[ext1, ext2]
 #    packages=[
 #        'signaturemean',
 #        'signaturemean.barycenters',
