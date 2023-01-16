@@ -1,6 +1,7 @@
 # Python files
 src/signaturemean/barycenters/mean_pennec.py
 src/signaturemean/barycenters/mean_le.py
+src/signaturemean/barycenters/mean_le_weights.py
 
 
 # Byte-compiled / optimized / DLL files

@@ -4,36 +4,22 @@ A toolbox for signature averaging.
 
 ## Signature barycenters
 
-This repository contains three approaches to compute a barycenter of _iterated integrals signatures_ of paths. Let $X:[0,1]\to\mathbb{R}^D$
+This repository contains approaches to compute a barycenter of _iterated integrals signatures_.
 
-be a path and denote $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ its associated signature up to order m.
+From a dataset of multivariate time series $(X_i)_{1\leq i \leq n}$ we define the following barycenters with weights $w_i$ and denoting $\mathbb{X} = S_{[0,1]}^{(\leq m)}(X)$ the signature up to order m :
 
-From a dataset $(X_i)_{1\leq i \leq n}$ we define the following barycenters:
 
--   `signaturemean.barycenters.mean_le` : Log Euclidean mean method
-
-$$\bar{\mathbb{X}} = \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ \mathbb{X}_i\Bigg) .$$
-
--   `signaturemean.barycenters.mean_pennec` : Group Exponential mean method [2, Algorithm 1]
-
-$$m_{(k+1)} = m_{(k)} \otimes \mathrm{Exp}\ \Bigg( \frac1n \sum_{i=1}^n \mathrm{Log}\ (m_{(k)}^{-1}\otimes \mathbb{X}_i)\Bigg) .$$
-
--   `signaturemean.barycenters.mean_tsoptim` : Optimization on time series space method
-
-$$\min_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
-
+-   group mean `signaturemean.barycenters.mean_group` : solution $m$ of $$\sum_{i=1}^n w_i \mathrm{Log}(m^{-1}\boxtimes\mathbb{X}_i)=0$$
+-   `signaturemean.barycenters.mean_tsoptim` : Optimization on time series space method $$\min_{X\in\mathbb{R}^{D\times L}} \sum_{i=1}^n d(\mathbb{X}, \mathbb{X}_i) .$$
 
 For an introduction on the iterated integrals signature transform, the reader can refer itself to [1].
 
-## Usage
+## Quick example
 
-``` python
-import torch
+```python
 import numpy as np
-import signatory
-
-from signaturemean.barycenters import mean_le
-from signaturemean.barycenters import mean_pennec
+import iisignature
+from signaturemean.barycenters import mean_group
 from signaturemean.barycenters import mean_tsoptim
 from signaturemean import utils
 
@@ -43,19 +29,23 @@ channels = 3  # number of dimensions
 depth = 4     # depth (order) of truncation of the signature
 
 # Simulate random data
-X = torch.rand(batch, stream, channels)   # simulate random numbers
+X = np.random.rand(batch, stream, channels)   # simulate random numbers
 X = utils.datashift(X)    # paths start at zero
 X = utils.datascaling(X)  # paths have total variation = 1
-SX = signatory.signature(X, depth=depth)
 
-## Compute barycenter with each approach
-# Approach 1: log euclidean mean
-print(mean_le.mean(SX, depth, channels))      # returns a signature
-# Approach 2: group exponential method
-print(mean_pennec.mean(SX, depth, channels))  # returns a signature
-# Approach 3: optimization on path space
+# Compute signature
+SX = iisignature.sig(X, depth)
+weights = 1./batch*np.ones(batch)
+
+# Averaging, method 1
+SX = np.concatenate((np.ones((batch,1)), SX), axis=1)  # level 0 of signature
+m = mean_group.mean(SX, depth, channels, weights)
+print(m)
+
+# Averaging, method 2 (requires torch)
+import torch
 tso = mean_tsoptim.TSoptim(depth=depth, random_state=1641)
-tso.fit(X)
+tso.fit(torch.from_numpy(X))
 print(tso.barycenter_ts)  # returns a path
 ```
 
@@ -66,12 +56,18 @@ print(tso.barycenter_ts)  # returns a path
 
 ## Requirements
 
-1.  `python3 -m pip install -r requirements.txt`.
+```sh
+python3 -m pip install -r requirements.txt
+```
+
+Note that `torch` and `pymanopt` are used only in `mean_tsoptim`.
+
+<!-- 1.  `python3 -m pip install -r requirements.txt`.
 2.  Requires `signatory`. [How to install signatory](https://signatory.readthedocs.io/en/latest/pages/usage/installation.html). NB: verify that your `signatory` package version is compatible with your `torch` package version. For instance, use this installation: torch 1.9.0 and signatory 1.2.6.1.9.0
     ```
     pip install torch==1.9.0
     pip install signatory==1.2.6.1.9.0 --no-cache-dir --force-reinstall
-    ```
+    ```-->
 
 
 
@@ -84,5 +80,3 @@ Figure: Representation in three-dimensional path space of various barycenters. I
 ## References
 
 [1] Chevyrev, I. and Kormilitzin, A. (2016) ‘A Primer on the Signature Method in Machine Learning’, arXiv:1603.03788 [cs, stat] [Preprint]. Available at: http://arxiv.org/abs/1603.03788 (Accessed: 9 August 2021).
-
-[2] Pennec, Xavier, and Vincent Arsigny. 2013. “Exponential Barycenters of the Canonical Cartan Connection and Invariant Means on Lie Groups.” In Matrix Information Geometry, edited by Frank Nielsen and Rajendra Bhatia, 123–66. Berlin, Heidelberg: Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-642-30232-9_7.

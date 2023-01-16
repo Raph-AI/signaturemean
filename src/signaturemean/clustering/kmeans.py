@@ -9,8 +9,6 @@ import signatory
 from signaturemean.clustering.utils import EmptyClusterError
 from signaturemean.clustering.utils import _check_no_empty_cluster
 from ..cutils import depth_inds
-from signaturemean.barycenters import mean_pennec
-from signaturemean.barycenters import mean_le
 from signaturemean.barycenters import mean_tsoptim
 from signaturemean.barycenters import mean_group
 
@@ -62,10 +60,9 @@ class KMeansSignature():
         Method for the initialization of the cluster centers. NB: currently only
         "random" is supported.
 
-    averaging : str (default: "LE")
-        Averaging method. Should be one of "LE"
-        (corresponding to :func:`signaturemean.barycenters.mean_le`), "pennec"
-        (:func:`signaturemean.barycenters.mean_pennec`) or
+    averaging : str (default: "group")
+        Averaging method. Should be "group"
+        (corresponding to :func:`signaturemean.barycenters.mean_group`) or
         "tsoptim" (:func:`signaturemean.barycenters.mean_tsoptim`). Careful: if
         using "tsoptim", the input of `fit()` function should be a dataset of
         paths and not signatures.
@@ -85,10 +82,6 @@ class KMeansSignature():
         Only when using averaging="tsoptim". Path length (stream) to use for the
         optimization space.
 
-    max_iter_pe : int (default: 20)
-        See parameter `max_iter` in
-        :func:`signaturemean.barycenters.mean_pennec.mean()`.
-
     Attributes
     ----------
     labels_ : numpy.ndarray
@@ -105,9 +98,9 @@ class KMeansSignature():
     >>> SX = signatory.signature(X, depth=depth)
 
     >>> # log euclidean barycenter
-    >>> km1 = KMeansSignature(n_clusters=2, max_iter=2, depth=depth,
+    >>> km1 = KMeansSignature(n_clusters=2, max_iter=10, depth=depth,
                               channels=channels, random_state=1708,
-                              metric='euclidean', averaging='LE')
+                              averaging='group', metric='euclidean')
     >>> km1.fit(SX)
     >>> print(km1.labels_)
     """
@@ -120,14 +113,13 @@ class KMeansSignature():
                  max_iter=10,
                  n_init=1,
                  init='random',
-                 averaging='LE',
+                 averaging='group',
                  stream_fixed=True,
                  minibatch=False,
                  verbose=False,
                  tsoptim_mean_stream=10,
                  tsoptim_n_init = 1,
-                 max_iter_tsoptim=200,
-                 max_iter_pe=20):
+                 max_iter_tsoptim=200):
         self.depth = depth
         self.channels = channels
         self.random_state = random_state
@@ -143,7 +135,6 @@ class KMeansSignature():
         self.tsoptim_mean_stream = tsoptim_mean_stream
         self.tsoptim_n_init = tsoptim_n_init
         self.max_iter_tsoptim = max_iter_tsoptim
-        self.max_iter_pe = max_iter_pe
 
     def _check_params(self, SX):
         # n_init
@@ -163,14 +154,14 @@ class KMeansSignature():
                 f"`n_clusters`={self.n_clusters}."
             )
 
-        list_methods = ['LE', 'pennec', 'tsoptim', 'group']
+        list_methods = ['tsoptim', 'group']
         if not self.averaging in list_methods:
             raise ValueError(
                 f"Parameter `averaging` should be one of {list_methods}, got "
                 f"'{self.averaging}' instead."
             )
 
-        if self.averaging in ['LE', 'pennec', 'group']:
+        if self.averaging in ['group']:
             if len(SX.shape) != 2:
                 raise ValueError(
                     f"fit input should have shape (batch, sig_coeffs), got"
@@ -198,7 +189,7 @@ class KMeansSignature():
     def _fit_one_init(self, SX, rs):
         if self.init == "random":
             indices = rs.choice(self.batch_, self.n_clusters, replace=False)
-            if self.averaging in ['LE', 'pennec', 'group']:
+            if self.averaging in ['group']:
                 self.cluster_centers_ = SX[indices].clone()
             elif self.averaging == 'tsoptim':
                 if self.stream_fixed == False:
@@ -293,19 +284,19 @@ class KMeansSignature():
         if self.verbose:
             print("kmeans update centroids step")
         for k in range(self.n_clusters):
-            if self.averaging == 'LE':
-                self.cluster_centers_[k] = mean_le.mean(
-                    SX[self.labels_ == k],
-                    depth=self.depth,
-                    channels=self.channels
+            if self.averaging == 'group':
+                lenweights = len(self.SXnp[self.labels_ == k])
+                weights = 1./lenweights*np.ones(lenweights)
+                # print(self.depth)
+                # print(self.channels)
+                # print(self.weights)
+                m = mean_group.mean(
+                    SX       = self.SXnp[self.labels_ == k],
+                    depth    = self.depth,
+                    channels = self.channels,
+                    weights  = weights
                 )
-            elif self.averaging == 'pennec':
-                self.cluster_centers_[k] = mean_pennec.mean(
-                    SX[self.labels_ == k],
-                    depth=self.depth,
-                    channels=self.channels,
-                    max_iter=self.max_iter_pe
-                )
+                self.cluster_centers_[k] = torch.from_numpy(m[1:])
             # elif self.averaging == 'group':  # for cython version
             #     m = mean_group.mean(
             #         self.SXnp[self.labels_ == k],
@@ -314,14 +305,6 @@ class KMeansSignature():
             #         inds=self.dinds
             #     )
             #     self.cluster_centers_[k] = torch.from_numpy(m)
-            elif self.averaging == 'group':
-                m = mean_group.mean(
-                    SX       = self.SXnp[self.labels_ == k],
-                    depth    = self.depth,
-                    channels = self.channels,
-                    dinds    = self.dinds
-                )
-                self.cluster_centers_[k] = torch.from_numpy(m)
             elif self.averaging == 'tsoptim' and self.stream_fixed==True:
                 tsoptim = mean_tsoptim.TSoptim(
                     self.depth,
@@ -358,7 +341,6 @@ class KMeansSignature():
         SX : (batch, channels**1 + ... + channels**depth) torch.Tensor
             Array of signatures.
         """
-        # self.times_pe = np.array([0., 0., 0., 0., 0.])
         self.batch_ = len(SX)
         self._check_params(SX)
         self.labels_ = None
@@ -366,13 +348,14 @@ class KMeansSignature():
         self.Scluster_centers_ = None
         self.n_iter_ = 0
         if self.averaging == 'group':
-            self.dinds = depth_inds(self.depth, self.channels, scalar=True)
             if type(SX) == torch.Tensor:
                 self.SXnp = SX.numpy()
             elif type(SX) == np.ndarray:
                 self.SXnp = SX.copy()
                 SX = torch.from_numpy(SX)
+            self.SXnp = np.concatenate((np.ones((self.batch_, 1)), self.SXnp), 1)
             self.SXnp = (self.SXnp).astype('double')
+            # self.weights = 1./self.batch_*np.ones(self.batch_)  # uniform
         if self.averaging == 'tsoptim' and self.stream_fixed == True:
             self.SSX = signatory.signature(SX, depth=self.depth)
         elif self.averaging == 'tsoptim' and self.stream_fixed == False:
@@ -395,115 +378,3 @@ class KMeansSignature():
                 if self.verbose:
                     print("Interrupted because of empty cluster")
         return self
-
-
-# def datascaling(data):
-#     "Each observation is set to have total variation norm equals to 1."
-#     batch, stream, channels = data.shape
-#     print(f"stream = {stream}")
-#     for i in range(batch):
-#         tvnorm = np.array([(data[i, k, :] - data[i, k-1, :]).numpy() for k in range(1, stream)])
-#         tvnorm = np.sum(tvnorm, axis=0)
-#         tvnorm = np.linalg.norm(tvnorm)
-#         print(f"tvnorm obs #{i} = {tvnorm}")
-#         data[i] = data[i]/tvnorm
-#         print(data[i])
-#     return(data)
-
-
-# def kmeans(n_clusters, signatures, depth, channels, max_iterations, seed,
-#            mean_strat, dist, verbose=False, minibatch=False):
-#     """
-#     Perform k-means on a dataset of signatures.
-#
-#     Parameters
-#     ----------
-#     max_iterations : int
-#         number of iterations before k-means stops
-#     dist : string
-#         Distance to use. One of 'euclidean', 'sigdist'.
-#     mean_strat : string
-#         Strategy to use for averaging. One of 'PE', 'LE'.
-#
-#     Notes
-#     -----
-#     Cluster associated to each observation for every k-means iteration is
-#     written in the logs folder.
-#     """
-#     batch, siglen = signatures.shape
-#     y_pred = -1*np.ones(batch, dtype='int')  # corresponding cluster index for each obs
-#
-#     # INITIALIZATION
-#     # choose k obs randomly to start from
-#     rng = np.random.default_rng(seed)
-#     idx_init_centroid = rng.integers(batch, size=n_clusters)  # TO DO : replace with rng.choice
-#     # # not random initialization
-#     # idx_init_centroid = [7, 2, 1, 15, 3, 8, 5, 14, 0, 10]
-#     centroids = signatures[idx_init_centroid]
-#
-#     n_iter = 0
-#     while n_iter < max_iterations:
-#         # if n_iter%2==0:
-#         print(f"iteration #{n_iter}")
-#
-#         # 1. ASSIGN EACH OBS TO CLUSTER W/ NEAREST CENTROID
-#         idx_obs = 0
-#         while idx_obs < batch:
-#             # print(f'{idx_obs} / {batch}')
-#             sig = signatures[idx_obs]
-#             id_cluster = 0
-#             if dist=='euclidean':
-#                 dist_sigc = torch.linalg.norm(sig-centroids[0])
-#                 i = 0
-#                 while i<n_clusters:
-#                     dist_sigc_i = torch.linalg.norm(sig-centroids[i])
-#                     if dist_sigc_i < dist_sigc:
-#                         id_cluster = i
-#                         dist_sigc = dist_sigc_i
-#                     i += 1
-#             # elif dist=='sigdist':
-#             #     distlist = [utils.dist_on_sigs(sig, centroids[i], depth, channels) for i in range(k)]  # SIG DISTANCE
-#             y_pred[idx_obs] = id_cluster
-#             idx_obs += 1
-#
-#         # 2. UPDATE MEAN VALUES TO MEAN OF CLUSTER
-#         i = 0
-#         while i < n_clusters:
-#             to_average = signatures[y_pred==i, :]  # select obs of cluster i
-#             if not len(to_average)==0:
-#                 if mean_strat=='PE':
-#                     centroids[i] = mean_pennec.mean(to_average, depth, channels)
-#                 elif mean_strat=='LE':
-#                     centroids[i] = mean_le.mean(to_average, depth, channels)
-#                 else:
-#                     raise ValueError(f"Chosen mean strategy '{mean_strat}' do NOT exist.")
-#             i += 1
-#         if verbose:
-#             # print(f"SUM  = {sum1}")
-#             print(f"first cluster indices : {y_pred[:15]}")
-#             print(f"mean values")
-#             print((centroids[0])[14:24])
-#             print((centroids[3])[14:24])
-#             print((centroids[6])[14:24])
-#         n_iter += 1
-#     return(y_pred, centroids)
-
-
-# def kmeansInertia(SX, y, centroids, dist, channels=None, sigdepth=None):
-#     """
-#     SX : signatures of the data
-#     y : y_i is the cluster in which X_i has been assigned
-#     centroids : center of each cluster
-#     """
-#     nclasses = len(centroids)
-#     intracluster_inertia = {}
-#     for key in range(nclasses):
-#         intracluster_inertia[key] = 0.
-
-#     for idx_obs, obs in enumerate(SX):
-#         idx_cluster = y[idx_obs]
-#         if dist == 'sigdist':
-#             d_curr = utils.dist_on_sigs(obs, centroids[idx_cluster], sigdepth, channels)
-#         intracluster_inertia[idx_cluster] += d_curr
-#     inertia = sum(intracluster_inertia.values())
-#     return(inertia, intracluster_inertia)

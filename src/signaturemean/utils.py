@@ -396,14 +396,15 @@ def datashift(data):
         Type should be list if stream value is not the same for every
         observation.
     """
-    if type(data) == torch.Tensor:
+    if type(data) in [torch.Tensor, np.ndarray]:
         batch, stream, channels = data.shape
-        datashifted = data.clone()
+        if type(data) == np.ndarray:
+            datashifted = data.copy()
+        else:
+            datashifted = data.clone()
         for idx_obs in range(batch):
             data0 = data[idx_obs, 0, :]
             for idx_stream in range(stream):
-                # print(data[idx_obs, idx_stream, :])
-                # print(data0)
                 datashifted[idx_obs, idx_stream, :] = data[idx_obs, idx_stream, :] - data0
     elif type(data) == list:
         datashifted = []
@@ -454,9 +455,12 @@ def datascaling(data, p=1):
     p : int
         Value for the computation of p-var norm.
     """
-    if type(data) == torch.Tensor:
+    if type(data) in [torch.Tensor, np.ndarray]:
         batch, stream, channels = data.shape
-        datascaled = data.clone()
+        if type(data) == np.ndarray:
+            datascaled = data.copy()
+        else:
+            datascaled = data.clone()
         for i in range(batch):
             pv = p_var_norm(data[i], p)
             if pv != 0.:  # eg. if data[i] is constant
