@@ -412,48 +412,105 @@ def datashift(data):
             for idx_stream in range(obs.shape[0]):
                 obsshift[idx_stream, :] = obs[idx_stream, :] - obs[0, :]
             datashifted.append(obsshift)
+    # else:
+    #     raise TypeError()
     return(datashifted)
 
 
-def datascaling(data):
+
+def p_var_norm(X, p):
     """
-    Each observation is set to have total variation norm equals to 1.
+    Compute the p-variation norm for a multivariate time series.
+
+    X : array-like (stream, channels)
+    Reference : algorithm in
+    https://en.wikipedia.org/wiki/P-variation#Computation_of_p-variation_for_discrete_time_series
+    """
+    if type(X) == torch.Tensor:
+        x = X.numpy()
+    else:
+        x = X.copy()
+    stream = len(x)
+    cum_p_var = np.zeros(stream)
+    for n in range(1, stream):
+        for k in range(n):
+            cum_p_var[n] = max(
+                cum_p_var[n],
+                cum_p_var[k]+np.sum(np.power(np.abs(x[n]-x[k]), p))
+            )
+    return(np.power(cum_p_var[-1], 1./p))
+
+
+def datascaling(data, p=1):
+    """
+    Each time series is set to have p-variation norm equal to 1.
 
     Parameters
     ----------
-    data : array-like or list
+    data : array-like (batch, stream, channels) or list
         Type should be list if stream value is not the same for every
         observation.
+
+    p : int
+        Value for the computation of p-var norm.
     """
     if type(data) == torch.Tensor:
         batch, stream, channels = data.shape
         datascaled = data.clone()
         for i in range(batch):
-            variations = [np.linalg.norm(data[i, k, :]-data[i, k-1, :])
-                          for k in range(1, stream)]
-            tvnorm = np.sum(np.array(variations), axis=0)
-            if tvnorm != 0.:  # case: data[i] is constant
-                datascaled[i] = data[i]/tvnorm
+            pv = p_var_norm(data[i], p)
+            if pv != 0.:  # eg. if data[i] is constant
+                datascaled[i] = data[i]/pv
     elif type(data) == list:
         datascaled = []
         for obs in data:
-            stream = obs.shape[0]
-            variations = [np.linalg.norm(obs[k, :]-obs[k-1, :])
-                for k in range(1, stream)]
-            tvnorm = np.sum(np.array(variations), axis=0)
-            if tvnorm != 0.:  # case: obs is constant
-                obsscaled = obs/tvnorm
+            pv = p_var_norm(obs, p)
+            if pv != 0.:  # eg. if obs is constant
+                obsscaled = obs/pv
                 datascaled.append(obsscaled)
             else:
                 datascaled.append(obs)
     return(datascaled)
 
+# def datascaling(data):
+#     """
+#     Each observation is set to have total variation norm equals to 1.
+#
+#     Parameters
+#     ----------
+#     data : array-like or list
+#         Type should be list if stream value is not the same for every
+#         observation.
+#     """
+#     if type(data) == torch.Tensor:
+#         batch, stream, channels = data.shape
+#         datascaled = data.clone()
+#         for i in range(batch):
+#             variations = [np.linalg.norm(data[i, k, :]-data[i, k-1, :])
+#                           for k in range(1, stream)]
+#             tvnorm = np.sum(np.array(variations), axis=0)
+#             if tvnorm != 0.:  # eg. if data[i] is constant
+#                 datascaled[i] = data[i]/tvnorm
+#     elif type(data) == list:
+#         datascaled = []
+#         for obs in data:
+#             stream = obs.shape[0]
+#             variations = [np.linalg.norm(obs[k, :]-obs[k-1, :])
+#                 for k in range(1, stream)]
+#             tvnorm = np.sum(np.array(variations), axis=0)
+#             if tvnorm != 0.:  # eg. if obs is constant
+#                 obsscaled = obs/tvnorm
+#                 datascaled.append(obsscaled)
+#             else:
+#                 datascaled.append(obs)
+#     return(datascaled)
+
 
 def sigscaling(SX, depth, channels):
     """
     Each signature tensor of depth m is multiplied by factorial m.
-    Careful: should use `utils.datascaling` before computation of signature and
-    use of `utils.sigscaling`.
+    Careful: use `utils.datascaling` before computation of signature and before
+    using this function.
 
     Parameters
     ----------

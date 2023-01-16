@@ -52,10 +52,11 @@ cpdef cnp.ndarray[double, ndim=1] mean(
     >>> stream = 30   # number of timestamps for each time series
     >>> channels = 2  # number of dimensions
     >>> depth = 3     # depth (order) of truncation of the signature
+    >>> weights = 1./batch*np.ones(batch)
     >>> X = torch.rand(batch, stream, channels)   # simulate random numbers
     >>> SX = signatory.signature(X, depth, scalar_term=True)
     >>> SX = SX.numpy().astype('float')
-    >>> m = mean_group.mean(SX, depth, channels)
+    >>> m = mean_group.mean(SX, depth, channels, weights)
     """
 
     cdef unsigned int batch = len(SX)
